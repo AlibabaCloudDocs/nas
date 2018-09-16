@@ -2,6 +2,13 @@
 
 您可以在 Windows 系统中将 NAS 的 SMB 文件系统挂载至 ECS 实例。
 
+## 前提条件 {#section_zlq_3j1_dfb .section}
+
+将 SMB 文件系统挂载至 ECS 实例前，需要确保 Windows 系统服务中的以下两项服务均已启动：
+
+-   Workstation
+-   TCP/IP NetBIOS Helper
+
 ## 挂载命令 {#section_pgk_srh_cfb .section}
 
 您可以运行以下格式的命令，挂载 SMB 文件系统：
