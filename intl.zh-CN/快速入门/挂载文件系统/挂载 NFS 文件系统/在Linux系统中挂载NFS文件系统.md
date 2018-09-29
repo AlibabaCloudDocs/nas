@@ -11,7 +11,7 @@
 -   如果要挂载的是 NFSv4 文件系统，运行以下命令：
 
     ```
-    sudo mount -t nfs -o vers=4.0，rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+    sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
     
     ```
 
