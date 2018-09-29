@@ -28,7 +28,8 @@ net use <挂载目标盘符> \\<挂载点域名>\myshare
 如果您需要将 SMB 文件系统挂载到盘符 Z，可以运行以下命令：
 
 ```
-C:\> net use z: \\fid-xxxx.cn-hangzhou.nas.aliyuncs.com\myshare
+C:\> net use z: \\file-system-id-xxxx.region.nas.aliyuncs.com\myshare
+
 ```
 
 ## 查看挂载信息 {#section_ypf_4sh_cfb .section}
