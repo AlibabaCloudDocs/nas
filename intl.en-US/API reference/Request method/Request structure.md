@@ -37,3 +37,9 @@ JAVA, PHP, and, Python SDKs are currently supported.
 
 We recommend that you use SDKs which can simplify the process for HTTP message encapsulation and signature operations.
 
+You can download the SDK from the following links:
+
+-   Java: [NAS Java SDK](https://github.com/aliyun/aliyun-openapi-java-sdk/tree/master/aliyun-java-sdk-nas)
+-   Python: [NAS Python SDK](https://github.com/aliyun/aliyun-openapi-python-sdk/tree/master/aliyun-python-sdk-nas)
+-   PHP: [NAS PHP SDK](https://github.com/aliyun/aliyun-openapi-php-sdk/tree/master/aliyun-php-sdk-nas)
+
