@@ -15,34 +15,28 @@ You can create a mounting script in the Windows operating system and then create
 
         For details about the mounting command, see [Mount an SMB file system](reseller.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#) .
 
-    -   To mount an NFS file system, add the following command to the script:
-
-        ```
-        mount -o nolock \\fid-xxxx.cn-shanghai.nas.aliyuncs.com\! Z: 
-        ```
-
 2.  In the Control Panel of Windows, select **Administrative Tools**, and then select **Schedule tasks**. 
-3.  In Task Scheduler, select **Action** \> **Create Task**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312128_en-US.png)
+3.  In Task Scheduler, select **Action** \> **Create Task**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812128_en-US.png)
 
  
-4.  On the **General** tab, enter the **Name** of the scheduled task, and then select **Run whether user is logged on or not** and **Run with the highest privileges**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312129_en-US.png)
+4.  On the **General** tab, enter the **Name** of the scheduled task, and then select **Run whether user is logged on or not** and **Run with the highest privileges**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812129_en-US.png)
 
  
-5.  On the **Triggers** tab, click **New**. Then, select **At log on** for **Begin the task**, and select **Enabled** in **Advanced settings**. After that, click **OK**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312130_en-US.png)
+5.  On the **Triggers** tab, click **New**. Then, select **At log on** for **Begin the task**, and select **Enabled** in **Advanced settings**. After that, click **OK**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812130_en-US.png)
 
  
-6.  On the **Actions** tab, click **New**. Then, select**Start a program** for **Actions**, and then select the created nas\_auto.bat script in **Program/script**. After that, click **OK**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312131_en-US.png)
+6.  On the **Actions** tab, click **New**. Then, select**Start a program** for **Actions**, and then select the created nas\_auto.bat script in **Program/script**. After that, click **OK**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812131_en-US.png)
 
  
-7.  On the **Conditions** tab, select **Start only if the following network connection is available**, and then select **Any connection**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312132_en-US.png)
+7.  On the **Conditions** tab, select **Start only if the following network connection is available**, and then select **Any connection**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812132_en-US.png)
 
  
-8.  On the **Settings** tab, select **If the running task does not end when requested, force it to stop**, and then select **Do not start a new instance** for **If the task is already running, then the following rule applies**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312133_en-US.png)
+8.  On the **Settings** tab, select **If the running task does not end when requested, force it to stop**, and then select **Do not start a new instance** for **If the task is already running, then the following rule applies**.![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812133_en-US.png)
 
  
 9.  Click **OK**. 
 10. Restart the server to check whether the task is successfully created. If the system displays the following information, the scheduled task can be normally executed:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322387312134_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/154322585812134_en-US.png)
 
 
