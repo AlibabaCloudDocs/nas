@@ -4,20 +4,20 @@ CreateAccessGroup is used to create a permission group.
 
 ## Request parameters { .section}
 
-|Parameter name|Type |Required|Description|
-|--------------|-----|--------|-----------|
-|Action|String|TRUE|Operation interface name and system required parameter. Value: CreateAccessGroup|
-|AccessGroupName|String|TRUE|Permission group name|
-|AccessGroupType|String|TRUE|Permission group type, including the Vpc and Classic types|
-|Description|String|FALSE|Permission group description. It is the same as the permission group name by default.|
+|Parameter name|Type|Required|Description|
+|--------------|----|--------|-----------|
+|Action|String |TRUE|Operation interface name and system required parameter. Value: CreateAccessGroup|
+|AccessGroupName|String |TRUE|Permission group name|
+|AccessGroupType|String |TRUE|Permission group type, including the Vpc and Classic types|
+|Description|String |FALSE|Permission group description. It is the same as the permission group name by default.|
 
 ## Response parameters { .section}
 
-|Parameter name |Type|Description|
-|---------------|----|-----------|
-|AccessGroupName|String|Permission group name|
+|Parameter name|Type|Required or not|
+|--------------|----|---------------|
+|AccessGroupName|String |Permission group name|
 
-## Example { .section}
+## Examples { .section}
 
 -   Request example
 
