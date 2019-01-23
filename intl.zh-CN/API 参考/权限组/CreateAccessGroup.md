@@ -8,7 +8,7 @@ CreateAccessGroup用于创建权限组。
 |----|--|--|--|
 |Action|String|TRUE|操作接口名，系统规定参数，取值：CreateAccessGroup|
 |AccessGroupName|String|TRUE|权限组名称|
-|AccessGroupType|String|TRUE|权限组类型，包括 VPC和 Classic|
+|AccessGroupType|String|TRUE|权限组类型，包括 Vpc和 Classic|
 |Description|String|FALSE|权限组描述，默认和名称相同|
 
 ## 返回参数 { .section}
