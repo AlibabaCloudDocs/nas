@@ -4,7 +4,7 @@ NAS provides two storage types: NAS normal and Cloud Paralled File System \(CPFS
 
 -   [NAS normal](reseller.en-US/Product Introduction/Storage type/NAS normal.md#)applies to distributed file storage scenarios and provides two product types: capacity type and SSD performance type.
 
--   [Cloud parallel file system](reseller.en-US/Product Introduction/Storage type/Cloud parallel file system.md#)is a parallel file system. It is now in the beta testing phase.
+-   CPFS is a parallel file system. It is now in the beta testing phase.
 
 
 The following table describes the advantages and application scenarios of each storage type:
