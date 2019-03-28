@@ -10,7 +10,7 @@ In the domain of storage, NAS is the abbreviation for network attached storage, 
 
 Both NAS and Elastic Block Store \(EBS\) provide computational storage. To access a NAS or EBS file system, you must use POSIX-based APIs and link ECS instances with the file system. The difference between EBS and NAS is the location of each file system. The file system of EBS is integrated with an operating system. However, you can only access the file system of NAS over networks. OSS does not have a dedicated file system. You are only allowed to access OSS by using APIs over networks.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/131419/155365948339576_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/131419/155374582139576_en-US.png)
 
 -   NAS: As NAS has regulated file systems on a storage system, computational nodes can access NAS in the same way they access a local file system by using POSIX-based APIs over networks. NAS supports scalable capacity. You do not need to preserve capacity in advance. Capacity can be scaled based on the amount of actually written data. The file lock mechanism of NAS natively supports shared access. Compared to EBS, NAS has high latency and low IOPS performance due to network issues. Therefore, NAS is mainly applied to shared access scenarios with multiple computational nodes and stateless clusters.
 -   EBS: EBS is a type of bare disks, which cannot be directly accessed by an operating system. You must expose block storage as volumes by using RAID or LVM. Then, you can access these volumes by formatting the file system to ext3, ext4, and NTFS.
@@ -28,7 +28,7 @@ Both NAS and Elastic Block Store \(EBS\) provide computational storage. To acces
 
     NAS supports shared access to file storage. Each ECS instance can access NAS in the same way it accesses a local file system and retrieves the same data. This allows data to be automatically synchronized between multiple ECS instances. NAS addresses the issue of data synchronization in clustering mode.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/131419/155365948339577_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/131419/155374582139577_en-US.png)
 
 -   High-performance websites
 
@@ -69,9 +69,4 @@ NAS has multiple storage types. For various application models, we recommend tha
  Latency: 1-2ms.
 
  |File sharing, containers, and big data analysis.|
-|\[DO NOT TRANSLATE\]| \[DO NOT TRANSLATE\]
-
- \[DO NOT TRANSLATE\]
-
- |\[DO NOT TRANSLATE\]|
 
