@@ -8,7 +8,7 @@
 
 阿里云云企业网产品可以帮助用户实现同 Region 下的不同 VPC 互通。网络打通后VPC1 里的 ECS 可以直接 ping 通 VPC2 内的 ECS 和 NAS 挂载点。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155125194139613_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382876339613_zh-CN.png)
 
 1.  创建云企业网示例
     1.  登录[云企业网管理控制台](https://cen.console.aliyun.com/)。
@@ -17,7 +17,7 @@
 
         如图所示：
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155125194139616_zh-CN.png)
+        ![](images/39616_zh-CN_source.png)
 
         配置说明如下：
 
@@ -33,18 +33,20 @@
  描述在2-256个字符之间，不能以`http://`和 `https://` 开头。
 
  |
-        |加载网络实例|您可以将位于本账号下或其他账号下的网络实例加载到云企业网实例中，详情请参见[网络实例](https://help.aliyun.com/document_detail/66001.html#concept-gbk-1mh-tdb)。|
+        |加载网络实例| 您可以将位于本账号下或其他账号下的网络实例加载到云企业网实例中，详情请参见[网络实例](https://help.aliyun.com/document_detail/66001.html#concept-gbk-1mh-tdb)。
+
+ |
 
 2.  加载网络示例
     1.  在云企业网实例页面，单击已创建实例操作列中的**管理**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155125194139619_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382876339619_zh-CN.png)
 
     2.  在加载网络实例页面，单击**加载网络实例**，配置网络实例。
 
         如图所示：
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155125194139622_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382876339622_zh-CN.png)
 
         配置说明如下：
 
