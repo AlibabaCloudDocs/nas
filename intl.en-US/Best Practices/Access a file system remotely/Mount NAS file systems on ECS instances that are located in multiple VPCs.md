@@ -8,7 +8,7 @@ By default, when you mount a NAS file system on an ECS instance, ensure that the
 
 CEN enables connections between instances that are located in multiple VPCs but in the same region. After the connection is established, the ECS instance in VPC1 can directly communicate with the ECS instance and the NAS mount point in VPC2 by using the ping command.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155375161339613_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382875139613_en-US.png)
 
 1.  Create a CEN instance
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/).
@@ -17,7 +17,7 @@ CEN enables connections between instances that are located in multiple VPCs but 
 
         \[DO NOT TRANSLATE\]
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155375161339616_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382875139616_en-US.png)
 
         The options are described as follows:
 
@@ -33,18 +33,20 @@ CEN enables connections between instances that are located in multiple VPCs but 
  The description can be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
 
  |
-        |Attach a network|You can attach networks in your account or another account to a CEN instance. For more information, see [Networks](https://help.aliyun.com/document_detail/66001.html#concept-gbk-1mh-tdb).|
+        |Attach a network| You can attach networks in your account or another account to a CEN instance. For more information, see [Networks](https://partners-intl.aliyun.com/help/doc-detail/66001.htm).
+
+ |
 
 2.  Examples
     1.  On the Instances page, locate the newly created instance and click **Manage** in the Actions column.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155375161339619_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382875139619_en-US.png)
 
     2.  On the CEN page, click **Attach Network** to configure the network as shown in the following figure.
 
         \[DO NOT TRANSLATE\]
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155375161339622_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382875139622_en-US.png)
 
         The options are described as follows:
 
