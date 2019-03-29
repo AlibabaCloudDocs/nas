@@ -8,7 +8,7 @@ By default, you can only mount NAS file systems on ECS instances that are in the
 
 CEN enables connections between VPCs that belong to multiple accounts. After connections between VPCs are established, ECS instances that are in one VPC can access NAS file systems in another VPC, even if the VPCs belong to different accounts.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155375163039653_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155382878339653_en-US.png)
 
 1.  Create a CEN instance using account A
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/).
@@ -17,7 +17,7 @@ CEN enables connections between VPCs that belong to multiple accounts. After con
 
         \[DO NOT TRANSLATE\]
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155375163039616_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382878339616_en-US.png)
 
         The options are described as follows:
 
@@ -33,7 +33,9 @@ CEN enables connections between VPCs that belong to multiple accounts. After con
  The description can be 2 to 256 characters in length. It cannot start with `http://` or `https://`.
 
  |
-        |Attach networks|You can attach networks that are owned by this account or another account to a CEN instance. For more information, see [Networks](https://help.aliyun.com/document_detail/66001.html#concept-gbk-1mh-tdb).|
+        |Attach networks| You can attach networks in your account or another account to a CEN instance. For more information, see [Networks](https://partners-intl.aliyun.com/help/doc-detail/66001.htm).
+
+ |
 
     4.  Obtain the ID of the new CEN instance.
 
@@ -53,7 +55,7 @@ CEN enables connections between VPCs that belong to multiple accounts. After con
 
     In the Attach to CEN dialog box, enter Peer Account UID and Peer Account CEN ID, and then click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155375163039688_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155382878339688_en-US.png)
 
 3.  Attach a network by using account A
 
@@ -63,7 +65,7 @@ CEN enables connections between VPCs that belong to multiple accounts. After con
     2.  On the Instances page, locate the newly created CEN and click **Manage** in the Actions column.
     3.  On the CEN page, click **Attach Network** to configure the network.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155375163039689_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155382878339689_en-US.png)
 
         The options are described as follows:
 
