@@ -71,6 +71,5 @@ df -h
 ## 挂载文件系统参考信息 {#section_hcg_smv_fgb .section}
 
 -   [挂载前注意事项](cn.zh-CN/快速配置指南/挂载文件系统/挂载前注意事项.md#)
--   [在Windows系统中挂载NFS文件系统](cn.zh-CN/快速配置指南/挂载文件系统/挂载 NFS 文件系统/在Windows系统中挂载NFS文件系统.md#)
 -   [挂载 SMB 文件系统](cn.zh-CN/快速配置指南/挂载文件系统/挂载 SMB 文件系统.md#)
 
