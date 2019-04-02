@@ -6,5 +6,5 @@ LDAP is used to provide directory services.
 
 You can view the basic information of a file system on the File System Details page. Additionally, in the Access Control section of the page, you can click **Add LDAP** to configure the LDAP service.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/148019/155419439541332_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/148019/155419539641332_en-US.png)
 
