@@ -4,7 +4,7 @@ Cloud Paralleled File System \(CPFS\) is a parallel file storage service that is
 
 ## Manage file systems {#section_ecs_nr2_2hb .section}
 
-For more information, see [Quick Start Guide](../../../../../intl.en-US/Quick Configuration Guide/Create file systems.md#) for instructions on how to create a file system. Currently, CPFS provides the subscription billing method. During a service period, you can **upgrade** the service to increase storage capacity, corresponding bandwidth, and IOPS performance. Before the service expires, you can **renew** the service to extend the service time.
+For more information, see [Quick Start Guide](../../../../../reseller.en-US/Quick Configuration Guide/Create file systems.md#) for instructions on how to create a file system. Currently, CPFS provides the subscription billing method. During a service period, you can **upgrade** the service to increase storage capacity, corresponding bandwidth, and IOPS performance. Before the service expires, you can **renew** the service to extend the service time.
 
 ## Mount a file system {#section_rw2_1s2_2hb .section}
 
@@ -39,7 +39,7 @@ configArgs=--with-o2ib=no
 
         Save the file and run the `service cpfs-client rebuild` command.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155419438241321_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155419538641321_en-US.png)
 
     -   Open the `/etc/cpfs/cpfs-mounts.conf` configuration file, and add
 
@@ -57,6 +57,6 @@ configArgs=--with-o2ib=no
 
         Execute the service cpfs-client start command or the service cpfs-client stop command to start or stop the mount service.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155419438241331_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155419538641331_en-US.png)
 
 
