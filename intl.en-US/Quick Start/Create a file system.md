@@ -2,7 +2,7 @@
 
 To create a file system in NAS, follow these steps:
 
-1.  Log on to the [NAS console](https://nas.console.aliyun.com/).
+1.  Log on to the [NAS console](partners-intl.console.aliyun.com/#/nas).
 2.  Click **Create File System** in the upper right corner.
 
     **Note:** 
@@ -11,7 +11,7 @@ To create a file system in NAS, follow these steps:
     -   Each account can create up to 10 file systems.
 3.  On the Create File System page, set the parameters.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/154417322121054_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/154417335421054_en-US.png)
 
     The parameters are described as follows:
 

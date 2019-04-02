@@ -2,13 +2,13 @@
 
 阿里云文件存储服务在使用时有一个限制：对于一个地域（比如华东1）内创建的文件系统（NFS或者SMB），只支持同一地域内的ECS挂载，用户在其他地域（比如华北1）内的ECS，或者用户自己IDC机房的服务器，是没法直接挂载的；只有通过建立不同VPC间或者IDC和VPC间的高速通道才能实现跨地域或者从IDC服务器挂载文件系统，而部署高速通道带来的高成本将是很多用户面临的一个非常现实的问题。
 
-之前对于已经在自己机房部署了VPN服务的用户，我们推荐使用阿里云的VPN网关来实现用户办公环境或者IDC到阿里云NAS的互通，具体过程可以参考[本地IDC VPN网络访问阿里云文件存储](cn.zh-CN/最佳实践/远程访问文件系统/本地IDC VPN网络访问阿里云文件存储.md#)。
+之前对于已经在自己机房部署了VPN服务的用户，我们推荐使用阿里云的VPN网关来实现用户办公环境或者IDC到阿里云NAS的互通，具体过程可以参考[本地IDC VPN网络访问阿里云文件存储](intl.zh-CN/最佳实践/远程访问文件系统/本地IDC VPN网络访问阿里云文件存储.md#)。
 
 但是，VPN的部署非常繁琐，而且阿里云VPN目前是按月收费的（每月收费从几百到几千不等），对于一些用户，他们在业务上云过程中，仅仅是想把少量的线下数据上传到阿里云NAS，那么对于这部分用户来说，是不是有更好的方案呢？接下来我们就来介绍一个更简单（而且花费更少）的方案：使用NAT网关实现从公网访问阿里云NAS。
 
 使用NAT网关从公网访问阿里云NAS的网络架构如下图所示：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669013110_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447413110_zh-CN.png)
 
 用户需要做的是：
 
@@ -24,43 +24,43 @@
 
 1.  在NAS控制台创建文件系统。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669013111_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447413111_zh-CN.png)
 
 2.  为文件系统添加挂载点，注意需要创建VPC挂载点（NAT只支持VPC）
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669013112_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447413112_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669013113_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447413113_zh-CN.png)
 
 3.  获得挂载点的IP（可以在用户的ECS中ping一下挂载点地址获得IP）
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113114_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447413114_zh-CN.png)
 
 4.  在NAT控制台创建NAT网关 。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113115_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447413115_zh-CN.png)
 
 5.  为NAT网关添加带宽包。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113116_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513116_zh-CN.png)
 
 6.  创建DNAT，公网IP会出现第五步中创建的EIP，私网IP填写需要访问的挂载点的IP，端口设置最简单的方式是选择“所有端口”。（也可以安装NFS和SMB协议需要选择相应的端口。）
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113117_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513117_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113118_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513118_zh-CN.png)
 
 7.  验证挂载NFS，将NAT映射配置到一个NFS的挂载点。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113119_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513119_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113120_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513120_zh-CN.png)
 
 8.  验证挂载SMB，删除原来的NAT映射，添加一条映射配置到一个SMB的挂载点。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113121_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513121_zh-CN.png)
 
-     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155065669113122_zh-CN.png)
+     ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18706/155080447513122_zh-CN.png)
 
 
 到这里可以看出，使用NAT的方案，从配置来说要比使用VPN的方案要简单很多，但使用NAT也有其缺点：

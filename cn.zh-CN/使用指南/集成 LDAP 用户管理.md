@@ -6,5 +6,5 @@ LDAP 为轻量目录访问协议\(Lightweight Directory Access Protocol\)，用�
 
 您可以在文档系统详情页面，查看已创建文件系统的基本信息，同时还可以在访问控制区域**添加 LDAP**。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/148019/155383646741332_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/148019/155419439441332_zh-CN.png)
 
