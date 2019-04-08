@@ -1,11 +1,6 @@
 # Storage types {#concept_61136_zh .concept}
 
-NAS provides two storage types: NAS normal and Cloud Paralled File System \(CPFS\).
-
--   applies to distributed file storage scenarios and provides two product types: capacity type and SSD performance type.
-
--   CPFS is a parallel file system. It is now in the beta testing phase.
-
+NAS provides three storage types: Capacity type，Performance type and Extreme type.
 
 The following table describes the advantages and application scenarios of each storage type:
 
@@ -14,10 +9,10 @@ The following table describes the advantages and application scenarios of each s
 | Capacity type
 
  |Large capacity and low cost|Highly scalable and cost-sensitive workloads, such as big data analysis, file sharing, and data backup|
-| SSD performance type
+| Performance type
 
  |Low latency and high IOPS|Random I/O intensive and latency-sensitive workloads, such as enterprise applications, website containers, and searching tasks|
-| CPFS
+| Extreme type
 
- |Low latency, high throughput, and parallel I/O|Highly parallel applications and workloads with high I/O and throughput, such as high-performance computing|
+ |Extra-low latency and high IOPS|High-performance Web sites, DevOPS, code hosting and CI integrated environments.|
 
