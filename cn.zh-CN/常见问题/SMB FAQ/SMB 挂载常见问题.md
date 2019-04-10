@@ -1,13 +1,13 @@
 # SMB 挂载常见问题 {#concept_dnz_nsy_bhb .concept}
 
-## Windows Server Version 1709 不支持挂载 NAS SMB {#section_fmv_wsy_bhb .section}
+## Windows 2016 以后的版本不支持挂载 NAS SMB {#section_fmv_wsy_bhb .section}
 
 -   问题现象
 
     命令及错误提示：
 
     ```
-    C:\Users\Administrator>net use z: \7b33d498e4-nds21.ap-southeast-1.nas.aliyuncs.com\myshare
+    C:\Users\Administrator>net use z: \xxxxx-xxxx.xxxxx.nas.aliyuncs.com\myshare
     System error 1272 has occurred.
     You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
     ```
@@ -101,7 +101,7 @@ mklink /D C:\myshare \xxxxxxx-xxxx.cn-beijing.nas.aliyuncs.com\myshare\
 
 如图所示：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155288141540796_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155486361740796_zh-CN.png)
 
 **说明：** 
 
