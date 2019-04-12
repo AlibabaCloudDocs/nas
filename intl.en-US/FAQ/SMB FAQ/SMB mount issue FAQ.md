@@ -101,7 +101,7 @@ Ensure that a CIFS file system is supported by a specific Linux kernel: In the /
 
 The details are shown in the following figure.
 
-![](images/40796_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155503674240796_en-US.png)
 
 **Note:** 
 
