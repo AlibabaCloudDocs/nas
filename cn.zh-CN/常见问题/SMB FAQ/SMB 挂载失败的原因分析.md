@@ -10,11 +10,11 @@ Windows 系统挂载 SMB 失败时的解决步骤如下。
 
 2.  确认 Windows 系统版本。目前我们只支持 Windows 2008 R2 及以上版本， 不支持 Windows 2008。
 
-    **说明：** Windows 2016 以后版本请参见[SMB 挂载常见问题](cn.zh-CN/常见问题/SMB FAQ/SMB 挂载常见问题.md#)。
+    **说明：** Windows 2016 以后版本请参见[SMB 挂载常见问题](intl.zh-CN/常见问题/SMB FAQ/SMB 挂载常见问题.md#)。
 
 3.  确认文件系统类型是 SMB，目前不能通过 SMB 协议挂载 NFS 文件系统。如图：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/155486034441401_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/155538220041401_zh-CN.png)
 
 4.  确认文件系统挂载点权限组是否包含该机器的内网 IP / VPC IP。
 5.  经典网络挂载时，确认 ECS 和 NAS 属于同一阿里云 UID 。
