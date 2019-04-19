@@ -26,8 +26,8 @@ NAS has the following features:
 
     -   Network isolation \(VPC\) and User isolation \(classic network\)
     -   Standard file system access control
-    -   Permission group access control, see [Use permission groups](../../../../reseller.en-US/User Guide/Use permission groups.md#) for details.
-    -   primary account/RAM account authorization, see [Use RAM to grant RAM users the NAS permission](../../../../reseller.en-US/User Guide/Use RAM to grant RAM users the NAS permission.md#) for details.
+    -   Permission group access control, see [Use permission groups](../../../../intl.en-US/User Guide/Use permission groups.md#) for details.
+    -   primary account/RAM account authorization, see [Use RAM to grant RAM users the NAS permission](../../../../intl.en-US/User Guide/Use RAM to grant RAM users the NAS permission.md#) for details.
 -   Performance scaling
 
     Alibaba Cloud NAS provides high-throughput, high-IOPS, and low-latency storage for application workloads. Performance and capacity requirements can be scaled based on business needs.
@@ -50,7 +50,7 @@ NAS has its own advantages in cost, reliability, and ease of use.
 
     With 99.999999999% data reliability, Alibaba Cloud NAS reduces data security risk in comparison to self-built file storage.
 
-    The storage must be highly durable by default. All data within the file storage service must be synchronously replicated, so that a minimum of two copies of each file are stored within a logical data center. The two copies must be stored on different devices.
+    The file storage is highly durable by default. All data within the file storage service is synchronously replicated to three copies, three copies of each file are stored on different devices within a logical data center.
 
 -   Ease of use
     -   Alibaba Cloud NAS supports the NFSv3, NFSv4, and SMB protocols. You can directly use apps with NAS without modification.
@@ -62,23 +62,23 @@ NAS provides the following functions:
 
 |Scenarios|Function|Reference|
 |---------|--------|---------|
-|Create a file system|You must create a file system to use NAS.|[Create a file system](../../../../reseller.en-US/Quick Start/Create a file system.md#)|
-|Manage a file system|You can check the detailed information about a file system or delete a file system.|[File system](../../../../reseller.en-US/User Guide/File system.md#)|
-|Add a mount point|To mount a file system, you must add a mount point to the file system.|[Add a mount point](../../../../reseller.en-US/Quick Start/Add a mount point.md#)|
-|Manage a mount point|You can disable, enable, or delete a mount point, or modify the permission group of a mount point.|[Mount point](../../../../reseller.en-US/User Guide/Mount point.md#)|
-|Mount a file system|You must mount a file system to the compute node before use.| [Mount an NFS file system in Linux](../../../../reseller.en-US/Quick Start/Mount a file system/Mount a NFS file system/Mount an NFS file system in Linux.md#)
+|Create a file system|You must create a file system to use NAS.|[Create a file system](../../../../intl.en-US/Quick Start/Create a file system.md#)|
+|Manage a file system|You can check the detailed information about a file system or delete a file system.|[File system](../../../../intl.en-US/User Guide/File system.md#)|
+|Add a mount point|To mount a file system, you must add a mount point to the file system.|[Add a mount point](../../../../intl.en-US/Quick Start/Add a mount point.md#)|
+|Manage a mount point|You can disable, enable, or delete a mount point, or modify the permission group of a mount point.|[Mount point](../../../../intl.en-US/User Guide/Mount point.md#)|
+|Mount a file system|You must mount a file system to the compute node before use.| [Mount an NFS file system in Linux](../../../../intl.en-US/Quick Start/Mount a file system/Mount a NFS file system/Mount an NFS file system in Linux.md#)
 
- [Mount an SMB file system](../../../../reseller.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#)
+ [Mount an SMB file system](../../../../intl.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#)
 
  |
-|Access control|You can use RAM to authorize sub-account to perform operations in NAS. You can also use use permission groups to control user access.| [Use RAM to grant RAM users the NAS permission](../../../../reseller.en-US/User Guide/Use RAM to grant RAM users the NAS permission.md#)
+|Access control|You can use RAM to authorize sub-account to perform operations in NAS. You can also use use permission groups to control user access.| [Use RAM to grant RAM users the NAS permission](../../../../intl.en-US/User Guide/Use RAM to grant RAM users the NAS permission.md#)
 
- [Use permission groups](../../../../reseller.en-US/User Guide/Use permission groups.md#)
+ [Use permission groups](../../../../intl.en-US/User Guide/Use permission groups.md#)
 
  |
 |Back up a file system|NAS backup service is released for public test. You can use the service to back up a NAS file system.| |
 |Migrate data to NAS|When using NAS, You must migrate data from local or OSS to NAS.| |
-|Use NAS APIs|NAS provides various API interfaces that allow you to perform various operations on a file system.|[API overview](../../../../reseller.en-US/API reference/API overview.md#)|
+|Use NAS APIs|NAS provides various API interfaces that allow you to perform various operations on a file system.|[API overview](../../../../intl.en-US/API reference/API overview.md#)|
 
 ## Scenarios {#section_dsc_m35_2fb .section}
 
@@ -105,5 +105,5 @@ NAS applies to the following scenarios:
 
 NAS is billed based on the actual usage in two methods: pay-as-you-go and subscription.
 
-For detailed pricing information, see [Billing method](../../../../reseller.en-US/Pricing/Billing method.md#).
+For detailed pricing information, see [Billing method](../../../../intl.en-US/Pricing/Billing method.md#).
 
