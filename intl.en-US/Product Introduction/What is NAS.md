@@ -48,7 +48,7 @@ NAS has its own advantages in cost, reliability, and ease of use.
     -   With the high availability, NAS reduces data security risk and substantially saves maintenance cost.
 -   Reliability
 
-    With 99.999999999% data reliability, Alibaba Cloud NAS reduces data security risk in comparison to self-built file storage. `%;` 
+    With 99.999999999% data reliability, Alibaba Cloud NAS reduces data security risk in comparison to self-built file storage.
 
     The storage must be highly durable by default. All data within the file storage service must be synchronously replicated, so that a minimum of two copies of each file are stored within a logical data center. The two copies must be stored on different devices.
 
