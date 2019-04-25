@@ -28,7 +28,7 @@
         ./ossutilmac64 config
         ```
 
-4.  在显示的 ossutil 交互界面中，按照提示输入配置参数。Windows 中的界面如下：![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/22768/153916270013493_zh-CN.png)
+4.  在显示的 ossutil 交互界面中，按照提示输入配置参数。Windows 中的界面如下：![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/22768/155616119413493_zh-CN.png)
 
  
 
