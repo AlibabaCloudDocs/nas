@@ -4,9 +4,9 @@
 
 进行迁移前，在计算节点的系统内安装 JAVA JDK 1.7 及以上版本。您可以在[Oracle官网](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)进行下载。
 
-1.  在线下 IDC 客户的计算节点上下载 nas\_tool 软件，下载链接如下：[https://nasimport.oss-cn-shanghai.aliyuncs.com/nas\_tool.zip](https://nasimport.oss-cn-shanghai.aliyuncs.com/nas_tool.zip)。 
-2.  将nas\_tool.zip解压缩至工作目录。 
-3.  将阿里云 NAS 文件系统挂载到线下 IDC 客户的计算节点，具体方式请参见[通过VPN网关实现从用户IDC或者跨地域挂载文件系统](../../../../intl.zh-CN/最佳实践/通过VPN网关实现从用户IDC或者跨地域挂载文件系统.md#)。 
+1.  在线下 IDC 客户的计算节点上下载 [nas\_tool](https://nasimport.oss-cn-shanghai.aliyuncs.com/nas_tool.zip) 软件。
+2.  将nas\_tool.zip解压缩至工作目录。
+3.  将阿里云 NAS 文件系统挂载到线下 IDC 客户的计算节点，具体方式请参见[本地IDC VPN网络访问阿里云文件存储](../../../../cn.zh-CN/最佳实践/远程访问文件系统/本地IDC VPN网络访问阿里云文件存储.md#)。
 4.  执行迁移脚本，不同操作系统中的操作如下： 
     -   在 Windows 系统中，运行`cmd`，执行`cd`命令进入 nas\_tool 所在的目录，运行以下命令：
 
