@@ -1,52 +1,54 @@
 # NAS备份服务 {#concept_73045_zh .concept}
 
-文件存储 NAS 提供了操作便捷、策略灵活的备份支持。
+文件存储 NAS 无法直接进行备份，需要通过混合云备份（HBR）中的 ECS 文件备份来实现。
 
-## 简介 {#section_nvf_zvm_hfb .section}
+您可以在[混合云备份管理控制台](https://hbr.console.aliyun.com/)进行[NAS 备份](https://yq.aliyun.com/articles/696633)。
 
-NAS 备份服务能够接管整个备份流程，帮助您方便地完成整个自动化备份任务，将您从繁琐的人工操作与多版本管理中解放出来。您可以在控制台中快速定义备份任务。
+备份流程如图所示。
 
-NAS备份服务具有以下特性：
+![](images/13198_zh-CN_source.png)
 
--   支持周期性备份。您可以指定备份间隔，每隔一段时间启动一次新的备份。目前支持的间隔为6/8/12/24小时。
--   支持多备份历史版本保存。每进行一次备份会生成一个新的备份版本。您可以设置需要保留的版本数。保留的版本数目最大为9。
--   支持基于备份的数据恢复。您可以选定特定版本的备份，将其恢复到一个文件系统。为了最大程度避免误操作，恢复目标必须是空文件系统。
--   支持手动触发新的备份任务。您可以手动地、即时地触发一个新的备份任务。这在自动备份的基础上为您提供了更加灵活的备份策略。
+## 准备工作 {#section_ohp_0iu_zrd .section}
 
-## 创建备份任务 {#section_azc_2xm_hfb .section}
+1.  创建挂载点，详情请参见[添加挂载点](../../../../cn.zh-CN/快速配置指南/添加挂载点.md#)。
+2.  在 NAS 挂载点同一 VPC 中创建 ECS 实例。
+3.  挂载 NAS 文件系统。
+    -   Linux 系统挂载 NFS 文件系统，请先[安装 NFS 客户端](../../../../cn.zh-CN/快速配置指南/挂载文件系统/挂载 NFS 文件系统/在Linux系统中安装NFS客户端.md#)然后[挂载 NFS 文件系统](../../../../cn.zh-CN/快速配置指南/挂载文件系统/挂载 NFS 文件系统/在 Linux 系统中挂载 NFS 文件系统.md#)。
+    -   [Windows 系统挂载 SMB 文件系统](../../../../cn.zh-CN/快速配置指南/挂载文件系统/挂载 SMB 文件系统.md#)。
 
-创建备份方法如下：
+## HBR ECS 文件备份 {#section_j5q_h3n_75f .section}
 
-1.  登录[文件存储控制台](https://nas.console.aliyun.com/)。
-2.  单击**备份**，单击右上角的**新建备份**，如下图所示：
+1.  创建 ECS 文件备份客户端。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18698/155488521513200_zh-CN.png)
+    1.  登录[混合云备份控制台](https://hbr.console.aliyun.com)。
+    2.  在左侧导航栏，选择**ECS备份** \> **ECS文件备份**，单击**添加ECS实例**。
 
-3.  在弹出的对话框中选择需要备份的**源文件系统**（即要备份的对象），如下图所示：
+        ![](images/13199_zh-CN_source.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18698/155488521613201_zh-CN.png)
+    3.  在添加ECS实例页面，配置备份仓库名称。在下拉框中选择您之前已经创建过备份仓库，如您之前没有创建过备份仓库，单击**新建仓库**，然后输入**仓库名称**和**描述**即可创建一个新仓库。仓库名称不得超过32个字节。
 
-    创建备份任务中的其他选项描述如下：
+        ![](images/13200_zh-CN_source.png)
 
-    -    **开始时间**：目前只提供3个时间点供选择，分别是0点、8点和16点。
-    -    **备份间隔**：目前可选择6小时、12小时和24小时。一般情况下，推荐选择24小时，并将备份放在业务低峰时间。
-    -    **备份保留份数**：指备份时需要保留最新版本的个数。
-4.  创建备份任务完成后，备份服务会根据备份策略自动运行备份任务。
+    4.  添加需要备份的 ECS，单击**创建**，完成 ECS 实例在 HBR 的注册。
 
-    **说明：** 您也可以在**备份**页面中单击源文件系统右侧的**立即备份**，人工触发一次备份，如下图所示：
+        ![](images/13201_zh-CN_source.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18698/155488521613202_zh-CN.png)
+    更多操作详情请参见[准备工作](https://help.aliyun.com/document_detail/100942.html)。
 
+2.  定制备份计划
 
-## 数据恢复 {#section_ww3_2ym_hfb .section}
+    1.  在注册好的 ECS 实例操作栏，单击**备份**。
 
-备份服务目前支持将备份恢复到一个空的NAS文件系统上，恢复界面如下：
+        ![](images/13202_zh-CN_source.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18698/155488521613203_zh-CN.png)
+    2.  在备份页面，备份路径请填写挂载路径，请根据实际需求修改备份计划名称备份保留时间、备份起始时间以及备份执行间隔。
 
-您只需选择目标NAS文件系统及希望恢复的源文件系统备份版本号，即可将特定版本的备份恢复到目标文件系统。
+        ![](images/13203_zh-CN_source.png)
 
-关于希望恢复的源文件系统备份版本号，可在备份详情页中查找，如下图所示：
+    3.  创建后，在备份计划和任务页签查看创建后的计划。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18698/155488521613204_zh-CN.png)
+        ![](images/13204_zh-CN_source.png)
+
+    **说明：** 更多操作详情请参见[备份ECS文件](https://help.aliyun.com/document_detail/100945.html)和[恢复ECS文件](https://help.aliyun.com/document_detail/95243.html)。
+
 
