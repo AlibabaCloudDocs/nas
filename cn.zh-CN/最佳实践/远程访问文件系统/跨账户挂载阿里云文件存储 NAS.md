@@ -2,20 +2,18 @@
 
 本文主要介绍如何跨账户挂载阿里云文件存储 NAS。
 
-默认情况下，阿里云 NAS 只支持挂载到同账户下的 ECS。如果一个企业用户下有多个 UID 账户，且不同账户下的 ECS 和 NAS 之间需进行数据互访，只需 ECS 与 NAS 之间的 VPC 网络互通。您可以通过云企业网的跨账户功能来实现 VPC 网络互通。
-
-## 配置 VPC 互通 {#section_crp_jgn_xgb .section}
+默认情况下，阿里云 NAS 只支持挂载到同账户下的 ECS。如果一个企业用户有多个 UID 账户，且不同账户下的 ECS 和 NAS 之间需进行数据互访，只需 ECS 与 NAS 之间的 VPC 网络互通。您可以通过云企业网的跨账户功能来实现 VPC 网络互通。
 
 阿里云企业网产品可以帮助用户实现不同账号下的 VPC 互通，VPC 互通后就可以跨账号实现 NAS 的挂载访问。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155382877939653_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155653040339653_zh-CN.png)
+
+## 配置步骤 {#section_crp_jgn_xgb .section}
 
 1.  创建 A 账号云企业网实例
     1.  登录[云企业网管理控制台](https://cen.console.aliyun.com/)。
     2.  在云企业网实例页面，单击**创建云企业网实例**。
     3.  配置云企业网实例。
-
-        如图所示：
 
         ![](images/39616_zh-CN_source.png)
 
@@ -37,35 +35,21 @@
 
  |
 
-    4.  获取已创建的云企业网实例 ID。
+    4.  获取已创建的云企业网实例 ID，本操作的云企业网实例 ID 为 cbn-xxxxxxxxxx4l7。
+2.  账号 B 授权账号 A 加载其网络实例。
+    1.  使用账号 B 登录[VPC 管理控制台](https://vpcnext.console.aliyun.com/)。
+    2.  在左侧导航栏，单击**专有网络**。
+    3.  单击目标 VPC 的实例 ID。
+    4.  在云企业网跨账号授权信息区域，单击**云企业网跨账号授权**。在弹出的对话框中，输入对方账号 ID 和对方云企业网实例 ID，然后单击**确定**。
 
-        本操作的云企业网实例 ID 为 cbn-xxxxxxxxxx4l7。
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155653040339688_zh-CN.png)
 
-2.  账号 B 授权账号 A 加载其网络实例
-
-    跨账号加载网络实例，需要在加载的 VPC 详情页面进行授权。步骤如下：
-
-    1. 使用账号 B 登录[VPC 管理控制台](https://vpcnext.console.aliyun.com/)。
-
-    2. 在左侧导航栏，单击**专有网络**。
-
-    3. 单击目标 VPC 的实例 ID。
-
-    4. 在云企业网跨账号授权信息区域，单击**云企业网跨账号授权**。
-
-    在弹出的对话框中，输入对方账号 ID 和对方云企业网实例 ID，然后单击**确定**。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155382877939688_zh-CN.png)
-
-3.  账号 A 加载网络实例
-
-    完成授权后可以进行跨账号网络实例加载：
-
-    1.  使用账号A登录[云企业网管理控制台](https://cen.console.aliyun.com/)。
+3.  账号 A 加载网络实例。
+    1.  使用账号 A 登录[云企业网管理控制台](https://cen.console.aliyun.com/)。
     2.  在云企业网实例页面，单击已创建云企业网实例操作列的**管理**。
     3.  在加载网络实例页面，单击**加载网络实例**，配置网络实例：
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155382877939689_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/155653040639689_zh-CN.png)
 
         配置说明如下：
 
@@ -77,9 +61,7 @@
         |地域|选择所选实例的地域。本操作选择华北1。|
         |实例|选择要加载的实例。本操作选择一个 VPC 实例。|
 
-4.  NAS 挂载验证
-
-    登录 ECS 实例进行挂载验证。
+4.  登录 ECS 实例进行挂载验证。
 
     ```
     [root@ ~]#sudo mount -t nfs -o vers=4.0,vpc2挂载点域名:/ /mnt
