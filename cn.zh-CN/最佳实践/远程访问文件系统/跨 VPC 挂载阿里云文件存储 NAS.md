@@ -6,9 +6,9 @@
 
 实现方式如下图所示：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652885039613_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652958339613_zh-CN.png)
 
-## 配置 VPC 互通 {#section_kmv_trm_xgb .section}
+## 配置步骤 {#section_kmv_trm_xgb .section}
 
 阿里云云企业网产品可以帮助用户实现同 Region 下的不同 VPC 互通。网络打通后 VPC1 里的 ECS 可以直接 ping 通 VPC2 内的 ECS 和 NAS 挂载点。
 
@@ -40,13 +40,13 @@
 2.  加载网络实例
     1.  在云企业网实例页面，单击已创建实例操作列中的**管理**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652885039619_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652958339619_zh-CN.png)
 
     2.  在加载网络实例页面，单击**加载网络实例**，配置网络实例。
 
         如图所示：
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652885039622_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652958339622_zh-CN.png)
 
         配置说明如下：
 
