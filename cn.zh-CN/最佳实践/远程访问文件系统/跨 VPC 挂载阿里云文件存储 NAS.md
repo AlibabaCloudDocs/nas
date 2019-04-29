@@ -1,21 +1,21 @@
 # 跨 VPC 挂载阿里云文件存储 NAS {#concept_bnk_22m_xgb .concept}
 
-本文主要介绍如何跨 VPC 进行挂载阿里云文件存储 NAS。
+本文主要介绍如何跨 VPC 挂载阿里云文件存储 NAS。
 
-默认场景下，阿里云 ECS 挂载 NAS 需要确保 ECS 和 NAS 在同一 VPC 网络环境下。但很多时候由于历史配置部署原因，ECS 的 VPC 和 NAS 挂载点的 VPC 并不一致。因此我们可以通过云企业网同账户功能来实现 VPC 的互通。
+默认场景下，阿里云 ECS 挂载 NAS 需要确保 ECS 和 NAS 在同一 VPC 网络环境下。但很多时候由于历史配置部署原因，ECS 的 VPC 和 NAS 挂载点的 VPC 并不一致。因此我们可以通过云企业网来实现 VPC 的互通。
+
+实现方式如下图所示：
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652885039613_zh-CN.png)
 
 ## 配置 VPC 互通 {#section_kmv_trm_xgb .section}
 
-阿里云云企业网产品可以帮助用户实现同 Region 下的不同 VPC 互通。网络打通后VPC1 里的 ECS 可以直接 ping 通 VPC2 内的 ECS 和 NAS 挂载点。
+阿里云云企业网产品可以帮助用户实现同 Region 下的不同 VPC 互通。网络打通后 VPC1 里的 ECS 可以直接 ping 通 VPC2 内的 ECS 和 NAS 挂载点。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382876339613_zh-CN.png)
-
-1.  创建云企业网示例
+1.  创建云企业网实例
     1.  登录[云企业网管理控制台](https://cen.console.aliyun.com/)。
     2.  在云企业网实例页面，单击**创建云企业网实例**。
     3.  配置云企业网实例：
-
-        如图所示：
 
         ![](images/39616_zh-CN_source.png)
 
@@ -33,20 +33,20 @@
  描述在2-256个字符之间，不能以`http://`和 `https://` 开头。
 
  |
-        |加载网络实例| 您可以将位于本账号下或其他账号下的网络实例加载到云企业网实例中，详情请参见[网络实例](https://help.aliyun.com/document_detail/66001.html#concept-gbk-1mh-tdb)。
+        |加载网络实例| 您可以将位于本账号下或其他账号下的网络实例加载到云企业网实例中，详情请参见[网络实例](https://www.alibabacloud.com/help/zh/doc-detail/66001.htm)。
 
  |
 
-2.  加载网络示例
+2.  加载网络实例
     1.  在云企业网实例页面，单击已创建实例操作列中的**管理**。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382876339619_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652885039619_zh-CN.png)
 
     2.  在加载网络实例页面，单击**加载网络实例**，配置网络实例。
 
         如图所示：
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155382876339622_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/155652885039622_zh-CN.png)
 
         配置说明如下：
 
