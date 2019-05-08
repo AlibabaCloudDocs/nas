@@ -21,7 +21,7 @@
 
     单机预估值：14k
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140406_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840406_zh-CN.png)
 
 -   随机写 IOPS 设置
 
@@ -31,7 +31,7 @@
 
     单机预估值：10k
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140407_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840407_zh-CN.png)
 
 -   随机读吞吐
 
@@ -41,7 +41,7 @@
 
     -   容量型单机预估值：150MB
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140408_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840408_zh-CN.png)
 
     -   性能型单机预估值：300MB
 -   随机写吞吐
@@ -50,7 +50,7 @@
     fio -numjobs=1 -iodepth=128 -direct=1 -ioengine=libaio -sync=1 -rw=randwrite -bs=1M -size=1G -time_based -runtime=60 -name=Fio -directory=/mnt
     ```
 
-    -   容量型单机预估值：150MB![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140409_zh-CN.png)
+    -   容量型单机预估值：150MB![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840409_zh-CN.png)
     -   性能型单机预估值：600MB
 
 ## Windows 系统下的性能测试 {#section_u51_rxb_bhb .section}
@@ -65,7 +65,7 @@
 
     单机预估值：14k
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140406_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840406_zh-CN.png)
 
 -   随机写 IOPS 设置
 
@@ -75,7 +75,7 @@
 
     单机预估值：10k
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140407_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840407_zh-CN.png)
 
 -   随机读吞吐
 
@@ -85,7 +85,7 @@
 
     -   容量型单机预估值：150MB
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140408_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840408_zh-CN.png)
 
     -   性能型单机预估值：300MB
 -   随机写吞吐
@@ -96,7 +96,7 @@
 
     -   容量型单机预估值：150MB
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155599953140409_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41408/155600240840409_zh-CN.png)
 
     -   性能型单机预估值：600MB
 

@@ -4,7 +4,7 @@ CPFS 是阿里云新上线的并行文件存储服务，专注于提供高性能
 
 ## 管理文件系统 {#section_ecs_nr2_2hb .section}
 
-请参见[快速配置指南](../../../../../intl.zh-CN/快速配置指南/创建文件系统.md#)来创建文件系统。CPFS 服务目前采用预付费模式（即包年包月），服务期间您可以根据自身业务增长情况，选择**升级**来提高存储容量和对应的带宽和 IOPS 性能。在服务到期之前，您可以选择**续费**来延长使用时间。
+请参见[快速配置指南](../../../../cn.zh-CN/快速配置指南/创建文件系统.md#)来创建文件系统。CPFS 服务目前采用预付费模式（即包年包月），服务期间您可以根据自身业务增长情况，选择**升级**来提高存储容量和对应的带宽和 IOPS 性能。在服务到期之前，您可以选择**续费**来延长使用时间。
 
 ## 文件系统的挂载使用 {#section_rw2_1s2_2hb .section}
 
@@ -39,7 +39,7 @@ configArgs=--with-o2ib=no
 
         保存后运行`service cpfs-client rebuild`命令，10分钟左右完成客户端的 rebuild。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155419438041321_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155720838841321_zh-CN.png)
 
     -   编辑配置文件`/etc/cpfs/cpfs-mounts.conf`，增加文件系统和挂载目录信息。
 
@@ -57,6 +57,6 @@ configArgs=--with-o2ib=no
 
         通过service cpfs-client start/stop 来启动或停止挂载服务。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155419438041331_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155720838841331_zh-CN.png)
 
 
