@@ -11,8 +11,15 @@ You can run either of the following commands to mount an NFS file system.
 -   To mount an NFSv4 file system, run the following command:
 
     ```
-    sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
-    
+    sudo mount -t nfs4 -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+    						
+    ```
+
+    If you fail to mount the file system, run the following command:
+
+    ``` {#codeblock_5zi_tqv_o0v}
+    sudo mount -t nfs4 rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+    						
     ```
 
     **Note:** The value of the vers parameter varies with the client version. If an error occurs when you use `vers=4.0` in the command, use `vers=4`.
