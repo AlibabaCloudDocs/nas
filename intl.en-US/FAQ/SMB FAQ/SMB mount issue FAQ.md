@@ -7,7 +7,7 @@
     An error occurred while running the following command.
 
     ```
-    C:\Users\Administrator>net use z: \7b33d498e4-nds21.ap-southeast-1.nas.aliyuncs.com\myshare 
+    C:\Users\Administrator>net use z: \\xxxxxxx-xxxx.ap-southeast-1.nas.aliyuncs.com\myshare 
     System error 1272 has occurred.
     You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
     ```
@@ -76,7 +76,7 @@ This issue occurs when user accounts in Windows are isolated from one another.
 You need to create a shared link for multiple users. For example, you can use the following command to create a shared link named myshare in drive C.
 
 ```
-mklink /D C:\myshare \xxxxxxx-xxxx.cn-beijing.nas.aliyuncs.com\myshare\
+mklink /D C:\myshare \\xxxxxxx-xxxx.cn-beijing.nas.aliyuncs.com\myshare\
 ```
 
 ## An error occurred while loading files that are located in a shared SMB volume by using IIS on an ECS instance that runs Windows Server 2016 {#section_yw4_zkz_bhb .section}
@@ -101,7 +101,7 @@ Ensure that a CIFS file system is supported by a specific Linux kernel: In the /
 
 The details are shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155503674240796_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155857575940796_en-US.png)
 
 **Note:** 
 

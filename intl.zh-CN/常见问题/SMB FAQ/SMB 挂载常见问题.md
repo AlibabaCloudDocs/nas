@@ -7,7 +7,7 @@
     命令及错误提示：
 
     ```
-    C:\Users\Administrator>net use z: \xxxxx-xxxx.xxxxx.nas.aliyuncs.com\myshare
+    C:\Users\Administrator>net use z: \\xxxxx-xxxx.xxxxx.nas.aliyuncs.com\myshare
     System error 1272 has occurred.
     You can't access this shared folder because your organization's security policies block unauthenticated guest access. These policies help protect your PC from unsafe or malicious devices on the network.
     ```
@@ -76,7 +76,7 @@ mount -t cifs [MOUNT POINT] [LOCAL DIRECTORY] -o guest,vers=3.0
 要实现多用户的共享，需要创建一个目录链接。比如 C 盘下创建一个 myshare，命令如下：
 
 ```
-mklink /D C:\myshare \xxxxxxx-xxxx.cn-beijing.nas.aliyuncs.com\myshare\
+mklink /D C:\myshare \\xxxxxxx-xxxx.cn-beijing.nas.aliyuncs.com\myshare\
 ```
 
 ## Windows Server 2016 的 IIS 无法加载 SMB volume 文件的问题 {#section_yw4_zkz_bhb .section}
@@ -101,7 +101,7 @@ mklink /D C:\myshare \xxxxxxx-xxxx.cn-beijing.nas.aliyuncs.com\myshare\
 
 如图所示：
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155503482740796_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/137459/155857575640796_zh-CN.png)
 
 **说明：** 
 
