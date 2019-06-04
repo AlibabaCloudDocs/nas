@@ -1,18 +1,18 @@
 # NFS 客户端已知问题 {#concept_zzg_t32_jhb .concept}
 
-NFS 客户端为内核的一部分，由于部分内核存在一些缺陷，会影响 NFS 的正常使用。
+NFS 客户端为内核的一部分，由于部分内核存在一些缺陷，会影响 NFS 的正常使用。为了获得更好的 NFS 稳定性体验，请使用阿里云推荐的内核版本。
+
+## 推荐 Linux 系统版本 {#section_5ti_22q_ew2 .section}
 
 推荐使用阿里云官方内核镜像，选择经过阿里云严格测试的内核版本，确保稳定性，如下所示。
 
--   CentOS6.9+
--   Redhat6.9+
--   Ubuntu14.04/16.04/18.04
--   Debian8+
--   SUSE11+
--   OpenSUSE42.3+
--   AliyunLinux17+
-
-为了获得更好的 NFS 稳定性体验，建议避开使用以下内核。
+-   CentOS 6.9 及以上
+-   Redhat 6.9 及以上
+-   Ubuntu 14.04 / 16.04 / 18.04
+-   Debian 8 及以上
+-   SUSE 11 及以上
+-   OpenSUSE 42.3 及以上
+-   AliyunLinux 17 及以上
 
 ## 网络抖动导致文件系统无响应 {#section_i3z_hje_dhq .section}
 
@@ -27,7 +27,7 @@ NFS 客户端为内核的一部分，由于部分内核存在一些缺陷，会�
 
 使用 noresvport选项进行挂载后，请执行`ss -ant| grep 2049`命令检查端口号，如下图框选部分所示，端口号大于1024，说明挂载生效。反之，请先卸载所有已挂载的文件系统（执行`mount | grep nas`命令确保已不存在挂载），再进行重新挂载。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/156759/155962898146656_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/156759/155963278546656_zh-CN.png)
 
 **注意：** 请避开使用 2.6.32-696 ~ 2.6.32-696.10.1 版本的内核，该版本发生文件系统无响应的概率高于其他内核版本，详情请参见[RHEL6.9: NFSv4 TCP transport stuck in FIN\_WAIT\_2 forever](https://access.redhat.com/solutions/3053801)。
 
