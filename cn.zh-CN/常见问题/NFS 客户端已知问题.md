@@ -23,13 +23,11 @@ NFS 客户端为内核的一部分，由于部分内核存在一些缺陷，会�
 -   内核版本低于 2.6.32-696.16.1（不包括 2.6.32-696.16.1 版本）。
 -   内核版本高于 2.6.32-696.16.1（包括 2.6.32-696.16.1 版本），但是 NFS 挂载没有使用 noresvport 选项。
 
-**说明：** 您可以通过`uname -a`命令查看内核版本。
-
 当发生连接异常后，需要在 ECS 实例上重新执行挂载操作。挂载操作请参见[在 Linux 系统中挂载 NFS 文件系统](../../../../intl.zh-CN/快速配置指南/挂载文件系统/挂载 NFS 文件系统/在 Linux 系统中挂载 NFS 文件系统.md#)，使用推荐的参数进行挂载。
 
 使用 noresvport选项进行挂载后，请执行`ss -ant| grep 2049`命令检查端口号，如下图框选部分所示，端口号大于1024，说明挂载生效。反之，请先卸载所有已挂载的文件系统（执行`mount | grep nas`命令确保已不存在挂载），再进行重新挂载。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/156759/155962845846656_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/156759/155962898146656_zh-CN.png)
 
 **注意：** 请避开使用 2.6.32-696 ~ 2.6.32-696.10.1 版本的内核，该版本发生文件系统无响应的概率高于其他内核版本，详情请参见[RHEL6.9: NFSv4 TCP transport stuck in FIN\_WAIT\_2 forever](https://access.redhat.com/solutions/3053801)。
 
