@@ -10,7 +10,7 @@ You can run either of the following commands to mount an NFS file system.
 
 -   To mount an NFSv4 file system, run the following command:
 
-    ```
+    ``` {#codeblock_6k4_qjs_y1g}
     sudo mount -t nfs4 -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
     						
     ```
@@ -26,8 +26,8 @@ You can run either of the following commands to mount an NFS file system.
 
 -   To mount an NFSv3 file system, run the following command:
 
-    ```
-    sudo mount -t nfs -o vers=3,nolock,proto=tcp, rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+    ``` {#codeblock_dnk_0rp_hhx}
+    sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
     ```
 
 
@@ -63,13 +63,13 @@ You can specify multiple options when mounting a NAS file system. The options ar
 
 After the mounting succeeds, you can run the following command to view the mounted file system:
 
-```
+``` {#codeblock_ak1_a6y_3pg}
 mount -l
 ```
 
 You can also run the following command to view the capacity information about the mounted file system:
 
-```
+``` {#codeblock_lq3_pbw_soy}
 df -h
 ```
 

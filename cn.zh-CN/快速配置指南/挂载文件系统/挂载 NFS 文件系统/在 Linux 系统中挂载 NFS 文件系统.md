@@ -10,8 +10,8 @@
 
 -   如果要挂载的是 NFSv4 文件系统，运行以下命令：
 
-    ```
-    sudo mount -t nfs -o vers=4,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+    ``` {#codeblock_1dn_mlv_0pn}
+    sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
     						
     ```
 
@@ -26,8 +26,8 @@
 
 -   如果要挂载的是 NFSv3 文件系统，运行以下命令：
 
-    ```
-    sudo mount -t nfs -o vers=3,nolock,proto=tcp, rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+    ``` {#codeblock_p19_9i4_wpc}
+    sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
     ```
 
 
@@ -65,13 +65,13 @@
 
 挂载完成后，您可以运行以下命令查看已挂载的文件系统：
 
-```
+``` {#codeblock_hg7_4xy_fup}
 mount -l
 ```
 
 您也可以查看已挂载文件系统的当前容量信息：
 
-```
+``` {#codeblock_kj5_8ze_kt2}
 df -h
 ```
 
