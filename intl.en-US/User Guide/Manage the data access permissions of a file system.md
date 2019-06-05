@@ -21,7 +21,7 @@ Proceed as follows to create a permission group
 2.  In the left-side navigation pane, select **Permission Group**, and then click **Create Permission Group** in the upper-right corner.
 3.  Enter a name to create a new permission group.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/155972816332272_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/155972850932272_en-US.png)
 
 
 **Note:** With an Alibaba Cloud account, you can create up to 10 permission groups.
@@ -35,7 +35,7 @@ You can add, modify, and delete permission group rules.
 3.  On the **Permission Group Rules** page,
     -   you can click **Add Rule** in the upper-right corner to add a rule.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/155972816332287_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/155972850932287_en-US.png)
 
         For a rule, you can configure the following options.
 
@@ -53,6 +53,6 @@ You can add, modify, and delete permission group rules.
 
     -   After you create a permission group rule, you can click **Edit** or **Delete** next to the rule to modify or delete this rule.
 
-        ![](images/32289_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/155972851032289_en-US.png)
 
 
