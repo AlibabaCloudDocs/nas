@@ -54,7 +54,7 @@ NFS 客户端是 Linux 内核的一部分，请避免使用有缺陷的内核版
         ```
 
         -   如果返回为空，则表示所有的 NFS 文件系统卸载完成。
-        -   如果返回不为空，请重复[步骤 2](#li_90z_64q_mbc) 和[步骤 3](#li_zl8_t2h_u7b)，直到所有的 NFS 文件系统卸载完成。
+        -   如果返回不为空，请重复[步骤 ii](#li_92w_5og_153) 和[步骤 iii](#li_b13_ueh_pbw)，直到所有的 NFS 文件系统卸载完成。
     5.  挂载文件系统。
         -   如果希望使用 NFSv4 挂载，请执行以下命令。
 
@@ -68,7 +68,7 @@ NFS 客户端是 Linux 内核的一部分，请避免使用有缺陷的内核版
             sudo mount -t nfs -o vers=3,nolock,proto=tcp,noresvport foo.aliyuncs.com:/ /mnt
             ```
 
-    6.  执行以下命令查找其他需要挂载的文件系统，并执行步骤[步骤 5](#li_dnx_bmy_4b1) 完成挂载。
+    6.  执行以下命令查找其他需要挂载的文件系统，并执行步骤[步骤 v](#li_so1_j9j_dvw) 完成挂载。
 
         ``` {#codeblock_txv_oz4_2ri}
         cat /tmp/mount_aliyun
