@@ -12,9 +12,9 @@ Before operating a mount point, you must perform the following actions:
 
 ## View a list of mount points {#section_sq4_zlm_hfb .section}
 
-On the **File System List** page, click the name of a file system to open the **File System Details** page. On the File System Details page, you can manage mount points in the Mount Point section. You can perform multiple actions, such as **adding a mount point**, **modifying the permission group of a mount point**, **enabling** or **disabling** a mount point, and **deleting** a mount point.i
+On the **File System List** page, click the name of a file system to open the **File System Details** page. On the File System Details page, you can manage mount points in the Mount Point section. You can perform multiple actions, such as **adding a mount point**, **modifying the permission group of a mount point**, **enabling** or **disabling** a mount point, and **deleting** a mount point.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18693/155972430431414_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18694/155972787732271_en-US.png)
 
 ## Add a mount point {#section_dvy_xmm_hfb .section}
 
