@@ -6,19 +6,19 @@ In the NAS console, you can perform multiple operations on mount points. These o
 
 Before operating a mount point, you must perform the following actions:
 
-1.  Log on to the [NAS console](https://nas.console.aliyun.com/).
-2.  [Create a file system](../../../../intl.en-US/Quick Start/Create a file system.md#)Create at least one file system.
-3.  [Add a mount point](../../../../intl.en-US/Quick Start/Add a mount point.md#)Add at least one mount point to a file system.
+1.  Log on to the [NAS console](partners-intl.console.aliyun.com/#/nas).
+2.  [Create a file system](../../../../reseller.en-US/Quick Start/Create a file system.md#)Create at least one file system.
+3.  [Add a mount point](../../../../reseller.en-US/Quick Start/Add a mount point.md#)Add at least one mount point to a file system.
 
 ## View a list of mount points {#section_sq4_zlm_hfb .section}
 
-On the **File System List** page, click the name of a file system to open the **File System Details** page. On the File System Details page, you can manage mount points in the Mount Point section. You can perform multiple actions, such as **adding a mount point**, **modifying the permission group of a mount point**, **enabling** or **disabling** a mount point, and **deleting** a mount point.
+On the **File System List** page, click the name of a file system to open the **File System Details** page. On the File System Details page, you can manage mount points in the Mount Point section. You can perform multiple actions, such as **adding a mount point**, **modifying the permission group of a mount point**, **enabling** or **disabling** a mount point, and **deleting** a mount point.i
 
-![](images/32271_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18693/155972430431414_en-US.png)
 
 ## Add a mount point {#section_dvy_xmm_hfb .section}
 
-You can add one or more mount points to a file system. For more information, see [Add a mount point](../../../../intl.en-US/Quick Start/Add a mount point.md#).
+You can add one or more mount points to a file system. For more information, see [Add a mount point](../../../../reseller.en-US/Quick Start/Add a mount point.md#).
 
 ## Enable or disable a mount point {#section_w12_cnm_hfb .section}
 
