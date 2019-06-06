@@ -20,7 +20,7 @@ The features, benefits, and scenarios of each storage type are described in the 
 -   Improved performance, applicable to businesses that require large-capacity and high-throughput.
 
  |Low latency and high IOPS|Random I/O access, data-intensive, and latency-sensitive businesses, such as enterprise applications, websites, and containers.|
-|NAS Extreme| -   Maximum capacity of 32 TB. For Basic versions, the initial bandwidth is 150 Mbit/s and can be scaled up to 300 Mbit/s. For Premium versions, the initial bandwidth is 300 Mbit/s and can be scaled up to 1 Gbit/s.
+|NAS Extreme| -   Maximum capacity of 32 TB. The initial bandwidth is 150 Mbit/s and can be scaled up to 300 Mbit/s.
 -   A consistent latency of 100 microseconds.
 -   Applicable to latency-sensitive businesses that handle large amounts of small files.
 
