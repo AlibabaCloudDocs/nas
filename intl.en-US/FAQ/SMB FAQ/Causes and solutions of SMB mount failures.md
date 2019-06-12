@@ -2,7 +2,7 @@
 
 When you mount an SMB file system on an ECS instance that runs Windows, a mount failure may occur due to one of the following errors. This topic describes the causes and solutions of mount failures.
 
-## Error code: 0x80070053 {#section_kkp_c4t_s32 .section}
+## System error 53 {#section_kkp_c4t_s32 .section}
 
 **Description**
 
@@ -36,9 +36,9 @@ You can check the network connection as follows:
             net use z: \\xxxx.cn-hangzhou.nas.aliyuncs.com\myshare 
             ```
 
-        -   Ensure that the protocol type of a file system is SMB. You cannot mount an NFS file system by using the SMB protocol.
+        -   Ensure that the protocol type of a file system is SMB.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/155979882841401_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032096041401_en-US.png)
 
         -   Ensure that the IP address of the mount point is valid.
         -   Ensure that the ECS instance and the mount point are located in the same VPC.
@@ -48,7 +48,7 @@ You can check the network connection as follows:
     telnet <the IP address of a mount point\> 445
 
 
-## Error code: 0x80070058 {#section_hc3_y35_loh .section}
+## System error 58 {#section_hc3_y35_loh .section}
 
 **Description**
 
@@ -62,7 +62,7 @@ The SMB protocol version used on the ECS instance is not compatible with the ver
 
 Ensure that the ECS instance runs Windows Server 2008 R2 or later, excluding Windows Server 2008.
 
-## Error code: 0x80070064 {#section_3fa_9qy_l9f .section}
+## System error 64 {#section_3fa_9qy_l9f .section}
 
 **Description**
 
@@ -73,6 +73,7 @@ The specified network name is no longer available.
 -   The IP address of the target ECS instance is not specified in any NAS permission group that is bound to the file system.
 -   The NAS service is overdue.
 -   The ECS instance and the NAS file system are located in classic networks, but they are created by different Alibaba Cloud accounts.
+-   The protocol type of a file system is not SMB.
 
 **Solution**
 
@@ -81,8 +82,12 @@ This issue occurs when you do not have permission to access NAS file system reso
 1.  Ensure that the private IP address or the VPC IP address of the ECS instance is specified in a permission group that is bound to the file system.
 2.  Confirm that the balance of the Alibaba Cloud account is positive.
 3.  Ensure that the ECS instance and the NAS file system are created by the same Alibaba Cloud account if they are located in classic networks.
+4.  Ensure that the protocol type of a file system is SMB.
 
-## Error code: 0x80070067 {#section_2xt_2ks_so0 .section}
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032096041401_en-US.png)
+
+
+## System error 67 {#section_2xt_2ks_so0 .section}
 
 **Description**
 
@@ -94,12 +99,12 @@ Several important network services are not started.
 
 **Solution**
 
-Start the following services. For more information, see [Mount an SMB file system](../../../../reseller.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#section_zlq_3j1_dfb).
+Start the following services. For more information, see [Mount an SMB file system](../../../../intl.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#section_zlq_3j1_dfb).
 
 1.  Workstation
 2.  TCP/IP NetBIOS Helper
 
-## Error code: 0x80070085 {#section_dsx_7nn_yn0 .section}
+## System error 85 {#section_dsx_7nn_yn0 .section}
 
 **Description**
 
@@ -113,7 +118,7 @@ The target drive letter is already in use.
 
 You must change the target drive letter and re-mount the file system.
 
-## Error code: 0x80071272 {#section_pwi_i6q_rqy .section}
+## System error 1272 {#section_pwi_i6q_rqy .section}
 
 **Description**
 

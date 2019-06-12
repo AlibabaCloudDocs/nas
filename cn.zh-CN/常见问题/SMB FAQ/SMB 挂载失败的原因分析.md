@@ -1,6 +1,6 @@
 # SMB 挂载失败的原因分析 {#concept_fpq_xwf_2hb .concept}
 
-在Windows 系统中挂载 SMB 文件系统，可能发生以下错误导致挂载失败。本文主要介绍挂载失败的主要原因及解决方法。
+在Windows 系统中挂载 SMB 文件系统，可能发生系统错误导致挂载失败。本文主要介绍挂载失败的主要原因及解决方法。
 
 ## 系统错误 53 {#section_kkp_c4t_s32 .section}
 
@@ -36,9 +36,9 @@
             net use z: \\xxxx.cn-hangzhou.nas.aliyuncs.com\myshare 
             ```
 
-        -   确认文件系统类型为 SMB。目前通过 SMB 协议无法挂载 NFS 文件系统。
+        -   确认文件系统类型为 SMB。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/155918518241401_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032095541401_zh-CN.png)
 
         -   确认挂载点地址填写正确。
         -   确认客户端的 ECS 与挂载点在同一个 VPC 中。
@@ -62,7 +62,7 @@
 
 请确认 Windows 系统版本为Windows 2008 R2 及以上版本（不包括 Windows 2008）。
 
-## 错误描述 64 {#section_3fa_9qy_l9f .section}
+## 系统错误 64 {#section_3fa_9qy_l9f .section}
 
 **错误描述**
 
@@ -73,6 +73,7 @@
 -   NAS 权限组未允许目标 ECS 访问。
 -   服务欠费。
 -   选择经典网络进行挂载时， ECS 和 NAS 不属于同一阿里云 UID。
+-   文件系统类型不是 SMB。
 
 **解决方法**
 
@@ -81,6 +82,10 @@
 1.  确认文件系统挂载点权限组已包含该机器的内网 IP/VPC IP。
 2.  确认阿里云 UID 未欠费。
 3.  确认经典网络挂载时， ECS 和 NAS 属于同一个阿里云UID。
+4.  确认文件系统类型为 SMB。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032095541401_zh-CN.png)
+
 
 ## 系统错误 67 {#section_2xt_2ks_so0 .section}
 
@@ -94,7 +99,7 @@
 
 **解决方法**
 
-启动如下服务，具体操作可参见[挂载SMB文件系统](../../../../cn.zh-CN/快速配置指南/挂载文件系统/挂载 SMB 文件系统.md#section_zlq_3j1_dfb)。
+启动如下服务，具体操作可参见[挂载SMB文件系统](../../../../intl.zh-CN/快速配置指南/挂载文件系统/挂载 SMB 文件系统.md#section_zlq_3j1_dfb)。
 
 1.  启用 Workstation 服务。
 2.  启用 TCP/IP NetBIOS Helper 服务。
