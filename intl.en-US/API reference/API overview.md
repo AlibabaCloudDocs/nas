@@ -11,7 +11,7 @@ NAS provides the following APIs.
 |5|File system|[ModifyFileSystem](reseller.en-US/API reference/File system/ModifyFileSystem.md#)|Modify file system information.|
 |6|Mount point|[CreateMountTarget](reseller.en-US/API reference/Mount point/CreateMountTarget.md#)|Create a mount point.|
 |7|Mount point|[DeleteMountTarget](reseller.en-US/API reference/Mount point/DeleteMountTarget.md#)|Delete existing mount points.|
-|8|Mount point|[DescribeFileSystems](reseller.en-US/API reference/File system/DescribeFileSystems.md#)|Return mount point description.|
+|8|Mount point|[DescribeMountTargets](reseller.en-US/API reference/Mount point/DescribeMountTargets.md#)|Return mount point description.|
 |9|Mount point|[ModifyMountTarget](reseller.en-US/API reference/Mount point/ModifyMountTarget.md#)|Modify mount point information.|
 |10|Permission group|[CreateAccessGroup](reseller.en-US/API reference/Permission group/CreateAccessGroup.md#)|Create a permission group.|
 |11|Permission group|[DeleteAccessGroup](reseller.en-US/API reference/Permission group/DeleteAccessGroup.md#)|Delete existing permission groups.|
