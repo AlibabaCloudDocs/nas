@@ -1,6 +1,6 @@
 # SMB 挂载失败的原因分析 {#concept_fpq_xwf_2hb .concept}
 
-在Windows 系统中挂载 SMB 文件系统，可能发生系统错误导致挂载失败。本文主要介绍挂载失败的主要原因及解决方法。
+本文主要介绍在 Windows 系统中挂载 SMB 文件系统挂载失败时可能的原因及解决方案。
 
 ## 系统错误 53 {#section_kkp_c4t_s32 .section}
 
@@ -38,7 +38,7 @@
 
         -   确认文件系统类型为 SMB。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032095541401_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076533041401_zh-CN.png)
 
         -   确认挂载点地址填写正确。
         -   确认客户端的 ECS 与挂载点在同一个 VPC 中。
@@ -84,7 +84,7 @@
 3.  确认经典网络挂载时， ECS 和 NAS 属于同一个阿里云UID。
 4.  确认文件系统类型为 SMB。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032095541401_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076533041401_zh-CN.png)
 
 
 ## 系统错误 67 {#section_2xt_2ks_so0 .section}

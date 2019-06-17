@@ -1,6 +1,6 @@
 # Causes and solutions of SMB mount failures {#concept_fpq_xwf_2hb .concept}
 
-When you mount an SMB file system on an ECS instance that runs Windows, a mount failure may occur due to one of the following errors. This topic describes the causes and solutions of mount failures.
+This topic describes the possible causes and solutions when an SMB file system fails to mount on an ECS instance that runs Windows.
 
 ## System error 53 {#section_kkp_c4t_s32 .section}
 
@@ -38,7 +38,7 @@ You can check the network connection as follows:
 
         -   Ensure that the protocol type of a file system is SMB.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032096041401_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076534041401_en-US.png)
 
         -   Ensure that the IP address of the mount point is valid.
         -   Ensure that the ECS instance and the mount point are located in the same VPC.
@@ -84,7 +84,7 @@ This issue occurs when you do not have permission to access NAS file system reso
 3.  Ensure that the ECS instance and the NAS file system are created by the same Alibaba Cloud account if they are located in classic networks.
 4.  Ensure that the protocol type of a file system is SMB.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156032096041401_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076534041401_en-US.png)
 
 
 ## System error 67 {#section_2xt_2ks_so0 .section}
@@ -99,7 +99,7 @@ Several important network services are not started.
 
 **Solution**
 
-Start the following services. For more information, see [Mount an SMB file system](../../../../intl.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#section_zlq_3j1_dfb).
+Start the following services. For more information, see [Mount an SMB file system](../../../../reseller.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#section_zlq_3j1_dfb).
 
 1.  Workstation
 2.  TCP/IP NetBIOS Helper
