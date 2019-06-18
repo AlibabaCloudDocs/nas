@@ -2,10 +2,10 @@
 
 NAS 提供以下 API 接口。
 
+
 |序号|类别|API|描述|
 |--|--|---|--|
 |1|区域|[ZH-CN\_TP\_18715.md\#](intl.zh-CN/API参考/区域/DescribeRegions.md#)|返回所有 RegionId|
-|2|区域|[DescribeZones](intl.zh-CN/API参考/区域/DescribeZones.md#)|返回某个Region下所有可用区及可用区支持的产品|
 |3|文件系统|[ZH-CN\_TP\_18717.md\#](intl.zh-CN/API参考/文件系统/CreateFileSystem.md#)|创建新的文件系统|
 |4|文件系统|[ZH-CN\_TP\_18718.md\#](intl.zh-CN/API参考/文件系统/DeleteFileSystem.md#)|删除已有文件系统|
 |5|文件系统|[ZH-CN\_TP\_18719.md\#](intl.zh-CN/API参考/文件系统/DescribeFileSystems.md#)|返回文件系统描述信息|
