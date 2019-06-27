@@ -8,8 +8,8 @@
 
 在首次连接至 ECS 实例后，在该实例的/etc/fstab配置文件中添加以下命令：
 
-```
-fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt  nfs4 vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0
+``` {#codeblock_pta_fix_0pk}
+fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt  nfs vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0
 ```
 
 命令中各参数说明如下：
@@ -26,7 +26,7 @@ fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt  nfs4 vers=4.0,rsize=1048576,wsize=
 
 以挂载 NFSv4 文件系统为例，添加的命令如下：
 
-```
+``` {#codeblock_29a_lx1_ohd}
 sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt
 ```
 
@@ -39,14 +39,14 @@ sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans
 
 1.  编辑/etc/systemd/system/sockets.target.wants/rpcbind.socket文件，注释掉 IPv6 相关的rpcbind参数，否则 NFS 的 rpcbind 服务自动启动会失败。如图所示：
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/155565615743322_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156162900043322_zh-CN.png)
 
 2.  在首次连接至 ECS 实例后，在该实例的/etc/fstab配置文件中添加以下命令：
 
-    ```
+    ``` {#codeblock_ovi_5cs_m5z}
     xxxx:/share /tmp/benchmark   nfs vers=3,proto=tcp,noresvport,_netdev 0 0
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/155565615743323_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156162900043323_zh-CN.png)
 
 

@@ -8,8 +8,8 @@ To enable a file system to be mounted automatically on an ECS instance that runs
 
 After you connect to an ECS instance for the first time, add the following command to the /etc/fstab file.
 
-```
-fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt  nfs4 vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0
+``` {#codeblock_9pv_ygq_wop}
+fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt  nfs vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport 0 0
 ```
 
 The parameters used in the command are described as follows:
@@ -26,7 +26,7 @@ After you connect to an ECS instance for the first time, add the following comma
 
 Take an NFSv4 file system as an example. Add the following command.
 
-```
+``` {#codeblock_d35_uua_ubu}
 sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport fid-xxxx.cn-hangzhou.nas.aliyuncs.com:/ /mnt
 ```
 
@@ -39,14 +39,14 @@ sudo mount -t nfs -o vers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans
 
 1.  Modify the /etc/systemd/system/sockets.target.wants/rpcbind.socket file, move IPv6-related rpcbind parameters to comments. Otherwise, the rpcbind service fails to automatically start up. The details are shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/155565616043322_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156162900943322_en-US.png)
 
 2.  After you connect to an ECS instance for the first time, add the following command to the /etc/fstab file.
 
-    ```
+    ``` {#codeblock_ef7_a18_a0a}
     xxxx:/share /tmp/benchmark   nfs vers=3,proto=tcp,noresvport,_netdev 0 0
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/155565616043323_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156162900943323_en-US.png)
 
 
