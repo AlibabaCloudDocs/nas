@@ -1,53 +1,73 @@
-# ModifyMountTarget {#concept_62628_zh .concept}
+# ModifyMountTarget {#doc_api_NAS_ModifyMountTarget .reference}
 
 ModifyMountTarget用于修改挂载点信息。
 
-## 请求参数 { .section}
+## 调试 {#apiExplorer .section}
 
-|参数名称|类型|必选|描述|
-|----|--|--|--|
-|Action|String|TRUE|操作接口名，系统规定参数，取值：ModifyMountTarget|
-|FileSystemId|String|TRUE|文件系统 ID|
-|MountTargetDomain|String|TRUE|挂载点域名|
-|AccessGroupName|String|FALSE|权限组名称|
-|Status|String|FALSE|状态，包括 Active 和 Inactive|
+前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=ModifyMountTarget)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
 
-## 返回参数 { .section}
+## 请求参数 {#parameters .section}
 
-无
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|FileSystemId|String|是|1ca404a666|文件系统 ID
 
-## 示例 { .section}
+ |
+|MountTargetDomain|String|是|1ca404a666-wxa89.cn-hangzhou.nas.aliyuncs.com|挂载点域名
 
--   请求示例
+ |
+|AccessGroupName|String|否|classic-test|权限组名称
 
-    ```language-shell
-    GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyMountTarget
-    &FileSystemId=1ca404a666
-    &MountTargetDomain=1ca404a666
-    &Status=Inactive
-    &<公共请求参数>
-    …
-    
-    ```
+ |
+|Action|String|否|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
 
--   返回示例
-    -   XML示例
+ |
+|Status|String|否|Inactive|状态，包括 Active 和 Inactive
 
-        ```language-xml
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ModifyMountTargetResponse>
-          <RequestId>FF387D95-34C4-4879-B65A-99D1FA1B65CD</RequestId>
-        </ModifyMountTargetResponse>
-        
-        ```
+ |
 
-    -   JSON示例
+## 返回数据 {#resultMapping .section}
 
-        ```language-json
-        {
-          "RequestId": "FF387D95-34C4-4879-B65A-99D1FA1B65CD"
-        }
-        
-        ```
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|RequestId|String|FF387D95-34C4-4879-B65A-99D1FA1B65CD|请求ID
 
+ |
+
+## 示例 {#demo .section}
+
+请求示例
+
+``` {#request_demo}
+
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyMountTarget
+&FileSystemId=1ca404a666
+&MountTargetDomain=1ca404a666
+&Status=Inactive
+&<公共请求参数>
+
+```
+
+正常返回示例
+
+`XML` 格式
+
+``` {#xml_return_success_demo}
+<ModifyMountTargetResponse>
+  <RequestId>FF387D95-34C4-4879-B65A-99D1FA1B65CD</RequestId>
+</ModifyMountTargetResponse>
+
+```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
+{
+	"RequestId":"FF387D95-34C4-4879-B65A-99D1FA1B65CD"
+}
+```
+
+## 错误码 { .section}
+
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 

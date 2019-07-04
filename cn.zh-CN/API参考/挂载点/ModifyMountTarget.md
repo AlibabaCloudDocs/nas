@@ -1,4 +1,4 @@
-# ModifyMountTarget {#doc_api_1038870 .reference}
+# ModifyMountTarget {#doc_api_NAS_ModifyMountTarget .reference}
 
 ModifyMountTarget用于修改挂载点信息。
 
@@ -10,9 +10,6 @@ ModifyMountTarget用于修改挂载点信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
-
- |
 |FileSystemId|String|是|1ca404a666|文件系统 ID
 
  |
@@ -22,11 +19,14 @@ ModifyMountTarget用于修改挂载点信息。
 |AccessGroupName|String|否|classic-test|权限组名称
 
  |
+|Action|String|否|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
+
+ |
 |Status|String|否|Inactive|状态，包括 Active 和 Inactive
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -40,9 +40,10 @@ ModifyMountTarget用于修改挂载点信息。
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?Action=ModifyMountTarget
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyMountTarget
 &FileSystemId=1ca404a666
-&MountTargetDomain=1ca404a666-wxa89.cn-hangzhou.nas.aliyuncs.com
+&MountTargetDomain=1ca404a666
+&Status=Inactive
 &<公共请求参数>
 
 ```
@@ -68,5 +69,5 @@ http(s)://[Endpoint]/?Action=ModifyMountTarget
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
