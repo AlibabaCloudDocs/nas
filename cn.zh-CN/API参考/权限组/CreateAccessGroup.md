@@ -1,4 +1,4 @@
-# CreateAccessGroup {#doc_api_1039799 .reference}
+# CreateAccessGroup {#doc_api_NAS_CreateAccessGroup .reference}
 
 CreateAccessGroup用于创建权限组。
 
@@ -16,14 +16,17 @@ CreateAccessGroup用于创建权限组。
 |AccessGroupType|String|是|Classic|权限组类型，包括 Vpc和 Classic
 
  |
-|Action|String|是|CreateAccessGroup|操作接口名，系统规定参数，取值：CreateAccessGroup
+|Action|String|否|CreateAccessGroup|操作接口名，系统规定参数，取值：CreateAccessGroup
 
  |
 |Description|String|否|classictestaccessgroup|权限组描述，默认和名称相同
 
  |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
-## 返回参数 {#resultMapping .section}
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -40,10 +43,10 @@ CreateAccessGroup用于创建权限组。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessGroup
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessGroup
 &AccessGroupName=classic-test
 &AccessGroupType=Classic
-&Description=classictestaccessgroup
+&Description=classic test access group
 &<公共请求参数>…
 
 ```
@@ -71,5 +74,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessGroup
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
