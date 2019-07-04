@@ -1,4 +1,4 @@
-# DeleteMountTarget {#doc_api_1040444 .reference}
+# DeleteMountTarget {#doc_api_NAS_DeleteMountTarget .reference}
 
 DeleteMountTarget用于删除已有挂载点。
 
@@ -10,17 +10,17 @@ DeleteMountTarget用于删除已有挂载点。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DeleteMountTarget|操作接口名，系统规定参数，取值：DeleteMountTarget
-
- |
 |FileSystemId|String|是|174494b666|文件系统 ID
 
  |
 |MountTargetDomain|String|是|174494b666-xog95.cn-hangzhou.nas.aliyuncs.com|挂载点域名
 
  |
+|Action|String|否|DeleteMountTarget|操作接口名，系统规定参数，取值：DeleteMountTarget
 
-## 返回参数 {#resultMapping .section}
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -34,7 +34,7 @@ DeleteMountTarget用于删除已有挂载点。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteMountTarget
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteMountTarget
 &FileSystemId=174494b666
 &MountTargetDomain=174494b666-xog95.cn-hangzhou.nas.aliyuncs.com
 &<公共请求参数>…
@@ -62,5 +62,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteMountTarget
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
