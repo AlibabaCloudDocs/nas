@@ -1,4 +1,4 @@
-# DeleteFileSystem {#doc_api_1037011 .reference}
+# DeleteFileSystem {#doc_api_NAS_DeleteFileSystem .reference}
 
 DeleteFileSystem用于删除已有的文件系统。
 
@@ -10,14 +10,14 @@ DeleteFileSystem用于删除已有的文件系统。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DeleteFileSystem|操作接口名，系统规定参数，取值：DeleteFileSystem
-
- |
 |FileSystemId|String|是|1ca404a348|要删除的文件系统 ID
 
  |
+|Action|String|否|DeleteFileSystem|操作接口名，系统规定参数，取值：DeleteFileSystem
 
-## 返回参数 {#resultMapping .section}
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -31,7 +31,7 @@ DeleteFileSystem用于删除已有的文件系统。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteFileSystem
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteFileSystem
 &FileSystemId=1ca404a348
 &<公共请求参数>…
 
@@ -58,5 +58,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteFileSystem
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
