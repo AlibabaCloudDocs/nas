@@ -1,4 +1,4 @@
-# ModifyFileSystem {#doc_api_1037010 .reference}
+# ModifyFileSystem {#doc_api_NAS_ModifyFileSystem .reference}
 
 ModifyFileSystem用于修改文件系统的信息。
 
@@ -10,17 +10,17 @@ ModifyFileSystem用于修改文件系统的信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|ModifyFileSystem|操作接口名，系统规定参数，取值：ModifyFileSystem
+|FileSystemId|String|是|1ca404a666|文件系统 ID
 
  |
-|FileSystemId|String|是|1ca404a666|文件系统 ID
+|Action|String|否|ModifyFileSystem|操作接口名，系统规定参数，取值：ModifyFileSystem
 
  |
 |Description|String|否|空|描述信息（不可用空格符）
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -34,7 +34,7 @@ ModifyFileSystem用于修改文件系统的信息。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyFileSystem
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyFileSystem
 &FileSystemId=1ca404a666
 &<公共请求参数>…
 
@@ -61,5 +61,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyFileSystem
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
