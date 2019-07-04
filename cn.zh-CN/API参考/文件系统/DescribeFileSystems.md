@@ -1,4 +1,4 @@
-# DescribeFileSystems {#doc_api_1038215 .reference}
+# DescribeFileSystems {#doc_api_NAS_DescribeFileSystems .reference}
 
 DescribeFileSystems用于返回文件系统的描述信息。
 
@@ -10,10 +10,13 @@ DescribeFileSystems用于返回文件系统的描述信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeFileSystems|操作接口名，系统规定参数，取值：DescribeFileSystems
+|Action|String|否|DescribeFileSystems|操作接口名，系统规定参数，取值：DescribeFileSystems
 
  |
 |FileSystemId|String|否|109c042666|文件系统 ID
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 |PageNumber|Integer|否|1|列表的分页页码（从 1 开始计数）
@@ -22,8 +25,11 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |PageSize|Integer|否|1|每个分页包含的文件系统个数（默认为 10）
 
  |
+|VpcId|String|否|vpc-bp1sevsgtqvk5gxblhhod|专有网络ID
 
-## 返回参数 {#resultMapping .section}
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -42,37 +48,67 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |FileSystems| | |文件系统描述信息
 
  |
-|└CreateTime|String|2017-05-27T15:43:06CST|文件系统创建时间
+|Bandwidth|Long|150|文件系统吞吐上限（单位MB/s），通用型没有该字段
 
  |
-|└Destription|String|空|文件系统描述
+|Capacity|Long|1|文件系统容量（单位MB）
 
  |
-|└FileSystemId|String|109c042666|文件系统ID
+|CreateTime|String|2017-05-27T15:43:06CST|文件系统创建时间
 
  |
-|└MeteredSize|Long|1611661312|文件系统当前计费容量
+|Description|String|空|文件系统描述
 
  |
-|└MountTargets| | |挂载目标
+|Destription|String|空|文件系统描述
 
  |
-|└MountTargetDomain|String|109c042666-wjb85.cn-hangzhou.nas.aliyuncs.com|挂载点域名
+|FileSystemId|String|109c042666|文件系统ID
 
  |
-|└Packages| | |已绑定的存储包
+|MeteredSize|Long|1611661312|文件系统当前计费容量
 
  |
-|└PackageId|String|naspackage-xxxxxxxxxxx-xxxxxx|存储包ID
+|MountTargets| | |挂载目标
 
  |
-|└ProtocolType|String|NFS|协议类型
+|AccessGroupName|String|test-001|挂载点使用的权限组名称
 
  |
-|└RegionId|String|cn-hangzhou|区域ID
+|MountTargetDomain|String|109c042666-wjb85.cn-hangzhou.nas.aliyuncs.com|挂载点域名
 
  |
-|└StorageType|String|Performance|存储类型
+|NetworkType|String|vpc|网络类型，枚举值：vpc、classic
+
+ |
+|Status|String|active|挂载点状态，通用型 NAS：active、inactive
+
+ |
+|VpcId|String|vpc-bp1sevsgtqvk5gxblhhod|vpcid
+
+ |
+|VswId|String|vsw-bp1omfzsszekkvaxnz66e|vswid
+
+ |
+|Packages| | |已绑定的存储包
+
+ |
+|PackageId|String|naspackage-xxxxxxxxxxx-xxxxxx|存储包ID
+
+ |
+|ProtocolType|String|NFS|协议类型
+
+ |
+|RegionId|String|cn-hangzhou|区域ID
+
+ |
+|Status|String|Pending|文件系统状态，仅极速型有，状态枚举值包括：Pending、Running、Stopped
+
+ |
+|StorageType|String|Performance|存储类型，通用型NAS：Capacity、Performance，极速型NAS：standard、advance
+
+ |
+|ZoneId|String|cn-hangzhou-b|所在可用区
 
  |
 
@@ -151,5 +187,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeFileSystems
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
