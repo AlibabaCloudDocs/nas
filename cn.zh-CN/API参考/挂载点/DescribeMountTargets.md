@@ -1,4 +1,4 @@
-# DescribeMountTargets {#doc_api_1038864 .reference}
+# DescribeMountTargets {#doc_api_NAS_DescribeMountTargets .reference}
 
 DescribeMountTargets用于返回挂载点描述信息。
 
@@ -10,10 +10,10 @@ DescribeMountTargets用于返回挂载点描述信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeMountTargets|操作接口名，系统规定参数，取值：DescribeMountTargets
+|FileSystemId|String|是|1ca404a666|文件系统 ID
 
  |
-|FileSystemId|String|是|1ca404a666|文件系统 ID
+|Action|String|否|DescribeMountTargets|操作接口名，系统规定参数，取值：DescribeMountTargets
 
  |
 |MountTargetDomain|String|否|1ca404a666-xog95.cn-hangzhou.nas.aliyuncs.com|挂载点域名
@@ -26,29 +26,29 @@ DescribeMountTargets用于返回挂载点描述信息。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |MountTargets| | |挂载点描述信息
 
  |
-|└AccessGroup|String|DEFAULT\_VPC\_GROUP\_NAME|权限组
+|AccessGroup|String|DEFAULT\_VPC\_GROUP\_NAME|权限组
 
  |
-|└MountTargetDomain|String|1ca404a666-wxa89.cn-hangzhou.nas.aliyuncs.com|挂载点域名
+|MountTargetDomain|String|1ca404a666-wxa89.cn-hangzhou.nas.aliyuncs.com|挂载点域名
 
  |
-|└NetworkType|String|Vpc|网络类型 ，包括 Vpc 和 Classic
+|NetworkType|String|Vpc|网络类型 ，包括 Vpc 和 Classic
 
  |
-|└Status|String|Active|状态，包括 Active、Inactive 和 Creating
+|Status|String|Active|状态，包括 Active、Inactive 和 Creating
 
  |
-|└VpcId|String|vpc-2zesj9afh3y518k9oe86q|VPC 网络 ID
+|VpcId|String|vpc-2zesj9afh3y518k9oe86q|VPC 网络 ID
 
  |
-|└VswId|String|vsw-2zevmwkwyztjuoffgdiwl|交换机 ID
+|VswId|String|vsw-2zevmwkwyztjuoffgdiwl|交换机 ID
 
  |
 |PageNumber|Integer|1|列表的分页页码
@@ -70,7 +70,7 @@ DescribeMountTargets用于返回挂载点描述信息。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeMountTargets
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeMountTargets
 &FileSystemId=1ca404a666
 &<公共请求参数>…
 
@@ -125,5 +125,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeMountTargets
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
