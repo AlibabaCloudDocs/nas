@@ -1,4 +1,4 @@
-# ModifyAccessGroup {#doc_api_1038895 .reference}
+# ModifyAccessGroup {#doc_api_NAS_ModifyAccessGroup .reference}
 
 ModifyAccessGroup用于修改权限组。
 
@@ -13,14 +13,17 @@ ModifyAccessGroup用于修改权限组。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|Action|String|是|ModifyAccessGroup|操作接口名，系统规定参数，取值：ModifyAccessGroup
+|Action|String|否|ModifyAccessGroup|操作接口名，系统规定参数，取值：ModifyAccessGroup
 
  |
 |Description|String|否|classic-test|权限组描述
 
  |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
-## 返回参数 {#resultMapping .section}
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -34,7 +37,7 @@ ModifyAccessGroup用于修改权限组。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessGroup
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessGroup
 &AccessGroupName=classic-test
 &Description=classic-test
 &<公共请求参数>…
@@ -62,5 +65,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessGroup
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
