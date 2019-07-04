@@ -1,4 +1,4 @@
-# DeleteAccessGroup {#doc_api_1038777 .reference}
+# DeleteAccessGroup {#doc_api_NAS_DeleteAccessGroup .reference}
 
 DeleteAccessGroup用于删除已有权限组。
 
@@ -13,11 +13,14 @@ DeleteAccessGroup用于删除已有权限组。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|Action|String|是|DeleteAccessGroup|操作接口名，系统规定参数，取值：DeleteAccessGroup
+|Action|String|否|DeleteAccessGroup|操作接口名，系统规定参数，取值：DeleteAccessGroup
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -31,7 +34,7 @@ DeleteAccessGroup用于删除已有权限组。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteAccessGroup
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteAccessGroup
 &AccessGroupName=classic-test
 &<公共请求参数>…
 
@@ -58,5 +61,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteAccessGroup
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
