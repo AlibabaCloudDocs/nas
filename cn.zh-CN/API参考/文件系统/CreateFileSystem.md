@@ -1,4 +1,4 @@
-# CreateFileSystem {#doc_api_1038219 .reference}
+# CreateFileSystem {#doc_api_NAS_CreateFileSystem .reference}
 
 CreateFileSystem用于创建新的文件系统。
 
@@ -10,20 +10,20 @@ CreateFileSystem用于创建新的文件系统。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|CreateFileSystem|操作接口名，系统规定参数，取值：CreateFileSystem
-
- |
 |ProtocolType|String|是|NFS|使用的协议类型，目前包含 NFS和SMB
 
  |
 |StorageType|String|是|Performance|文件系统类别，目前包含 Performance（性能型）和 Capacity（容量型）
 
  |
+|Action|String|否|CreateFileSystem|操作接口名，系统规定参数，取值：CreateFileSystem
+
+ |
 |Description|String|否|balabala|文件系统描述（不可用空格符）
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -40,7 +40,7 @@ CreateFileSystem用于创建新的文件系统。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=CreateFileSystem
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateFileSystem
 &StorageType=Performance
 &ProtocolType=NFS
 &Description=balabala
@@ -71,5 +71,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=CreateFileSystem
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
