@@ -1,4 +1,4 @@
-# CreateMountTarget {#doc_api_1038390 .reference}
+# CreateMountTarget {#doc_api_NAS_CreateMountTarget .reference}
 
 CreateMountTarget用于创建挂载点。
 
@@ -13,13 +13,13 @@ CreateMountTarget用于创建挂载点。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|Action|String|是|CreateMountTarget|操作接口名，系统规定参数，取值：CreateMountTarget
-
- |
 |FileSystemId|String|是|174494b666|文件系统 ID
 
  |
 |NetworkType|String|是|vpc|网络类型，包括Vpc和Classic
+
+ |
+|Action|String|否|CreateMountTarget|操作接口名，系统规定参数，取值：CreateMountTarget
 
  |
 |VSwitchId|String|否|vsw-2zevmwkwyztjuoffgdiwl|交换机 ID
@@ -29,7 +29,7 @@ CreateMountTarget用于创建挂载点。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -46,10 +46,9 @@ CreateMountTarget用于创建挂载点。
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?Action=CreateMountTarget
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateMountTarget
 &AccessGroupName=classic-test
 &FileSystemId=174494b666
-&NetworkType=vpc
 &<公共请求参数>
 
 ```
@@ -77,5 +76,5 @@ http(s)://[Endpoint]/?Action=CreateMountTarget
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 

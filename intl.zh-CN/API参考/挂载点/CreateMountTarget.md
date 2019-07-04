@@ -1,57 +1,80 @@
-# CreateMountTarget {#concept_62621_zh .concept}
+# CreateMountTarget {#doc_api_NAS_CreateMountTarget .reference}
 
 CreateMountTarget用于创建挂载点。
 
-## 请求参数 { .section}
+## 调试 {#apiExplorer .section}
 
-|参数名称|类型|必选|描述|
-|----|--|--|--|
-|Action|String|TRUE|操作接口名，系统规定参数，取值：CreateMountTarget|
-|FileSystemId|String|TRUE|文件系统 ID|
-|AccessGroupName|String|TRUE|权限组名称|
-|NetworkType|String|TRUE|网络类型，包括Vpc和Classic|
-|VpcId|String|FALSE|VPC 网络 ID|
-|VSwitchId|String|FALSE|交换机 ID|
+前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=CreateMountTarget)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
 
-## 返回参数 { .section}
+## 请求参数 {#parameters .section}
 
-|参数名称|类型|描述|
-|----|--|--|
-|MountTargetDomain|String|挂载点域名|
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|AccessGroupName|String|是|classic-test|权限组名称
 
-## 示例 { .section}
+ |
+|FileSystemId|String|是|174494b666|文件系统 ID
 
--   请求示例
+ |
+|NetworkType|String|是|vpc|网络类型，包括Vpc和Classic
 
-    ```language-shell
-    GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateMountTarget
-    &FileSystemId=174494b666
-    &AccessGroupName=classic-test
-    &<公共请求参数>
-    …
-    
-    ```
+ |
+|Action|String|否|CreateMountTarget|操作接口名，系统规定参数，取值：CreateMountTarget
 
--   返回示例
-    -   XML示例
+ |
+|VSwitchId|String|否|vsw-2zevmwkwyztjuoffgdiwl|交换机 ID
 
-        ```language-xml
-        <?xml version="1.0" encoding="UTF-8"?>
-        <CreateMountTargetResponse>
-          <RequestId>70EACC9C-D07A-4A34-ADA4-77506C42B023</RequestId>
-          <MountTargetDomain>174494b666-xog95.cn-hangzhou.nas.aliyuncs.com</MountTargetDomain>
-        </CreateMountTargetResponse>
-        
-        ```
+ |
+|VpcId|String|否|vpc-2zesj9afh3y518k9oe86q|VPC 网络 ID
 
-    -   JSON示例
+ |
 
-        ```language-json
-        {
-          "RequestId": "70EACC9C-D07A-4A34-ADA4-77506C42B023",
-          "MountTargetDomain": "174494b666-xog95.cn-hangzhou.nas.aliyuncs.com"
-        }
-        
-        ```
+## 返回数据 {#resultMapping .section}
 
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|MountTargetDomain|String|174494b666-xog95.cn-hangzhou.nas.aliyuncs.com|挂载点域名
+
+ |
+|RequestId|String|70EACC9C-D07A-4A34-ADA4-77506C42B023|请求ID
+
+ |
+
+## 示例 {#demo .section}
+
+请求示例
+
+``` {#request_demo}
+
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateMountTarget
+&AccessGroupName=classic-test
+&FileSystemId=174494b666
+&<公共请求参数>
+
+```
+
+正常返回示例
+
+`XML` 格式
+
+``` {#xml_return_success_demo}
+<CreateMountTargetResponse>
+  <RequestId>70EACC9C-D07A-4A34-ADA4-77506C42B023</RequestId>
+  <MountTargetDomain>174494b666-xog95.cn-hangzhou.nas.aliyuncs.com</MountTargetDomain>
+</CreateMountTargetResponse>
+
+```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
+{
+	"RequestId":"70EACC9C-D07A-4A34-ADA4-77506C42B023",
+	"MountTargetDomain":"174494b666-xog95.cn-hangzhou.nas.aliyuncs.com"
+}
+```
+
+## 错误码 { .section}
+
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
