@@ -1,4 +1,4 @@
-# DescribeAccessGroups {#doc_api_1038877 .reference}
+# DescribeAccessGroups {#doc_api_NAS_DescribeAccessGroups .reference}
 
 DescribeAccessGroups用于返回权限组描述信息。
 
@@ -10,10 +10,13 @@ DescribeAccessGroups用于返回权限组描述信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeAccessGroups|操作接口名，系统规定参数，取值：DescribeAccessGroups
+|AccessGroupName|String|否|classic-test|权限组名称
 
  |
-|AccessGroupName|String|否|classic-test|权限组名称
+|Action|String|否|DescribeAccessGroups|操作接口名，系统规定参数，取值：DescribeAccessGroups
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 |PageNumber|Integer|否|1|列表的分页页码（从1开始计数）
@@ -23,26 +26,26 @@ DescribeAccessGroups用于返回权限组描述信息。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |AccessGroups| | |权限组描述信息
 
  |
-|└AccessGroupName|String|classic-test|权限组名称
+|AccessGroupName|String|classic-test|权限组名称
 
  |
-|└AccessGroupType|String|Classic|权限组类型，包括 Vpc 和 Classic
+|AccessGroupType|String|Classic|权限组类型，包括 Vpc 和 Classic
 
  |
-|└Description|String|This is a classic test access group~|权限组描述信息
+|Description|String|This is a classic test access group~|权限组描述信息
 
  |
-|└MountTargetCount|Integer|0|引入此权限组的挂载点数
+|MountTargetCount|Integer|0|引入此权限组的挂载点数
 
  |
-|└RuleCount|Integer|0|此权限组中包含的权限规则数
+|RuleCount|Integer|0|此权限组中包含的权限规则数
 
  |
 |PageNumber|Integer|1|列表的分页页码
@@ -64,7 +67,7 @@ DescribeAccessGroups用于返回权限组描述信息。
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?Action=DescribeAccessGroups
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeAccessGroups
 &<公共请求参数>
 
 ```
@@ -130,5 +133,5 @@ http(s)://[Endpoint]/?Action=DescribeAccessGroups
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
