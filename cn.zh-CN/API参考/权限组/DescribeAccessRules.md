@@ -1,4 +1,4 @@
-# DescribeAccessRules {#doc_api_1038938 .reference}
+# DescribeAccessRules {#doc_api_NAS_DescribeAccessRules .reference}
 
 DescribeAccessRules用于返回权限规则描述。
 
@@ -13,10 +13,13 @@ DescribeAccessRules用于返回权限规则描述。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|Action|String|是|DescribeAccessRules|操作接口名，系统规定参数，取值：DescribeAccessRules
+|AccessRuleId|String|否|1|规则序号
 
  |
-|AccessRuleId|String|否|1|规则序号
+|Action|String|否|DescribeAccessRules|操作接口名，系统规定参数，取值：DescribeAccessRules
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 |PageNumber|Integer|否|1|列表的分页页码（从 1 开始计数）
@@ -26,26 +29,26 @@ DescribeAccessRules用于返回权限规则描述。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |AccessRules| | |权限规则描述信息
 
  |
-|└AccessRuleId|String|1|权限规则ID
+|AccessRuleId|String|1|权限规则ID
 
  |
-|└Priority|Integer|1|优先级，范围 1-100，默认值为 1
+|Priority|Integer|1|优先级，范围 1-100，默认值为 1
 
  |
-|└RWAccess|String|RDWR|读写权限类型：RDWR（默认）和 RDONLY
+|RWAccess|String|RDWR|读写权限类型：RDWR（默认）和 RDONLY
 
  |
-|└SourceCidrIp|String|10.0.0.1/32|地址或地址段
+|SourceCidrIp|String|10.0.0.1/32|地址或地址段
 
  |
-|└UserAccess|String|no\_squash|用户权限类型：no\_squash（默认）、root\_squash 和 all\_squash
+|UserAccess|String|no\_squash|用户权限类型：no\_squash（默认）、root\_squash 和 all\_squash
 
  |
 |PageNumber|Integer|1|列表的分页页码
@@ -120,5 +123,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeAccessRules
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
