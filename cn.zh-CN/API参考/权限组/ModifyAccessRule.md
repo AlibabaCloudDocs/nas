@@ -1,4 +1,4 @@
-# ModifyAccessRule {#doc_api_1038894 .reference}
+# ModifyAccessRule {#doc_api_NAS_ModifyAccessRule .reference}
 
 ModifyAccessRule用于修改权限规则。
 
@@ -16,7 +16,10 @@ ModifyAccessRule用于修改权限规则。
 |AccessRuleId|String|是|1|规则序号
 
  |
-|Action|String|是|ModifyAccessRule|操作接口名，系统规定参数，取值：ModifyAccessRule
+|Action|String|否|ModifyAccessRule|操作接口名，系统规定参数，取值：ModifyAccessRule
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 |Priority|Integer|否|1|优先级，范围 1-100，默认值为 1
@@ -32,7 +35,7 @@ ModifyAccessRule用于修改权限规则。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -46,7 +49,7 @@ ModifyAccessRule用于修改权限规则。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessRule
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessRule
 &AccessGroupName=classic-test
 &AccessRuleId=1
 &SourceCidrIp=192.168.0.1
@@ -77,5 +80,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessRule
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
