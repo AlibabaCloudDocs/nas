@@ -1,4 +1,4 @@
-# CreateAccessRule {#doc_api_1039803 .reference}
+# CreateAccessRule {#doc_api_NAS_CreateAccessRule .reference}
 
 CreateAccessRule用于创建权限规则。
 
@@ -13,10 +13,13 @@ CreateAccessRule用于创建权限规则。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|Action|String|是|CreateAccessRule|操作接口名，系统规定参数，取值：CreateAccessRule
+|SourceCidrIp|String|是|10.0.0.1/32|地址或地址段
 
  |
-|SourceCidrIp|String|是|10.0.0.1/32|地址或地址段
+|Action|String|否|CreateAccessRule|操作接口名，系统规定参数，取值：CreateAccessRule
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 |Priority|Integer|否|1|优先级，范围 1-100，默认值为1
@@ -29,7 +32,7 @@ CreateAccessRule用于创建权限规则。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -46,9 +49,9 @@ CreateAccessRule用于创建权限规则。
 
 ``` {#request_demo}
 
-GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessRule
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessRule
 &AccessGroupName=classic-test
-&SourceCidrIp=10.0.0.1/32
+&SourceCidrIp=10.0.0.1/8
 &<公共请求参数>…
 
 ```
@@ -76,5 +79,5 @@ GEThttps://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessRule
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
