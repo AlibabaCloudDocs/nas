@@ -1,4 +1,4 @@
-# DescribeRegions {#doc_api_1032277 .reference}
+# DescribeRegions {#doc_api_NAS_DescribeRegions .reference}
 
 DescribeRegions用于返回所有 RegionId。
 
@@ -10,7 +10,10 @@ DescribeRegions用于返回所有 RegionId。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeRegions|操作接口名，系统规定参数，取值：DescribeRegions
+|Action|String|否|DescribeRegions|操作接口名，系统规定参数，取值：DescribeRegions
+
+ |
+|FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
 
  |
 |PageNumber|Integer|否|1|列表的分页页码（从 1 开始计数）
@@ -20,7 +23,7 @@ DescribeRegions用于返回所有 RegionId。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -33,13 +36,13 @@ DescribeRegions用于返回所有 RegionId。
 |Regions| | |区域的描述信息
 
  |
-|└LocalName|String|华东1|Region名称
+|LocalName|String|华东1|Region名称
 
  |
-|└RegionEndpoint|String|nas.cn-hangzhou.aliyuncs.com|Region公网访问域名
+|RegionEndpoint|String|nas.cn-hangzhou.aliyuncs.com|Region公网访问域名
 
  |
-|└RegionId|String|cn-hangzhou|RegionID
+|RegionId|String|cn-hangzhou|RegionID
 
  |
 |RequestId|String|A70BEE5D-76D3-49FB-B58F-1F398211A5C3|请求ID
@@ -55,7 +58,7 @@ DescribeRegions用于返回所有 RegionId。
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?Action=DescribeRegions
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeRegions
 &PageSize=2
 &PageNumber=1
 &<公共请求参数>
@@ -115,5 +118,5 @@ http(s)://[Endpoint]/?Action=DescribeRegions
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
