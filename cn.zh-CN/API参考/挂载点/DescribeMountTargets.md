@@ -33,22 +33,22 @@ DescribeMountTargets用于返回挂载点描述信息。
 |MountTargets| | |挂载点描述信息
 
  |
-|AccessGroup|String|DEFAULT\_VPC\_GROUP\_NAME|权限组
+|AccessGroup|String|DEFAULT\_VPC\_GROUP\_NAME|挂载点所应用的权限组名称
 
  |
 |MountTargetDomain|String|1ca404a666-wxa89.cn-hangzhou.nas.aliyuncs.com|挂载点域名
 
  |
-|NetworkType|String|Vpc|网络类型 ，包括 Vpc 和 Classic
+|NetworkType|String|Vpc|网络类型，枚举值：Classic、Vpc
 
  |
-|Status|String|Active|状态，包括 Active、Inactive 和 Creating
+|Status|String|Active|挂载点当前状态，枚举值包括：Active，Inactive，当状态为Active时才可以进行文件系统挂载使用
 
  |
-|VpcId|String|vpc-2zesj9afh3y518k9oe86q|VPC 网络 ID
+|VpcId|String|vpc-2zesj9afh3y518k9oe86q|如果网络类型为Vpc，VpcId表示挂载点所在VPC网络
 
  |
-|VswId|String|vsw-2zevmwkwyztjuoffgdiwl|交换机 ID
+|VswId|String|vsw-2zevmwkwyztjuoffgdiwl|如果网络类型为Vpc，VswId表示挂载点所在VSwitch交换机
 
  |
 |PageNumber|Integer|1|列表的分页页码
@@ -125,5 +125,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeMountTargets
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
 
