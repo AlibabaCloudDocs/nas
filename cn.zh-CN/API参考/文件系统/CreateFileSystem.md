@@ -19,7 +19,7 @@ CreateFileSystem用于创建新的文件系统。
 |Action|String|否|CreateFileSystem|操作接口名，系统规定参数，取值：CreateFileSystem
 
  |
-|Description|String|否|balabala|文件系统描述（不可用空格符）
+|Description|String|否|balabala|文件系统描述，长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（\_）或者连字符（-）
 
  |
 
@@ -71,5 +71,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateFileSystem
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
 
