@@ -22,7 +22,7 @@ ModifyMountTarget用于修改挂载点信息。
 |Action|String|否|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
 
  |
-|Status|String|否|Inactive|状态，包括 Active 和 Inactive
+|Status|String|否|Inactive|挂载点状态，枚举值包括：Active（表示启用），Inactive（表示禁用）
 
  |
 
@@ -69,5 +69,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyMountTarget
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
 
