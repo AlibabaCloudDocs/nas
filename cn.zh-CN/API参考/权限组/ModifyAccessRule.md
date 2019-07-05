@@ -28,7 +28,7 @@ ModifyAccessRule用于修改权限规则。
 |RWAccessType|String|否|RDWR|读写权限类型
 
  |
-|SourceCidrIp|String|否|192.168.0.1|地址或地址段
+|SourceCidrIp|String|否|192.168.0.1|地址或地址段（格式必须为单一IP地址或者CIDR网段格式，如：12.1.1.1 或 13.1.1.1/25）
 
  |
 |UserAccessType|String|否|all\_squash|用户权限类型
@@ -80,5 +80,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessRule
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
 
