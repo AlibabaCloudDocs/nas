@@ -13,7 +13,7 @@ ModifyAccessRule用于修改权限规则。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|AccessRuleId|String|是|1|规则序号
+|AccessRuleId|String|是|1|规则 ID
 
  |
 |Action|String|否|ModifyAccessRule|操作接口名，系统规定参数，取值：ModifyAccessRule
