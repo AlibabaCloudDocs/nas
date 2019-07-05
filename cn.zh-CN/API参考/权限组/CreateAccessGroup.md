@@ -19,7 +19,7 @@ CreateAccessGroup用于创建权限组。
 |Action|String|否|CreateAccessGroup|操作接口名，系统规定参数，取值：CreateAccessGroup
 
  |
-|Description|String|否|classictestaccessgroup|权限组描述，默认和名称相同
+|Description|String|否|classictestaccessgroup|权限组描述，默认和名称相同，长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（\_）或者连字符（-）
 
  |
 |FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
@@ -74,5 +74,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessGroup
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
 
