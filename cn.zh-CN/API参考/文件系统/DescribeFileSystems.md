@@ -51,7 +51,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |Bandwidth|Long|150|文件系统吞吐上限（单位MB/s），通用型没有该字段
 
  |
-|Capacity|Long|1|文件系统容量（单位MB）
+|Capacity|Long|1|文件系统容量（单位GB）
 
  |
 |CreateTime|String|2017-05-27T15:43:06CST|文件系统创建时间
