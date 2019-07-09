@@ -16,7 +16,7 @@
 
     **说明：** 目前只支持主账号使用极速型NAS。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156265302451079_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156266619151079_zh-CN.png)
 
 -   在需要创建文件系统的地域，已有可用的专有网络VPC。
 
@@ -87,13 +87,13 @@
  |
     |权限组| 选择**VPC 默认权限组（全部允许）**或已创建的权限组。
 
-**说明：** 初始情况下，每个账号都会自动生成一个VPC默认权限组，允许同一VPC环境下的任何IP地址都可以通过该挂载点访问文件系统。如果你要创建权限组，详情请参见[管理权限组](../../../../cn.zh-CN/用户指南/管理权限/管理权限组.md#)。
+**说明：** 初始情况下，每个账号都会自动生成一个VPC默认权限组，允许同一VPC环境下的任何IP地址都可以通过该挂载点访问文件系统。如果你要创建权限组，详情请参见[管理权限组](../../../../cn.zh-CN/控制台用户指南/管理权限/管理权限组.md#)。
 
  |
 
 5.  单击**确定**，创建挂载点。
 
-## 步骤三：安装NFS客户端 {#section_uio_oy3_r2m .section}
+## 步骤三：安装NFS客户端 { .section}
 
 在Linux系统中将NFS文件系统挂载至云服务器ECS，您需要先安装NFS客户端。
 
@@ -123,7 +123,7 @@
     cat /proc/sys/sunrpc/tcp_slot_table_entries
     ```
 
-    **说明：** NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中该参数最大值为256。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
+    **说明：** NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中此参数值为2，严重影响性能。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
 
     ``` {#d9e479}
     echo "options sunrpc tcp_slot_table_entries=128" >> /etc/modprobe.d/sunrpc.conf
@@ -152,7 +152,7 @@
     -   挂载点路径：挂载的目标地址，Linux 系统中的根目录”/”或任意子目录（如/mnt）。
  |
     |ver|文件系统版本，目前只支持 nfsv3。|
-    |挂载选项| 挂载文件系统时，可选择多种挂载选项，详情请参见[ZH-CN\_TP\_21207\_V9.md\#](cn.zh-CN/用户指南/挂载文件系统/手动挂载NFS文件系统.md#)中的[挂载选项说明表](cn.zh-CN/用户指南/挂载文件系统/手动挂载NFS文件系统.md#table_2uc_odz_vk9)。
+    |挂载选项| 挂载文件系统时，可选择多种挂载选项，详情请参见[ZH-CN\_TP\_21207\_V9.md\#](cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#)中的[挂载选项说明表](cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#table_2uc_odz_vk9)。
 
  |
 
@@ -160,7 +160,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156265302451085_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156266619251085_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
