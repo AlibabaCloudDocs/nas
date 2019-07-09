@@ -1,4 +1,4 @@
-# DescribeZones {#doc_api_1037012 .reference}
+# DescribeZones {#doc_api_NAS_DescribeZones .reference}
 
 DescribeZones用于查询某个 Region 下的所有可用区及可用区所支持的 NAS 类型。
 
@@ -12,11 +12,14 @@ DescribeZones用于查询某个 Region 下的所有可用区及可用区所支�
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|DescribeZones|操作接口名，系统规定参数，取值：DescribeZones
+|RegionId|String|是|cn-hangzhou|地域ID
+
+ |
+|Action|String|否|DescribeZones|操作接口名，系统规定参数，取值：DescribeZones
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -26,13 +29,13 @@ DescribeZones用于查询某个 Region 下的所有可用区及可用区所支�
 |Zones| | |每个元素是一个Zone
 
  |
-|└Capacity| |1|容量型存储
+|Capacity| |1|容量型存储
 
  |
-|└Performance| |0|性能型存储
+|Performance| |0|性能型存储
 
  |
-|└ZoneId|String|cn-hangzhou-b|可用区ID
+|ZoneId|String|cn-hangzhou-b|可用区ID
 
  |
 
@@ -146,5 +149,10 @@ https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeZones
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/NAS)
+|HttpCode|错误码|错误信息|描述|
+|--------|---|----|--|
+|500|InternalError|The request processing has failed due to some unknown error.|给您带来的不便，深感抱歉，请稍后再试。|
+|404|InvalidRegionId.NotFound|The specified Region is not found.|请求的 Region 不存在或暂未提供服务。|
+
+访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
 
