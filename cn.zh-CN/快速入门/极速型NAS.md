@@ -16,7 +16,7 @@
 
     **说明：** 目前只支持主账号使用极速型NAS。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156264141351079_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156265302451079_zh-CN.png)
 
 -   在需要创建文件系统的地域，已有可用的专有网络VPC。
 
@@ -101,17 +101,17 @@
 2.  运行以下命令，安装NFS客户端。
     -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
 
-        ``` {#d7e454}
+        ``` {#d9e454}
         sudo yum install nfs-utils
         ```
 
     -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
 
-        ``` {#d7e460}
+        ``` {#d9e460}
         sudo apt-get update
         ```
 
-        ``` {#d7e463}
+        ``` {#d9e463}
         sudo apt-get install nfs-common
         ```
 
@@ -119,13 +119,13 @@
 
     必须成功挂载一次NFS文件系统后，该命令才有效。
 
-    ``` {#d7e474}
+    ``` {#d9e474}
     cat /proc/sys/sunrpc/tcp_slot_table_entries
     ```
 
     **说明：** NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中该参数最大值为256。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
 
-    ``` {#d7e479}
+    ``` {#d9e479}
     echo "options sunrpc tcp_slot_table_entries=128" >> /etc/modprobe.d/sunrpc.conf
     echo "options sunrpc tcp_max_slot_table_entries=128" >>  /etc/modprobe.d/sunrpc.conf
     sysctl -w sunrpc.tcp_slot_table_entries=128
@@ -160,7 +160,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156264141451085_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156265302451085_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
