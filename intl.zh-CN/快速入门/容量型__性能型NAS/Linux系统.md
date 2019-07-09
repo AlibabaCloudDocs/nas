@@ -1,0 +1,195 @@
+# Linux系统 {#concept_27526_zh .task}
+
+本文档介绍如何快速创建文件系统，并将其挂载至云服务器ECS（Linux系统）上。
+
+1.  已注册阿里云账号，并完成实名认证。
+
+    如果没有，请先注册阿里云账号，详情请参见[创建阿里云账号](https://www.alibabacloud.com/help/zh/doc-detail/50482.html)。
+
+2.  已开通NAS服务。
+
+    首次登录[NAS控制台](https://nas.console.aliyun.com/)时，根据页面提示开通NAS服务。
+
+3.  在需要创建文件系统的地域，已有可用的云服务器ECS。
+
+    如果没有，请购买云服务器ECS，详情请参见[创建ECS实例](../../../../intl.zh-CN/个人版快速入门/创建ECS实例.md#)。
+
+    **说明：** 
+
+    1.  如果您要使用RAM账户操作NAS，详情请参见[RAM用户访问控制](../../../../intl.zh-CN/用户指南/管理权限/RAM用户访问控制.md#)。
+    2.  开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../intl.zh-CN/计费方式/预付费/购买存储包.md#)。
+    3.  如果要创建专有网络类型的挂载点，还需在创建文件系统的地域上创建专有网络VPC，并将已创建的云服务器ECS归属到此专有网络VPC下，详情请参见[创建专有网络和交换机](创建专有网络和交换机../../SP_22/DNVPC11885991/ZH-CN_TP_2434_V13.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb) 。
+
+## 步骤一：创建文件系统 {#section_3x4_3v9_srh .section}
+
+1.  登录[NAS控制台](https://nas.console.aliyun.com/)。
+2.  选择**NAS** \> **文件系统列表**，单击**创建文件系统**。
+3.  在创建文件系统页面，配置相关参数。
+
+    |参数|说明|
+    |--|--|
+    |地域| 选择要创建文件系统的地域。
+
+**说明：** 
+
+    -   不同地域的文件系统与云服务器ECS不互通。
+    -   地域不同，文件系统支持的存储类型、协议类型不同，更多详情请参见 [NAS 所在地域与存储类型、协议类型的对应关系](../../../../intl.zh-CN/常见问题/一般性问题/NAS 地域与支持的存储类型和协议类型.md#)。
+    -   每个账号在单个地域内最多可以创建20个文件系统。
+ |
+    |存储类型| 包括**SSD性能型**或**容量型**。
+
+**说明：** 性能型文件系统容量上限为1PB，容量型文件系统容量上限为10PB。按实际使用量付费。
+
+ |
+    |协议类型| 选择**NFS（包含 NFSv3 和 NFSv4）**。
+
+ NFS适合Linux ECS文件共享， SMB适合Windows ECS文件共享。
+
+ |
+    |可用区| 可用区是指在同一地域内，电力和网络互相独立的物理区域。
+
+ 单击下拉框选择可用区，建议和云服务器ECS在同一可用分区。
+
+**说明：** 同一地域不同可用区之间的文件系统与云服务器ECS互通。
+
+ |
+    |存储包| 存储包为可选项，是在按量付费的基础上推出的更加优惠的计费方式。如果不购买存储包，系统将默认按量计费，更多详情请参见[计量项和计费说明](../../../../intl.zh-CN/计费方式/计量项和计费说明.md#)。
+
+ |
+
+4.  单击**确定**，创建文件系统。
+
+## 步骤二：添加挂载点 {#section_9q8_owp_z6n .section}
+
+在文件存储NAS中，需要通过挂载点将文件系统挂载至云服务器ECS。文件存储NAS支持专有网络类型和经典网络两种挂载点，它们的创建方式不同，具体操作如下所示。
+
+**说明：** 每个文件系统最多可添加两个挂载点。
+
+1.  选择**NAS** \> **文件系统列表**。
+2.  找到目标文件系统，单击**添加挂载点**。
+3.  在**添加挂载点**页面，配置相关参数。
+
+    **挂载点类型**：包括专有网络和经典网络。
+
+    -   如果您要添加专有网络类型的挂载点，请配置以下参数。
+
+        |参数|说明|
+        |--|--|
+        |VPC网络| 选择已创建的VPC网络。如果还未创建 ，请单击[点击前往VPC控制创建VPC网络](https://vpc.console.aliyun.com/)进行创建。
+
+**说明：** 必须与云服务器ECS选择一样的VPC网络和交换机。
+
+ |
+        |交换机| 选择VPC网络下创建的交换机。
+
+ |
+        |权限组| 选择**VPC 默认权限组（全部允许）**或已创建的权限组。
+
+**说明：** 初始情况下，每个账号都会自动生成一个VPC默认权限组，允许同一VPC环境下的任何IP地址都可以通过该挂载点访问文件系统。如果你要创建权限组，详情请参见[管理权限组](../../../../intl.zh-CN/用户指南/管理权限/管理权限组.md#)。
+
+ |
+
+    -   如果您要添加经典网络类型的挂载点，请配置以下参数。
+
+        |参数|说明|
+        |--|--|
+        |权限组| 选择已创建的权限组。如果还未创建，单击[点击管理/创建权限组](https://nas.console.aliyun.com/#/accessGroup/list)进行创建。
+
+**说明：** 
+
+        -   目前不支持境外地域添加经典网络挂载点。
+        -   目前经典网络类型挂载点仅支持ECS实例挂载。
+        -   出于安全原因，NAS没有提供经典网络类型的默认权限组。因此初次使用时，您需要在权限组页面创建一个经典网络类型权限组，并向权限组添加合适的规则。有关权限组的操作，请参见[管理权限组](../../../../intl.zh-CN/.md#)。
+        -   首次创建经典网络挂载点时，系统会要求您通过RAM授权NAS访问您的ECS实例查询接口，请按照指引完成授权操作后重新尝试创建经典网络挂载点。详细操作请参见[创建经典网络挂载点时为什么需要RAM授权？](../../../../intl.zh-CN/常见问题/一般性问题/创建经典网络挂载点时为什么需要RAM授权？.md#)。
+ |
+
+4.  单击**确定**，创建挂载点。
+
+## 步骤三：安装NFS客户端 {#section_0q3_q5c_9sh .section}
+
+在Linux系统中将NFS文件系统挂载至云服务器ECS，您需要先安装NFS客户端。
+
+1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
+2.  运行以下命令，安装NFS客户端。
+    -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
+
+        ``` {#codeblock_juv_ss3_ruh}
+        sudo yum install nfs-utils
+        ```
+
+    -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
+
+        ``` {#codeblock_15q_8px_jnw}
+        sudo apt-get update
+        ```
+
+        ``` {#codeblock_0hb_304_3rf}
+        sudo apt-get install nfs-common
+        ```
+
+3.  运行以下命令，查看同时发起的NFS请求数量。
+
+    必须成功挂载一次NFS文件系统后，该命令才有效。
+
+    ``` {#codeblock_2gx_n4i_7n6}
+    cat /proc/sys/sunrpc/tcp_slot_table_entries
+    ```
+
+    **说明：** NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中该参数最大值为256。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
+
+    ``` {#codeblock_cxi_nc4_vu5}
+    echo "options sunrpc tcp_slot_table_entries=128" >> /etc/modprobe.d/sunrpc.conf
+    echo "options sunrpc tcp_max_slot_table_entries=128" >>  /etc/modprobe.d/sunrpc.conf
+    sysctl -w sunrpc.tcp_slot_table_entries=128
+    ```
+
+
+## 步骤四：挂载文件系统 {#section_789_6w7_3jg .section}
+
+您可以使用文件系统的DNS名称或挂载目标的DNS名称，将NFS文件系统挂载至云服务器ECS。文件系统的DNS名称会自动解析为所连接云服务器ECS的可用区中挂载目标的IP地址。
+
+1.  挂载NFS文件系统。
+
+    -   如果您要挂载NFSv4文件系统，运行以下命令：
+
+        ``` {#codeblock_t2c_et5_veq}
+        sudo mount -t nfs -o vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+        							
+        ```
+
+        如果挂载失败，请尝试以下命令：
+
+        ``` {#codeblock_yvx_c4n_0wc}
+        sudo mount -t nfs4 -o rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+        							
+        ```
+
+    -   如果您要挂载NFSv3文件系统，运行以下命令：
+
+        ``` {#codeblock_qnr_onw_j3b}
+        sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+        ```
+
+    挂载命令中的参数说明如下表所示：
+
+    |参数|描述|
+    |:-|:-|
+    |挂载点| 挂载点包括挂载点域名和挂载点路径。
+
+    -   挂载点域名：添加挂载点时自动生成，无需手工配置。
+    -   挂载点路径：挂载的目标地址，Linux 系统中的根目录”/”或任意子目录（如/mnt）。
+ |
+    |vers|文件系统版本，目前只支持nfsv3和nfsv4。|
+    |挂载选项| 挂载文件系统时，可选择多种挂载选项，详情请参见[ZH-CN\_TP\_21207\_V9.md\#](intl.zh-CN/用户指南/挂载文件系统/手动挂载NFS文件系统.md#)中的[挂载选项说明表](intl.zh-CN/用户指南/挂载文件系统/手动挂载NFS文件系统.md#table_2uc_odz_vk9)。
+
+ |
+
+2.  执行`mount -l`命令，查看挂载结果。
+
+    如果回显包含如下类似信息，说明挂载成功。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156265285749539_zh-CN.png)
+
+    挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
+
+

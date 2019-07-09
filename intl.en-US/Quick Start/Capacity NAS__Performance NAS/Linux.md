@@ -71,7 +71,7 @@ After creating a file system, you must add a mount point for the file system bef
 **Note:** 
 
         -   Currently, only ECS instances can use mount points in classic networks.
-        -   For a classic network mount point, no default permission group is provided. When using this for the first time, you must go to the Permission Group page to create a permission group in a classic network, and add rules for the permission group. For more information, see [Manage the data access permissions of a file system](../../../../intl.en-US/User Guide/Manage the data access permissions of a file system.md#).
+        -   For a classic network mount point, no default permission group is provided. When using this for the first time, you must go to the Permission Group page to create a permission group in a classic network, and add rules for the permission group. For more information, see [Manage the data access permissions of a file system](../../../../intl.en-US/User Guide/Manage permission/Manage the data access permissions of a file system.md#).
         -   When adding a mount point in a classic network for the first time, you are requested to authorize NAS through RAM to access the query interface of your ECS instance. Follow the instructions to complete the authorization, then try creating the mount point in the classic network again. For more information, see [Why do I need RAM permissions to create a mount point in a classic network](../../../../intl.en-US/FAQ/FAQs/Why do I need RAM permissions to create a mount point in a classic network.md#).
  |
 
@@ -153,7 +153,7 @@ When you mount a NAS NFS file system to an ECS instance, you can use the DNS nam
     -   Mount point path: which can be the root directory "/" or any sub-directory in the NAS file system.
  |
     |vers|Indicates the file system version. Only NFSv3 and NFSv4 are supported.|
-    |option| You can specify multiple options when mounting a NAS file system. For more information, see [Mount option description table](intl.en-US/Quick Start/Mount a file system/Mount an NFS file system in Linux.md#table_2uc_odz_vk9) on the [Mount an NFS file system in Linux](intl.en-US/Quick Start/Mount a file system/Mount an NFS file system in Linux.md#).
+    |option| You can specify multiple options when mounting a NAS file system. For more information, see [Mount option description table](intl.en-US/User Guide/Mount a file system/Mount an NFS file system in Linux.md#table_2uc_odz_vk9) on the [Mount an NFS file system in Linux](intl.en-US/User Guide/Mount a file system/Mount an NFS file system in Linux.md#).
 
  |
 
