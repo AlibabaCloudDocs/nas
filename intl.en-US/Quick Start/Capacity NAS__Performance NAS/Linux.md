@@ -81,7 +81,7 @@ After creating a file system, you must add a mount point for the file system bef
 
 To mount a NAS NFS file system to an ECS instance in Linux, you must install an NFS client.
 
-1.  Log on to [ECS console](https://ecs.console.aliyun.com/)。
+1.  Log on to [ECS console](https://ecs.console.aliyun.com/).
 2.  Run either of the following commands to install an NFS client.
     -   If you use the CentOS , Redhat or Aliyun Linux run the following command:
 
@@ -120,7 +120,7 @@ To mount a NAS NFS file system to an ECS instance in Linux, you must install an 
 
 When you mount a NAS NFS file system to an ECS instance, you can use the DNS name of the file system or the target to which you want to mount the file system. The DNS name of the file system is automatically resolved to the IP address of the mount target in the available zone of the mounted ECS instance.
 
-1.  Log on to [ECS console](https://ecs.console.aliyun.com/)。
+1.  Log on to [ECS console](https://ecs.console.aliyun.com/).
 2.  You can run either of the following commands to mount an NFS file system.
 
     -   To mount an NFSv4 file system, run the following command:
@@ -161,7 +161,7 @@ When you mount a NAS NFS file system to an ECS instance, you can use the DNS nam
 
     If the command output contains the following information, the mount is successful.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156272427351149_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156272523851149_en-US.png)
 
     After the mounting succeeds, you can also run `df -h` command to view the capacity information about the mounted file system.
 
