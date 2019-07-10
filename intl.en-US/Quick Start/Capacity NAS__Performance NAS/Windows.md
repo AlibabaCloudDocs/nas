@@ -20,7 +20,7 @@
 **Note:** The maximum storage capacity of a file system is 1 PB for the SSD performance type and 10 PB for the capacity type. Fees are charged based on the actual usage.
 
  |
-    |Protocol Type|You can select **SMB \(2.1and later\)**。 NFS is recommended in Linux and SMB is recommended in Windows.
+    |Protocol Type|You can select **SMB \(2.1and later\)**. NFS is recommended in Linux and SMB is recommended in Windows.
 
  |
     |Zone| Zones are physical areas with independent power grids and networks within one region.
@@ -79,14 +79,14 @@ After creating a file system, you must add a mount point for the file system bef
 
 You can mount an SMB file system on an ECS instance that runs Windows.
 
-1.  Log on to [ECS console](https://ecs.console.aliyun.com/)。
+1.  Log on to [ECS console](https://ecs.console.aliyun.com/).
 2.  You can run the following command to mount an SMB file system.
 
     ``` {#codeblock_xom_3j4_tdj}
     net use D: \\file-system-id.region.nas.aliyuncs.com\myshare
     ```
 
-    Mount command format: `net use <target mount drive> \\<domain name of the mount point>\myshare`。
+    Mount command format: `net use <target mount drive> \\<domain name of the mount point>\myshare`.
 
     -   Target mount drive: the mount drive of the target Windows instance.
     -   domain name of the mount point: when you create a mount point for a file system, a mount address is generated. You must enter the mount address to mount the file system. For more information, see [Manage mount points](../../../../intl.en-US/Console User Guide/Manage mount points.md#).
@@ -99,6 +99,6 @@ You can mount an SMB file system on an ECS instance that runs Windows.
 
     If the command output contains the following information, the mount is successful.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18691/156272428951150_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18691/156272526451150_en-US.png)
 
 
