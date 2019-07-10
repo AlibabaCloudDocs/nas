@@ -69,7 +69,7 @@ After creating a file system, you must add a mount point for the file system bef
 **Note:** 
 
         -   Currently, only ECS instances can use mount points in classic networks.
-        -   For a classic network mount point, no default permission group is provided. When using this for the first time, you must go to the Permission Group page to create a permission group in a classic network, and add rules for the permission group. For more information, see [Manage the data access permissions of a file system](../../../../intl.en-US/User Guide/Manage the data access permissions of a file system.md#).
+        -   For a classic network mount point, no default permission group is provided. When using this for the first time, you must go to the Permission Group page to create a permission group in a classic network, and add rules for the permission group. For more information, see [Manage the data access permissions of a file system](../../../../intl.en-US/Console User Guide/Manage permission/Manage the data access permissions of a file system.md#).
         -   When adding a mount point in a classic network for the first time, you are requested to authorize NAS through RAM to access the query interface of your ECS instance. Follow the instructions to complete the authorization, then try creating the mount point in the classic network again. For more information, see [Why do I need RAM permissions to create a mount point in a classic network](../../../../intl.en-US/FAQ/FAQs/Why do I need RAM permissions to create a mount point in a classic network.md#).
  |
 
@@ -89,7 +89,7 @@ You can mount an SMB file system on an ECS instance that runs Windows.
     Mount command format: `net use <target mount drive> \\<domain name of the mount point>\myshare`。
 
     -   Target mount drive: the mount drive of the target Windows instance.
-    -   domain name of the mount point: when you create a mount point for a file system, a mount address is generated. You must enter the mount address to mount the file system. For more information, see [Manage mount points](../../../../intl.en-US/User Guide/Manage mount points.md#).
+    -   domain name of the mount point: when you create a mount point for a file system, a mount address is generated. You must enter the mount address to mount the file system. For more information, see [Manage mount points](../../../../intl.en-US/Console User Guide/Manage mount points.md#).
     -   myshare: indicates the name of an SMB share. However, this name cannot be changed.
     **Note:** 
 
@@ -99,6 +99,6 @@ You can mount an SMB file system on an ECS instance that runs Windows.
 
     If the command output contains the following information, the mount is successful.
 
-    ![](images/49545_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18691/156272428951150_en-US.png)
 
 
