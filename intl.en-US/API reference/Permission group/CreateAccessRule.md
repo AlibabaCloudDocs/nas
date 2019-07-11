@@ -1,57 +1,81 @@
-# CreateAccessRule {#concept_62636_zh .concept}
+# CreateAccessRule {#doc_api_NAS_CreateAccessRule .reference}
 
-CreateAccessRule is used to create a permission rule.
+You can call this operation to create permission rules.
 
-## Request parameters { .section}
+## Debugging {#apiExplorer .section}
 
-|Parameter name|Type |Required|Description|
-|--------------|-----|--------|-----------|
-|Action|String|TRUE|Operation interface name and system required parameter. Value: CreateAccessRule|
-|AccessGroupName|String|TRUE|Permission group name|
-|SourceCidrIp|String|TRUE|Address or address segment|
-|RWAccessType|String|FALSE|Read-write permission type: RDWR \(default\), RDONLY|
-|UserAccessType|String|FALSE|User permission type: no\_squash \(default\), root\_squash, all\_squash|
-|Priority|Integer|FALSE|Priority level. Range: 1-100. Default value: 1|
+Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&api=CreateAccessRule) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
 
-## Response parameters { .section}
+## Request parameters {#parameters .section}
 
-|Parameter name |Type|Description|
-|---------------|----|-----------|
-|AccessRuleId|String|Rule serial number|
+|Parameter|Type|Required|Example|Description |
+|---------|----|--------|-------|------------|
+|AccessGroupName|String |Yes|classic-test|The name of the permission group.
 
-## Example { .section}
+ |
+|SourceCidrIp|String | Yes|10.0.0.1/32|An IP address or a CIDR notation. For example, 12.1.1.1 or 13.1.1.1/25.
 
--   Request example
+ |
+|Action|String |No|CreateAccessRule|The operation that you want to perform. Set the value to CreateAccessRule.
 
-    ```language-shell
-    GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessRule
-    &AccessGroupName=classic-test
-    &SourceCidrIp=10.0.0.1/32
-    &<Public Request Parameter>
-    …
-    
-    ```
+ |
+|FileSystemType|String|No|standard|The type of file system. Valid values: standard and extreme. Default value: standard.
 
--   Response example
-    -   XML example
+ |
+|Priority|Integer|No|1|The priority of the rule. Valid values: 1 to 100. Default value: 1.
 
-        ```language-xml
-        <? xml version="1.0" encoding="UTF-8"? >
-        <CreateAccessRuleResponse>
-          <AccessRuleId>1</AccessRuleId>
-          <RequestId>A323836B-5BC6-45A6-8048-60675C23EE2A</RequestId>
-        </CreateAccessRuleResponse>
-        
-        ```
+ |
+|RWAccessType|String|No|RDWR|The type of permission. Valid values: RDWR and RDONLY. Default value: RDWR.
 
-    -   JSON example
+ |
+|UserAccessType|String|No|no\_squash|The type of user permission. Valid values: no\_squash, root\_squash, and all\_squash. Default value: no\_squash.
 
-        ```language-json
-        {
-          "RequestId": "A323836B-5BC6-45A6-8048-60675C23EE2A",
-          "AccessRuleId": "1"
-        }
-        
-        ```
+ |
 
+## Response parameters {#resultMapping .section}
+
+|Parameter|Type|Example|Description |
+|---------|----|-------|------------|
+|AccessRuleId|String|1|The rule ID.
+
+ |
+|RequestId|String|A323836B-5BC6-45A6-8048-60675C23EE2A|The request ID.
+
+ |
+
+## Examples {#demo .section}
+
+Sample request
+
+``` {#request_demo}
+
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessRule
+&AccessGroupName=classic-test
+&SourceCidrIp=10.0.0.1/8
+&<Common request parameters>
+
+```
+
+Sample success response
+
+`XML` format
+
+``` {#xml_return_success_demo}
+<CreateAccessRuleResponse>
+  <AccessRuleId>1</AccessRuleId>
+  <RequestId>A323836B-5BC6-45A6-8048-60675C23EE2A</RequestId>
+</CreateAccessRuleResponse>
+
+```
+
+`JSON` format
+
+``` {#json_return_success_demo}
+{
+	"AccessRuleId": "1"
+	"RequestId": "A323836B-5BC6-45A6-8048-60675C23EE2A",
+}
+```
+
+## Error codes { .section}
 

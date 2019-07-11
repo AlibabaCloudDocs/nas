@@ -13,7 +13,7 @@ CreateAccessRule用于创建权限规则。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|SourceCidrIp|String|是|10.0.0.1/32|地址或地址段
+|SourceCidrIp|String|是|10.0.0.1/32|地址或地址段（格式必须为单一IP地址或者CIDR网段格式，如：12.1.1.1 或 13.1.1.1/25）
 
  |
 |Action|String|否|CreateAccessRule|操作接口名，系统规定参数，取值：CreateAccessRule
