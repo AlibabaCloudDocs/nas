@@ -39,7 +39,7 @@ DescribeRegions用于返回所有 RegionId。
 |LocalName|String|华东1|Region名称
 
  |
-|RegionEndpoint|String|nas.cn-hangzhou.aliyuncs.com|Region公网访问域名
+|RegionEndpoint|String|nas.cn-hangzhou.aliyuncs.com|对应地域的服务入口地址
 
  |
 |RegionId|String|cn-hangzhou|RegionID
