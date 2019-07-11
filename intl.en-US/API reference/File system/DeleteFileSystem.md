@@ -55,5 +55,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
         ```
 
 
-## Error codes {#section_0kc_j16_4zn .section}
+## Error codes {#section_ayv_9vp_ben .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
