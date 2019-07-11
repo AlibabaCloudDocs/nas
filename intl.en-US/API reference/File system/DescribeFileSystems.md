@@ -199,5 +199,7 @@ Sample success response
 }
 ```
 
-## Error codes {#section_cgz_wcz_x0t .section}
+## Error codes {#section_b2v_n0e_m4a .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
