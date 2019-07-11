@@ -1,57 +1,75 @@
-# CreateFileSystem {#concept_62611_zh .concept}
+# CreateFileSystem {#doc_api_NAS_CreateFileSystem .reference}
 
-CreateFileSystem is used to create a new file system.
+You can call this operation to create file systems.
 
-## Request parameters { .section}
+## Debugging {#apiExplorer .section}
 
-|Parameter name |Type|Required|Description|
-|---------------|----|--------|-----------|
-|Action|String|TRUE|Operation interface name and system required parameter. Value: CreateFileSystem|
-|StorageType|String|TRUE|The file system type. Currently includes the Performance type and the Capacity type|
-|ProtocolType|String|TRUE|Type of protocol used. Currently includes the NFS type and the SMB type|
-|Description|String|FALSE|File system description \(space characters are not allowed\)|
+Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&api=CreateFileSystem) to simplify API usage. You can use OpenAPI Explorer to search for APIs, call APIs, and dynamically generate SDK example code.
 
-## Response parameters { .section}
+## Request parameters {#parameters .section}
 
-|Parameter name |Type|Description|
-|---------------|----|-----------|
-|FileSystemId|String|ID of the file system created|
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|ProtocolType|String|Yes|NFS| The protocol type of the file system. Valid values: NFS and SMB.
 
-## Example { .section}
+ |
+|StorageType|String|Yes|Performance| The type of the file system. Valid values: Performance and Capacity.
 
--   Request example
+ |
+|Action|String|No|CreateFileSystem| The operation that you want to perform. Set the value to CreateFileSystem.
 
-    ```language-shell
-    GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateFileSystem
-    &StorageType=Performance
-    &ProtocolType=NFS
-    &Description=balabala
-    &<Public Request Parameter>
-    …
-    
-    
-    ```
+ |
+|Description|String|No|balabala| The description of the file system. The description must be 2 to 128 characters in length. The description must start with a letter, but cannot start with http:// or https://. The description can contain letters, numbers, colons \(:\), underscores \(\_\), and hyphens \(-\).
 
--   Response example
-    -   XML example
+ |
 
-        ```language-xml
-        <? xml version="1.0" encoding="UTF-8"? >
-        <CreateFileSystemResponse>
-          <FileSystemId>1ca404a666</FileSystemId>
-          <RequestId>98696EF0-1607-4E9D-B01D-F20930B68845</RequestId>
-        </CreateFileSystemResponse>
-        
-        ```
+## Response parameters {#resultMapping .section}
 
-    -   JSON example
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|FileSystemId|String|1ca404a666| The ID of the new file system.
 
-        ```language-json
-        {
-          "RequestId": "98696EF0-1607-4E9D-B01D-F20930B68845",
-          "FileSystemId": "1ca404a666"
-        }
-        
-        ```
+ |
+|RequestId|String|98696EF0-1607-4E9D-B01D-F20930B68845| The request ID.
 
+ |
+
+## Examples {#demo .section}
+
+Sample request
+
+``` {#request_demo}
+
+GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateFileSystem
+&StorageType=Performance
+&ProtocolType=NFS
+&Description=balabala
+&<Common request parameters>
+
+```
+
+Sample success response
+
+`XML` format
+
+``` {#xml_return_success_demo}
+<CreateFileSystemResponse>
+  <FileSystemId>1ca404a666</FileSystemId>
+  <RequestId>98696EF0-1607-4E9D-B01D-F20930B68845</RequestId>
+</CreateFileSystemResponse>
+
+```
+
+`JSON` format
+
+``` {#json_return_success_demo}
+{
+	"FileSystemId":"1ca404a666",
+	"RequestId":"98696EF0-1607-4E9D-B01D-F20930B68845"
+}
+```
+
+## Error codes {#section_li6_9n8_w2l .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
