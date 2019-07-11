@@ -12,7 +12,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |---------|----|--------|-------|-----------|
 |AccessGroupName|String|Yes|classic-test| The name of the permission group.
 
- |
+ The name of the permission group. The name must be 3 to 64 characters in length. The name must start with a letter and contain letters, numbers, underscores \(\_\), and hyphens \(-\). The name of a new permission group must be different from built-in permission groups, including DEFAULT\_VPC\_GROUP\_NAME and DEFAULT\_CLASSIC\_GROUP\_NAME.|
 |AccessGroupType|String|Yes|Classic| The type of permission group. Valid values: Vpc and Classic.
 
  |
