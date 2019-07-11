@@ -51,7 +51,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |Bandwidth|Long|150|文件系统吞吐上限（单位MB/s），通用型没有该字段
 
  |
-|Capacity|Long|1|文件系统容量（单位MB）
+|Capacity|Long|1|文件系统容量（单位GB）
 
  |
 |CreateTime|String|2017-05-27T15:43:06CST|文件系统创建时间
@@ -66,7 +66,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |FileSystemId|String|109c042666|文件系统ID
 
  |
-|MeteredSize|Long|1611661312|文件系统当前计费容量
+|MeteredSize|Long|1611661312|文件系统已使用量（上一小时最大使用量，非当前值，单位Byte）
 
  |
 |MountTargets| | |挂载目标
@@ -102,7 +102,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |RegionId|String|cn-hangzhou|区域ID
 
  |
-|Status|String|Pending|文件系统状态，仅极速型有，状态枚举值包括：Pending、Running、Stopped
+|Status|String|Pending|文件系统状态，仅极速型NAS有，状态枚举值包括：Pending、Running、Stopped，当状态为Running时才可以进行后续操作（如创建挂载点等）
 
  |
 |StorageType|String|Performance|存储类型，通用型NAS：Capacity、Performance，极速型NAS：standard、advance
@@ -161,24 +161,38 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeFileSystems
 	"PageNumber":1,
 	"TotalCount":1,
 	"PageSize":1,
-	"RequestId":"035B3A3A-E514-4B41-B906-5D906CFBD65F",
+	"RequestId":"BC7C825C-5F65-4B56-BEF6-98C56C7C546E",
 	"FileSystems":{
 		"FileSystem":[
 			{
-				"FileSystemId":"109c042666",
-				"ProtocolType":"NFS",
-				"RegionId":"cn-hangzhou",
-				"CreateTime":"2017-05-27T15:43:06CST",
-				"Destription":"",
-				"MountTargets":{
-					"MountTarget":[
+				"FileSystemId":"31a8e48eda",
+				"Description":"31a8e48eda",
+				"Packages":{
+					"Package":[
 						{
-							"MountTargetDomain":"109c042666-wjb85.cn-hangzhou.nas.aliyuncs.com"
+							"PackageId":""
 						}
 					]
 				},
+				"ProtocolType":"NFS",
+				"CreateTime":"2017-04-18T00:22:56CST",
+				"RegionId":"cn-shanghai",
+				"Destription":"31a8e48eda",
+				"ZoneId":"cn-shanghai-b",
 				"StorageType":"Performance",
-				"MeteredSize":1611661312
+				"MountTargets":{
+					"MountTarget":[
+						{
+							"NetworkType":"vpc",
+							"Status":"active",
+							"VswId":"vsw-uf64zi0nn71ntvkbzdti4",
+							"AccessGroupName":"DEFAULT_VPC_GROUP_NAME",
+							"MountTargetDomain":"31a8e48eda-ykf64.cn-shanghai.nas.aliyuncs.com",
+							"VpcId":"vpc-uf65wx2khu08h4dlw2qfv"
+						}
+					]
+				},
+				"MeteredSize":4295639040
 			}
 		]
 	}
