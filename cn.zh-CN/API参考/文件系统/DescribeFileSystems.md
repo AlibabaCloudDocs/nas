@@ -66,7 +66,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |FileSystemId|String|109c042666|文件系统ID
 
  |
-|MeteredSize|Long|1611661312|文件系统当前计费容量
+|MeteredSize|Long|1611661312|文件系统已使用量（上一小时最大使用量，非当前值，单位Byte）
 
  |
 |MountTargets| | |挂载目标
