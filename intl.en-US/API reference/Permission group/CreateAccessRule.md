@@ -8,38 +8,38 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 
 ## Request parameters {#parameters .section}
 
-|Parameter|Type|Required|Example|Description |
-|---------|----|--------|-------|------------|
-|AccessGroupName|String |Yes|classic-test|The name of the permission group.
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|AccessGroupName|String|Yes|classic-test| The name of the permission group.
 
  |
-|SourceCidrIp|String | Yes|10.0.0.1/32|An IP address or a CIDR notation. For example, 12.1.1.1 or 13.1.1.1/25.
+|SourceCidrIp|String|Yes|10.0.0.1/32| An IP address or a CIDR notation. For example, 12.1.1.1 or 13.1.1.1/25.
 
  |
-|Action|String |No|CreateAccessRule|The operation that you want to perform. Set the value to CreateAccessRule.
+|Action|String|No|CreateAccessRule| The operation that you want to perform. Set the value to CreateAccessRule.
 
  |
-|FileSystemType|String|No|standard|The type of file system. Valid values: standard and extreme. Default value: standard.
+|FileSystemType|String|No|standard| The type of file system. Valid values: standard and extreme. Default value: standard.
 
  |
-|Priority|Integer|No|1|The priority of the rule. Valid values: 1 to 100. Default value: 1.
+|Priority|Integer|No|1| The priority of the rule. Valid values: 1 to 100. Default value: 1.
 
  |
-|RWAccessType|String|No|RDWR|The type of permission. Valid values: RDWR and RDONLY. Default value: RDWR.
+|RWAccessType|String|No|RDWR| The type of permission. Valid values: RDWR and RDONLY. Default value: RDWR.
 
  |
-|UserAccessType|String|No|no\_squash|The type of user permission. Valid values: no\_squash, root\_squash, and all\_squash. Default value: no\_squash.
+|UserAccessType|String|No|no\_squash| The type of user permission. Valid values: no\_squash, root\_squash, and all\_squash. Default value: no\_squash.
 
  |
 
 ## Response parameters {#resultMapping .section}
 
-|Parameter|Type|Example|Description |
-|---------|----|-------|------------|
-|AccessRuleId|String|1|The rule ID.
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|AccessRuleId|String|1| The rule ID.
 
  |
-|RequestId|String|A323836B-5BC6-45A6-8048-60675C23EE2A|The request ID.
+|RequestId|String|A323836B-5BC6-45A6-8048-60675C23EE2A| The request ID.
 
  |
 
@@ -77,5 +77,7 @@ Sample success response
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_7ca_up8_4n4 .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
