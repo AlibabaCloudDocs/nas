@@ -11,46 +11,34 @@
 
 在Linux系统中将NFS文件系统挂载至云服务器ECS，您需要先安装NFS客户端。
 
-1.  登录[云服务器 ECS](https://ecs.console.aliyun.com/)。
+1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
 2.  运行以下命令，安装NFS客户端。
     -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
 
-        ``` {#codeblock_hvf_5xm_593}
+        ``` {#d9e458}
         sudo yum install nfs-utils
         ```
 
     -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
 
-        ``` {#codeblock_znv_ibv_dd4}
+        ``` {#d9e464}
         sudo apt-get update
         ```
 
-        ``` {#codeblock_pcb_rj6_uao}
+        ``` {#d9e467}
         sudo apt-get install nfs-common
         ```
 
-3.  运行以下命令，查看同时发起的NFS请求数量。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../cn.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。
 
-    必须成功挂载一次NFS文件系统后，该命令才有效。
-
-    ``` {#codeblock_84q_ae9_tx7}
-    cat /proc/sys/sunrpc/tcp_slot_table_entries
-    ```
-
-    **说明：** Linux NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中此参数值为2，严重影响性能。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
-
-    ``` {#codeblock_fa9_y4k_jn7}
-    echo "options sunrpc tcp_slot_table_entries=128" >> /etc/modprobe.d/sunrpc.conf
-    echo "options sunrpc tcp_max_slot_table_entries=128" >>  /etc/modprobe.d/sunrpc.conf
-    sysctl -w sunrpc.tcp_slot_table_entries=128
-    ```
+    NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
 
 ## 步骤二：挂载NFS文件系统 {#section_spc_nlh_cfb .section}
 
 您可以使用文件系统的DNS名称或挂载目标的DNS名称，将NFS文件系统挂载至云服务器ECS。文件系统的DNS名称会自动解析为所连接云服务器ECS的可用区中挂载目标的IP地址。
 
-1.  登录[云服务器 ECS](https://ecs.console.aliyun.com/)。
+1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
 2.  挂载NFS文件系统。
 
     -   如果您使用的是容量型/性能型NAS，请参见以下命令进行挂载。
@@ -114,7 +102,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156274765549539_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156315848551407_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
