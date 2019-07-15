@@ -16,7 +16,7 @@
 
     **说明：** 目前只支持主账号使用极速型NAS。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156266619151079_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156315843151079_zh-CN.png)
 
 -   在需要创建文件系统的地域，已有可用的专有网络VPC。
 
@@ -93,7 +93,7 @@
 
 5.  单击**确定**，创建挂载点。
 
-## 步骤三：安装NFS客户端 { .section}
+## 步骤三：安装NFS客户端 {#section_mvh_b2e_ri3 .section}
 
 在Linux系统中将NFS文件系统挂载至云服务器ECS，您需要先安装NFS客户端。
 
@@ -101,42 +101,31 @@
 2.  运行以下命令，安装NFS客户端。
     -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
 
-        ``` {#d9e454}
+        ``` {#d9e458}
         sudo yum install nfs-utils
         ```
 
     -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
 
-        ``` {#d9e460}
+        ``` {#d9e464}
         sudo apt-get update
         ```
 
-        ``` {#d9e463}
+        ``` {#d9e467}
         sudo apt-get install nfs-common
         ```
 
-3.  运行以下命令，查看同时发起的NFS请求数量。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../../../../cn.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。
 
-    必须成功挂载一次NFS文件系统后，该命令才有效。
-
-    ``` {#d9e474}
-    cat /proc/sys/sunrpc/tcp_slot_table_entries
-    ```
-
-    **说明：** NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中此参数值为2，严重影响性能。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
-
-    ``` {#d9e479}
-    echo "options sunrpc tcp_slot_table_entries=128" >> /etc/modprobe.d/sunrpc.conf
-    echo "options sunrpc tcp_max_slot_table_entries=128" >>  /etc/modprobe.d/sunrpc.conf
-    sysctl -w sunrpc.tcp_slot_table_entries=128
-    ```
+    NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
 
-## 步骤四：挂载 NFS 文件系统 {#section_6ig_f8k_s6o .section}
+## 步骤四：挂载文件系统 {#section_6ig_f8k_s6o .section}
 
-您可以使用文件系统的 DNS 名称或挂载目标的 DNS 名称，将 NFS 文件系统挂载至云服务器 ECS。文件系统的 DNS 名称会自动解析为所连接云服务器 ECS 的可用区中挂载目标的 IP 地址。
+您可以使用文件系统的DNS名称或挂载目标的DNS名称，将NFS文件系统挂载至云服务器ECS。文件系统的DNS名称会自动解析为所连接云服务器ECS的可用区中挂载目标的IP地址。
 
-1.  挂载 NFS 文件系统。
+1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
+2.  挂载NFS文件系统。
 
     ``` {#codeblock_xf2_jcj_ox4}
     sudo mount -t nfs -o vers=3,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt
@@ -151,16 +140,16 @@
     -   挂载点域名：添加挂载点时自动生成，无需手工配置。
     -   挂载点路径：挂载的目标地址，Linux 系统中的根目录”/”或任意子目录（如/mnt）。
  |
-    |ver|文件系统版本，目前只支持 nfsv3。|
-    |挂载选项| 挂载文件系统时，可选择多种挂载选项，详情请参见[ZH-CN\_TP\_21207\_V9.md\#](cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#)中的[挂载选项说明表](cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#table_2uc_odz_vk9)。
+    |ver|文件系统版本，目前只支持nfsv3。|
+    |挂载选项| 挂载文件系统时，可选择多种挂载选项，详情请参见[手动挂载NFS文件系统](../../../../cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#)中的[挂载选项说明表](cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#table_2uc_odz_vk9)。
 
  |
 
-2.  执行`mount -l`命令，查看挂载结果。
+3.  执行`mount -l`命令，查看挂载结果。
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156266619251085_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156315843151085_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
