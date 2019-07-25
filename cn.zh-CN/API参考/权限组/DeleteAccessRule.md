@@ -2,9 +2,9 @@
 
 DeleteAccessRule用于删除已有权限规则。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=DeleteAccessRule)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=DeleteAccessRule&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -27,7 +27,7 @@ DeleteAccessRule用于删除已有权限规则。
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|5B4511A7-C99E-4071-AA8C-32E2529DA963|请求ID
+|RequestId|String|5B4511A7-C99E-4071-AA8C-32E2529DA963|请求 ID
 
  |
 
@@ -50,9 +50,8 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreatAccessRule
 
 ``` {#xml_return_success_demo}
 <DeleteAccessRuleResponse>
-  <RequestId>5B4511A7-C99E-4071-AA8C-32E2529DA963</RequestId>
+    <RequestId>5B4511A7-C99E-4071-AA8C-32E2529DA963</RequestId>
 </DeleteAccessRuleResponse>
-
 ```
 
 `JSON` 格式
