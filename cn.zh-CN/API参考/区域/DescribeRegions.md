@@ -2,9 +2,9 @@
 
 DescribeRegions用于返回所有 RegionId。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=DescribeRegions)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=DescribeRegions&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -39,13 +39,13 @@ DescribeRegions用于返回所有 RegionId。
 |LocalName|String|华东1|Region名称
 
  |
-|RegionEndpoint|String|nas.cn-hangzhou.aliyuncs.com|Region公网访问域名
+|RegionEndpoint|String|nas.cn-hangzhou.aliyuncs.com|对应地域的服务入口地址
 
  |
 |RegionId|String|cn-hangzhou|RegionID
 
  |
-|RequestId|String|A70BEE5D-76D3-49FB-B58F-1F398211A5C3|请求ID
+|RequestId|String|A70BEE5D-76D3-49FB-B58F-1F398211A5C3|请求 ID
 
  |
 |TotalCount|Integer|4|返回区域信息的总个数
@@ -71,24 +71,23 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeRegions
 
 ``` {#xml_return_success_demo}
 <DescribeRegionsResponse>
-  <PageNumber>1</PageNumber>
-  <TotalCount>4</TotalCount>
-  <PageSize>2</PageSize>
-  <RequestId>A70BEE5D-76D3-49FB-B58F-1F398211A5C3</RequestId>
-  <Regions>
-    <Region>
-      <RegionId>cn-hangzhou</RegionId>
-      <RegionEndpoint>nas.cn-hangzhou.aliyuncs.com</RegionEndpoint>
-      <LocalName>华东1</LocalName>
-    </Region>
-    <Region>
-      <RegionId>cn-shanghai</RegionId>
-      <RegionEndpoint>nas.cn-shanghai.aliyuncs.com</RegionEndpoint>
-      <LocalName>华东2</LocalName>
-    </Region>
-  </Regions>
+    <PageNumber>1</PageNumber>
+    <TotalCount>4</TotalCount>
+    <PageSize>2</PageSize>
+    <RequestId>A70BEE5D-76D3-49FB-B58F-1F398211A5C3</RequestId>
+    <Regions>
+        <Region>
+            <RegionId>cn-hangzhou</RegionId>
+            <RegionEndpoint>nas.cn-hangzhou.aliyuncs.com</RegionEndpoint>
+	        <LocalName>华东1</LocalName>
+        </Region>
+        <Region>
+            <RegionId>cn-shanghai</RegionId>
+	        <RegionEndpoint>nas.cn-shanghai.aliyuncs.com</RegionEndpoint>
+            <LocalName>华东2</LocalName>
+        </Region>
+    </Regions>
 </DescribeRegionsResponse>
-
 ```
 
 `JSON` 格式
