@@ -2,9 +2,9 @@
 
 CreateMountTarget用于创建挂载点。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=CreateMountTarget)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=CreateMountTarget&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -16,7 +16,7 @@ CreateMountTarget用于创建挂载点。
 |FileSystemId|String|是|174494b666|文件系统 ID
 
  |
-|NetworkType|String|是|vpc|网络类型，包括Vpc和Classic
+|NetworkType|String|是|vpc|网络类型，包括 VPC 和 Classic
 
  |
 |Action|String|否|CreateMountTarget|操作接口名，系统规定参数，取值：CreateMountTarget
@@ -36,7 +36,7 @@ CreateMountTarget用于创建挂载点。
 |MountTargetDomain|String|174494b666-xog95.cn-hangzhou.nas.aliyuncs.com|挂载点域名
 
  |
-|RequestId|String|70EACC9C-D07A-4A34-ADA4-77506C42B023|请求ID
+|RequestId|String|70EACC9C-D07A-4A34-ADA4-77506C42B023|请求 ID
 
  |
 
@@ -59,10 +59,9 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateMountTarget
 
 ``` {#xml_return_success_demo}
 <CreateMountTargetResponse>
-  <RequestId>70EACC9C-D07A-4A34-ADA4-77506C42B023</RequestId>
-  <MountTargetDomain>174494b666-xog95.cn-hangzhou.nas.aliyuncs.com</MountTargetDomain>
+    <RequestId>70EACC9C-D07A-4A34-ADA4-77506C42B023</RequestId>
+    <MountTargetDomain>174494b666-xog95.cn-hangzhou.nas.aliyuncs.com</MountTargetDomain>
 </CreateMountTargetResponse>
-
 ```
 
 `JSON` 格式
