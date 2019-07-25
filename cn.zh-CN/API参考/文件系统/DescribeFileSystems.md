@@ -2,9 +2,9 @@
 
 DescribeFileSystems用于返回文件系统的描述信息。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=DescribeFileSystems)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=DescribeFileSystems&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -25,7 +25,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |PageSize|Integer|否|1|每个分页包含的文件系统个数（默认为 10）
 
  |
-|VpcId|String|否|vpc-bp1sevsgtqvk5gxblhhod|专有网络ID
+|VpcId|String|否|vpc-bp1sevsgtqvk5gxblhhod|专有网络 ID
 
  |
 
@@ -39,7 +39,7 @@ DescribeFileSystems用于返回文件系统的描述信息。
 |PageSize|Integer|1|每个分页包含的文件系统个数
 
  |
-|RequestId|String|035B3A3A-E514-4B41-B906-5D906CFBD65F|请求ID
+|RequestId|String|035B3A3A-E514-4B41-B906-5D906CFBD65F|请求 ID
 
  |
 |TotalCount|Integer|1|文件系统的总个数
@@ -130,28 +130,27 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeFileSystems
 
 ``` {#xml_return_success_demo}
 <DescribeFileSystemsResponse>
-  <PageNumber>1</PageNumber>
-  <TotalCount>1</TotalCount>
-  <PageSize>1</PageSize>
-  <RequestId>035B3A3A-E514-4B41-B906-5D906CFBD65F</RequestId>
-  <FileSystems>
-    <FileSystem>
-      <FileSystemId>109c042666</FileSystemId>
-      <ProtocolType>NFS</ProtocolType>
-      <RegionId>cn-hangzhou</RegionId>
-      <CreateTime>2017-05-27T15:43:06CST</CreateTime>
-      <Destription/>
-      <MountTargets>
-        <MountTarget>
-          <MountTargetDomain>109c042666-wjb85.cn-hangzhou.nas.aliyuncs.com</MountTargetDomain>
-        </MountTarget>
-      </MountTargets>
-      <StorageType>Performance</StorageType>
-      <MeteredSize>1611661312</MeteredSize>
-    </FileSystem>
-  </FileSystems>
+    <PageNumber>1</PageNumber>
+    <TotalCount>1</TotalCount>
+    <PageSize>1</PageSize>
+    <RequestId>035B3A3A-E514-4B41-B906-5D906CFBD65F</RequestId>
+    <FileSystems>
+        <FileSystem>
+            <FileSystemId>109c042666</FileSystemId>
+            <ProtocolType>NFS</ProtocolType>
+            <RegionId>cn-hangzhou</RegionId>
+            <CreateTime>2017-05-27T15:43:06CST</CreateTime>
+            <Destription></Destription>
+            <MountTargets>
+                <MountTarget>
+                    <MountTargetDomain>109c042666-wjb85.cn-hangzhou.nas.aliyuncs.com</MountTargetDomain>
+                </MountTarget>
+            </MountTargets>
+            <StorageType>Performance</StorageType>
+            <MeteredSize>1611661312</MeteredSize>
+        </FileSystem>
+    </FileSystems>
 </DescribeFileSystemsResponse>
-
 ```
 
 `JSON` 格式
@@ -201,5 +200,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeFileSystems
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
