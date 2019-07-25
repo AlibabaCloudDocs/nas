@@ -2,9 +2,9 @@
 
 ModifyAccessGroup用于修改权限组。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=ModifyAccessGroup)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=ModifyAccessGroup&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -16,7 +16,7 @@ ModifyAccessGroup用于修改权限组。
 |Action|String|否|ModifyAccessGroup|操作接口名，系统规定参数，取值：ModifyAccessGroup
 
  |
-|Description|String|否|classic-test|权限组描述，默认和名称相同，长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（\_）或者连字符（-）
+|Description|String|否|classic-test|权限组描述，默认和名称相同，长度为 2~128 个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（\_）或者连字符（-）
 
  |
 |FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
@@ -27,7 +27,7 @@ ModifyAccessGroup用于修改权限组。
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|ED2AE737-9D50-4CA4-B0DA-31BD610C2363|请求ID
+|RequestId|String|ED2AE737-9D50-4CA4-B0DA-31BD610C2363|请求 ID
 
  |
 
@@ -50,9 +50,8 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessGroup
 
 ``` {#xml_return_success_demo}
 <ModifyAccessGroupResponse>
-  <RequestId>ED2AE737-9D50-4CA4-B0DA-31BD610C2363</RequestId>
+    <RequestId>ED2AE737-9D50-4CA4-B0DA-31BD610C2363</RequestId>
 </ModifyAccessGroupResponse>
-
 ```
 
 `JSON` 格式
@@ -65,5 +64,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessGroup
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
