@@ -2,9 +2,9 @@
 
 ModifyAccessRule用于修改权限规则。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=ModifyAccessRule)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=ModifyAccessRule&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -65,9 +65,8 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessRule
 
 ``` {#xml_return_success_demo}
 <ModifyAccessRuleResponse>
-  <RequestId>6299428C-3861-435D-AE54-9B330A0007C8</RequestId>
+    <RequestId>6299428C-3861-435D-AE54-9B330A0007C8</RequestId>
 </ModifyAccessRuleResponse>
-
 ```
 
 `JSON` 格式
@@ -80,5 +79,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAccessRule
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
