@@ -1,10 +1,10 @@
 # DeleteMountTarget {#doc_api_NAS_DeleteMountTarget .reference}
 
-DeleteMountTarget用于删除已有挂载点。
+DeleteMountTarget 用于删除已有挂载点。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=DeleteMountTarget)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=DeleteMountTarget&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -24,7 +24,7 @@ DeleteMountTarget用于删除已有挂载点。
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|5BC5CB97-9F28-42FE-84A4-0CD0DF4211C8|请求ID
+|RequestId|String|5BC5CB97-9F28-42FE-84A4-0CD0DF4211C8|请求 ID
 
  |
 
@@ -47,9 +47,8 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteMountTarget
 
 ``` {#xml_return_success_demo}
 <DeleteMountTargetResponse>
-  <RequestId>5BC5CB97-9F28-42FE-84A4-0CD0DF4211C8</RequestId>
+    <RequestId>5BC5CB97-9F28-42FE-84A4-0CD0DF4211C8</RequestId>
 </DeleteMountTargetResponse>
-
 ```
 
 `JSON` 格式
