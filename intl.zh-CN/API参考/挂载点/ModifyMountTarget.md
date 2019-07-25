@@ -2,9 +2,9 @@
 
 ModifyMountTarget用于修改挂载点信息。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=NAS&api=ModifyMountTarget)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=NAS&api=ModifyMountTarget&type=RPC&version=2017-06-26)
 
 ## 请求参数 {#parameters .section}
 
@@ -22,7 +22,7 @@ ModifyMountTarget用于修改挂载点信息。
 |Action|String|否|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
 
  |
-|Status|String|否|Inactive|状态，包括 Active 和 Inactive
+|Status|String|否|Inactive|挂载点状态，枚举值包括：Active（表示启用），Inactive（表示禁用）
 
  |
 
@@ -30,7 +30,7 @@ ModifyMountTarget用于修改挂载点信息。
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|FF387D95-34C4-4879-B65A-99D1FA1B65CD|请求ID
+|RequestId|String|FF387D95-34C4-4879-B65A-99D1FA1B65CD|请求 ID
 
  |
 
@@ -54,9 +54,8 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyMountTarget
 
 ``` {#xml_return_success_demo}
 <ModifyMountTargetResponse>
-  <RequestId>FF387D95-34C4-4879-B65A-99D1FA1B65CD</RequestId>
+    <RequestId>FF387D95-34C4-4879-B65A-99D1FA1B65CD</RequestId>
 </ModifyMountTargetResponse>
-
 ```
 
 `JSON` 格式
