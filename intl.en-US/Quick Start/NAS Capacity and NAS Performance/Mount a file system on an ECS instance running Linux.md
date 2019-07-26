@@ -178,7 +178,7 @@ You can use the domain name of a file system or the domain name of the mount tar
 
     An example of a successful mount is shown in the following figure.
 
-    ![mount results](images/49539_en-CN.png)
+    ![mount results](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156410934853099_en-US.png)
 
     After a file system is mounted, you can use the `df -h` command to view the capacity of the file system.
 
