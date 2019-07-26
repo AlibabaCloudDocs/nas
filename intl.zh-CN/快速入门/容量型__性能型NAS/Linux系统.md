@@ -16,8 +16,9 @@
 
     **说明：** 
 
-    1.  开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../intl.zh-CN/计费方式/预付费/购买存储包.md#)。
-    2.  如果要创建专有网络类型的挂载点，还需在创建文件系统的地域上创建专有网络VPC，并将已创建的云服务器ECS归属到此专有网络VPC下，详情请参见[创建专有网络和交换机](创建专有网络和交换机../../SP_22/DNVPC11885991/ZH-CN_TP_2434_V13.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb) 。
+    1.  如果您要使用RAM账户操作NAS，详情请参见[RAM用户访问控制](../../../../intl.zh-CN/控制台用户指南/管理权限/RAM用户访问控制.md#)。
+    2.  开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../intl.zh-CN/计费方式/预付费/购买存储包.md#)。
+    3.  如果要创建专有网络类型的挂载点，还需在创建文件系统的地域上创建专有网络VPC，并将已创建的云服务器ECS归属到此专有网络VPC下，详情请参见[创建专有网络和交换机](创建专有网络和交换机../../SP_22/DNVPC11885991/ZH-CN_TP_2434_V13.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb) 。
 
 ## 步骤一：创建文件系统 {#section_3x4_3v9_srh .section}
 
@@ -40,7 +41,7 @@
 **说明：** 性能型文件系统容量上限为1PB，容量型文件系统容量上限为10PB。按实际使用量付费。
 
  |
-    |协议类型| 选择**NFS（包含 NFSv3 和 NFSv4）**。
+    |协议类型| 选择**NFS（包含NFSv3和NFSv4）**。
 
  NFS适合Linux ECS文件共享， SMB适合Windows ECS文件共享。
 
@@ -64,9 +65,10 @@
 
 **说明：** 每个文件系统最多可添加两个挂载点。
 
-1.  选择**NAS** \> **文件系统列表**。
-2.  找到目标文件系统，单击**添加挂载点**。
-3.  在**添加挂载点**页面，配置相关参数。
+1.  登录[NAS控制台](https://nas.console.aliyun.com/)。
+2.  选择**NAS** \> **文件系统列表**。
+3.  找到目标文件系统，单击**添加挂载点**。
+4.  在**添加挂载点**页面，配置相关参数。
 
     **挂载点类型**：包括专有网络和经典网络。
 
@@ -102,7 +104,7 @@
         -   首次创建经典网络挂载点时，系统会要求您通过RAM授权NAS访问您的ECS实例查询接口，请按照指引完成授权操作后重新尝试创建经典网络挂载点。详细操作请参见[创建经典网络挂载点时为什么需要RAM授权？](../../../../intl.zh-CN/常见问题/一般性问题/创建经典网络挂载点时为什么需要RAM授权？.md#)。
  |
 
-4.  单击**确定**，创建挂载点。
+5.  单击**确定**，创建挂载点。
 
 ## 步骤三：安装NFS客户端 {#section_0q3_q5c_9sh .section}
 
@@ -126,28 +128,17 @@
         sudo apt-get install nfs-common
         ```
 
-3.  运行以下命令，查看同时发起的NFS请求数量。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../../../../intl.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。
 
-    必须成功挂载一次NFS文件系统后，该命令才有效。
-
-    ``` {#codeblock_2gx_n4i_7n6}
-    cat /proc/sys/sunrpc/tcp_slot_table_entries
-    ```
-
-    **说明：** NFS客户端对于同时发起的NFS请求数量进行了控制，若该参数配置较小，会降低IO性能。默认编译的内核中此参数值为2，严重影响性能。您可以使用root用户执行以下命令来提高该参数的值，使性能更佳。参数修改完成 ，需重启系统。
-
-    ``` {#codeblock_cxi_nc4_vu5}
-    echo "options sunrpc tcp_slot_table_entries=128" >> /etc/modprobe.d/sunrpc.conf
-    echo "options sunrpc tcp_max_slot_table_entries=128" >>  /etc/modprobe.d/sunrpc.conf
-    sysctl -w sunrpc.tcp_slot_table_entries=128
-    ```
+    NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
 
 ## 步骤四：挂载文件系统 {#section_789_6w7_3jg .section}
 
 您可以使用文件系统的DNS名称或挂载目标的DNS名称，将NFS文件系统挂载至云服务器ECS。文件系统的DNS名称会自动解析为所连接云服务器ECS的可用区中挂载目标的IP地址。
 
-1.  挂载NFS文件系统。
+1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
+2.  挂载NFS文件系统。
 
     -   如果您要挂载NFSv4文件系统，运行以下命令：
 
@@ -183,11 +174,11 @@
 
  |
 
-2.  执行`mount -l`命令，查看挂载结果。
+3.  执行`mount -l`命令，查看挂载结果。
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156272275949539_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156410712049539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
