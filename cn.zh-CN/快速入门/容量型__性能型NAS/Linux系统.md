@@ -178,7 +178,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156410712049539_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156410720649539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
