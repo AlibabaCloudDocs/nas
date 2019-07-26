@@ -131,6 +131,6 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156280924449545_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156410741049545_zh-CN.png)
 
 
