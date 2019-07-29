@@ -6,14 +6,14 @@ By default, you can only mount a file system on an ECS instance that is owned by
 
 You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned by different accounts.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156438414439653_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156438601739653_en-US.png)
 
 1.  Create a CEN instance by using Account A. 
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/).
     2.  On the Instances page, click **Create CEN Instance**.
     3.  Configure the CEN instance. 
 
-        ![](images/39616_en-US_source.png)
+        ![Configure the CEN instance](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156438601739616_en-US.png)
 
         |Name|Description|
         |----|-----------|
@@ -27,7 +27,7 @@ You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned
  The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
 
  |
-        |Attach Network| You can attach networks owned by this account or a different account to a CEN instance. For more information, see [CEN instances](https://www.alibabacloud.com/help/zh/doc-detail/66001.htm).
+        |Attach Network| You can attach networks owned by this account or a different account to a CEN instance. For more information, see [CEN instances](https://partners-intl.aliyun.com/help/doc-detail/66001.htm).
 
  |
 
@@ -39,14 +39,14 @@ You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned
     4.  On the VPC Details page, locate the CEN cross-account authorization information section, and click **CEN Cross-Account Authorization**.
     5.  In the Attach to CEN dialog box, enter the Peer Account UID and Peer Account CEN ID, and click **OK**. 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156438414439688_en-US.png)
+        ![attach to CEN](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156438601739688_en-US.png)
 
 3.  Attach a network by using Account A. 
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/) by using Account A.
     2.  On the Instances page, locate the target instance, and click **Manage**.
     3.  On the Networks tab, click **Attach Network** to configure the network. 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156438414539689_en-US.png)
+        ![configure the network](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156438601739689_en-US.png)
 
         |Name|Description|
         |----|-----------|
@@ -58,6 +58,6 @@ You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned
 
     4.  After the configuration is complete, click **OK**.
 4.  Mount a file system. 
-    -   For more information about how to mount an NFS file system on an ECS instance running Linux, see [Mount an NFS file system](intl.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#).
-    -   For more information about how to mount an SMB file system on an ECS instance running Windows, see [Mount an SMB file system](intl.en-US/Console User Guide/Mount a file system/Mount an SMB file system.md#).
+    -   For more information about how to mount an NFS file system on an ECS instance running Linux, see [Mount an NFS file system](reseller.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#).
+    -   For more information about how to mount an SMB file system on an ECS instance running Windows, see [Mount an SMB file system](reseller.en-US/Console User Guide/Mount a file system/Mount an SMB file system.md#).
 
