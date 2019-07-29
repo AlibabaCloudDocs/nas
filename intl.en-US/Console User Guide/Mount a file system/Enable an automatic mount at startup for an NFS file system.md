@@ -2,13 +2,15 @@
 
 This topic describes how to modify Linux configuration files to allow an NFS file system to be automatically mounted at startup.
 
-1.  You have created a file system. For more information, see [Create file systems](intl.en-US/Console User Guide/Manage file systems.md#section_5jo_0kj_jn5).
-2.  You have created a mount point. For more information, see [Create a mount point](intl.en-US/Console User Guide/Manage mount points.md#section_6xi_a3u_zkq).
-3.  You have installed an NFS client. For more information, see [Install an NFS client](intl.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#section_kvj_d02_szj).
+1.  You have created a file system. For more information, see [Create file systems](reseller.en-US/Console User Guide/Manage file systems.md#section_5jo_0kj_jn5).
+2.  You have created a mount point. For more information, see [Create a mount point](reseller.en-US/Console User Guide/Manage mount points.md#section_6xi_a3u_zkq).
+3.  You have installed an NFS client. For more information, see [Install an NFS client](reseller.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#section_kvj_d02_szj).
+
+## Prerequisites {#section_s5p_3m3_0zz .section}
 
 We recommend that you configure the /etc/fstab file to enable an NFS file system to be automatically mounted at startup. You can also configure the /etc/rc.local file to set an automatic mount.
 
-1.  Log on to the [ECS console](https://ecs.console.aliyun.com/).
+1.  Log on to the [ECS console](partners-intl.console.aliyun.com/#/ecs).
 2.  Configure an automatic mount.
     -   \(Recommended\) Open the /etc/fstab file and add the following command.
 
@@ -79,7 +81,7 @@ We recommend that you configure the /etc/fstab file to enable an NFS file system
 
     An example of a successful mount is shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156438405149539_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156438483149539_en-US.png)
 
     After a file system is mounted, you can use the `df -h` command to view the capacity of the file system.
 
