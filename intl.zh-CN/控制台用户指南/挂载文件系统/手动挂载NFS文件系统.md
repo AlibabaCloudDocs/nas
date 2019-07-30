@@ -1,11 +1,11 @@
-# 手动挂载NFS文件系统 {#concept_hpp_dkh_cfb .concept}
+# 手动挂载NFS文件系统 {#concept_hpp_dkh_cfb .task}
 
 本文档介绍如何在Linux系统中安装NFS客户端并通过挂载命令挂载NFS文件系统。
 
 ## 前提条件 {#section_b22_6c8_4of .section}
 
-1.  已创建文件系统，详情请参见[创建文件系统](intl.zh-CN/控制台用户指南/管理文件系统.md#section_5jo_0kj_jn5)。
-2.  已添加挂载点，详情请参见[添加挂载点](intl.zh-CN/控制台用户指南/管理挂载点.md#section_6xi_a3u_zkq)。
+1.  已创建文件系统，详情请参见[创建文件系统](cn.zh-CN/控制台用户指南/管理文件系统.md#section_5jo_0kj_jn5)。
+2.  已添加挂载点，详情请参见[添加挂载点](cn.zh-CN/控制台用户指南/管理挂载点.md#section_6xi_a3u_zkq)。
 
 ## 步骤一：安装NFS客户端 {#section_kvj_d02_szj .section}
 
@@ -15,21 +15,21 @@
 2.  运行以下命令，安装NFS客户端。
     -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
 
-        ``` {#d9e454}
+        ``` {#d7e458}
         sudo yum install nfs-utils
         ```
 
     -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
 
-        ``` {#d9e460}
+        ``` {#d7e464}
         sudo apt-get update
         ```
 
-        ``` {#d9e463}
+        ``` {#d7e467}
         sudo apt-get install nfs-common
         ```
 
-3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../intl.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../cn.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。
 
     NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
@@ -41,37 +41,44 @@
 1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
 2.  挂载NFS文件系统。
 
-    -   如果您要挂载NFSv4文件系统，运行以下命令：
+    -   如果您使用的是容量型/性能型NAS，请参见以下命令进行挂载。
+        -   如果您要挂载NFSv4文件系统，运行以下命令：
 
-        ``` {#codeblock_4q2_bar_cci}
-        sudo mount -t nfs -o vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
-        							
-        ```
+            ``` {#codeblock_r13_7ie_u65}
+            sudo mount -t nfs -o vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+            									
+            ```
 
-        如果挂载失败，请尝试以下命令：
+            如果挂载失败，请尝试以下命令：
 
-        ``` {#codeblock_0kd_8da_bd8}
-        sudo mount -t nfs4 -o rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
-        							
-        ```
+            ``` {#codeblock_hq6_l9e_62j}
+            sudo mount -t nfs4 -o rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+            									
+            ```
 
-    -   如果您要挂载NFSv3文件系统，运行以下命令：
+        -   如果您要挂载NFSv3文件系统，运行以下命令：
 
-        ``` {#codeblock_m8a_pwb_d8i}
-        sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+            ``` {#codeblock_2dp_8fn_rth}
+            sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+            ```
+
+    -   如果您使用的是极速型NAS，请参见以下命令进行挂载。
+
+        ``` {#codeblock_c1t_wx4_aik}
+        sudo mount -t nfs -o vers=3,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt
         ```
 
     挂载命令中的参数说明如下表所示：
 
     |参数|描述|
     |:-|:-|
-    |**挂载点**| 挂载点包括挂载点域名和挂载点路径。
+    |**挂载点**| 挂载点包括挂载点域名和挂载点路径，请根据实际值替换。
 
     -   挂载点域名：添加挂载点时自动生成，无需手工配置。
     -   挂载点路径：挂载的目标地址，Linux 系统中的根目录”/”或任意子目录（如/mnt）。
  |
-    |**vers**|文件系统版本。 支持nfsv3和nfsv4。
-
+    |**vers**|文件系统版本。     -   容量型/性能型NAS：支持nfsv3和nfsv4。
+    -   极速型NAS：支持nfsv3。
  |
 
     在挂载文件系统时，还可以选择多种挂载选项，这些选项使用逗号分隔列表的形式，具体选项与说明如下表所示：
@@ -95,7 +102,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156438398751407_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156447328551407_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
