@@ -16,7 +16,7 @@
 
     **说明：** 目前只支持主账号使用极速型NAS。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156315843151079_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156447240851079_zh-CN.png)
 
 -   在需要创建文件系统的地域，已有可用的专有网络VPC。
 
@@ -101,17 +101,17 @@
 2.  运行以下命令，安装NFS客户端。
     -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
 
-        ``` {#d9e458}
+        ``` {#d11e458}
         sudo yum install nfs-utils
         ```
 
     -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
 
-        ``` {#d9e464}
+        ``` {#d11e464}
         sudo apt-get update
         ```
 
-        ``` {#d9e467}
+        ``` {#d11e467}
         sudo apt-get install nfs-common
         ```
 
@@ -135,7 +135,7 @@
 
     |参数|描述|
     |:-|:-|
-    |挂载点| 挂载点包括挂载点域名和挂载点路径。
+    |挂载点| 挂载点包括挂载点域名和挂载点路径，请根据实际值替换。
 
     -   挂载点域名：添加挂载点时自动生成，无需手工配置。
     -   挂载点路径：挂载的目标地址，Linux 系统中的根目录”/”或任意子目录（如/mnt）。
@@ -149,7 +149,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156315843151085_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156447240851085_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
