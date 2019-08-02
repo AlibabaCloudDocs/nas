@@ -43,7 +43,7 @@
         -   如果您要挂载 NFSv3 文件系统，添加以下命令：
 
             ``` {#codeblock_ycw_chq_glo}
-            sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
+            sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
             ```
 
         命令中各参数说明如下表所示。
@@ -81,7 +81,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156447331549539_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156473951549539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 

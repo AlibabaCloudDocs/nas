@@ -43,7 +43,7 @@ We recommend that you configure the /etc/fstab file to enable an NFS file system
         -   If you need to mount an NFSv3-compliant file system, add the following command.
 
             ``` {#codeblock_ycw_chq_glo}
-            sudo mount -t nfs -o vers=3,nolock,proto=tcp, rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
+            sudo mount -t nfs -o vers=3,nolock,proto=tcp, rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev,noresvport file-system-id-xxxx.region.nas.aliyuncs.com:/ /mount-point
             ```
 
         The parameters used in the command are described in the following table.
@@ -81,7 +81,7 @@ We recommend that you configure the /etc/fstab file to enable an NFS file system
 
     An example of a successful mount is shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156438483149539_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156473953149539_en-US.png)
 
     After a file system is mounted, you can use the `df -h` command to view the capacity of the file system.
 
