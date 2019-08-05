@@ -102,8 +102,14 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156447328551407_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156499292151407_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
+
+4.  挂载成功后，您可以在ECS上访问NAS文件系统，执行读取或写入操作。
+
+    您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156499292154347_zh-CN.png)
 
 
