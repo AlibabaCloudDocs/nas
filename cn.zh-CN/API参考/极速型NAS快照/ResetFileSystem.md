@@ -5,7 +5,7 @@
 ## 接口说明 {#description .section}
 
 -   文件系统的状态必须为正常的状态。
--   指定的参数SnapshotId必须是由FileSystemId创建的历史快照。
+-   指定的参数SnapshotId必须是由 FileSystemId 创建的历史快照。
 
 ## 调试 {#api_explorer .section}
 
@@ -59,5 +59,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ResetFileSystem
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
