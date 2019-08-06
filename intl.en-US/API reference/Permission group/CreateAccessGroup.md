@@ -16,7 +16,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |AccessGroupType|String|Yes|Classic| The type of permission group. Valid values: Vpc and Classic.
 
  |
-|Action|String|No|CreateAccessGroup| The operation that you want to perform. Set the value to CreateAccessGroup.
+|Action|String|Yes|CreateAccessGroup| The operation that you want to perform. Set the value to CreateAccessGroup.
 
  |
 |Description|String|No|classictestaccessgroup| The description of the permission group. By default, the description of the permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length. The description must start with a letter and cannot start with http:// or https://. The description can contain letters, numbers, colons \(:\), underscores \(\_\), and hyphens \(-\).
