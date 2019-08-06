@@ -16,7 +16,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |SourceCidrIp|String|Yes|10.0.0.1/32| An IP address or a CIDR notation. For example, 12.1.1.1 or 13.1.1.1/25.
 
  |
-|Action|String|No|CreateAccessRule| The operation that you want to perform. Set the value to CreateAccessRule.
+|Action|String|Yes|CreateAccessRule| The operation that you want to perform. Set the value to CreateAccessRule.
 
  |
 |FileSystemType|String|No|standard| The type of file system. Valid values: standard and extreme. Default value: standard.
