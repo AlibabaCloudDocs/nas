@@ -10,7 +10,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 
 |Parameter name|Type|Required|Example|Description|
 |--------------|----|--------|-------|-----------|
-|Action|String|No|ModifyAccessGroup|Operation interface name and system required parameter. Value: ModifyAccessGroup.|
+|Action|String|Yes|ModifyAccessGroup|Operation interface name and system required parameter. Value: ModifyAccessGroup.|
 |AccessGroupName|String|Yes|classic-test|Permission group name.|
 |Description|String|No|classic-test| The description of the permission group. By default, the description of the permission group is the same as the name of the permission group. The description must be 2 to 128 characters in length. The description must start with a letter and cannot start with http:// or https://. The description can contain letters, numbers, colons \(:\), underscores \(\_\), and hyphens \(-\).
 
@@ -57,5 +57,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
         ```
 
 
-## Error codes {#section_elg_a4c_bhp .section}
+## Error codes {#section_bkx_vb7_i6i .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
