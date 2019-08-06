@@ -10,7 +10,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 
 |Parameter name|Type|Required|Example|Description|
 |--------------|----|--------|-------|-----------|
-|Action|String|No|DescribeRegions|Operation interface name and system required parameter. Value: DescribeRegions.|
+|Action|String|Yes|DescribeRegions|Operation interface name and system required parameter. Value: DescribeRegions.|
 |FileSystemType|String|No|standard|The type of the file system. Valid values: standard and extreme. Default value: standard.|
 |PageSize|Integer|No|2|The number of regions contained on each page. The default value is 10.|
 |PageNumber|Integer|No|1|The page number of the list \(beginning from 1\).|
@@ -98,7 +98,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
         ```
 
 
-## Error codes {#section_et2_rkk_7oh .section}
+## Error codes {#section_t1m_ywf_r6y .section}
 
 For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
