@@ -10,11 +10,11 @@ The network path was not found.
 
 **Cause**
 
-The network connection fails.
+The network connection fails or the TCP/IP NetBIOS Helper service is not started.
 
 **Solution**
 
-You can check the network connection as follows:
+You can troubleshoot the issue as follows:
 
 1.  Use the following ping command to check whether you can access the IP address of a mount point and ensure that the latency is within the expected range.
 
@@ -38,7 +38,7 @@ You can check the network connection as follows:
 
         -   Ensure that the protocol type of a file system is SMB.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076534041401_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156507781841401_en-US.png)
 
         -   Ensure that the IP address of the mount point is valid.
         -   Ensure that the ECS instance and the mount point are located in the same VPC.
@@ -47,6 +47,7 @@ You can check the network connection as follows:
 
     telnet <the IP address of a mount point\> 445
 
+3.  Check whether the TCP/IP NetBIOS Helper service is started. For more information, see [Mount an SMB file system](../../../../reseller.en-US/Console User Guide/Mount a file system/Mount an SMB file system.md#).
 
 ## System error 58 {#section_hc3_y35_loh .section}
 
@@ -84,7 +85,7 @@ This issue occurs when you do not have permission to access NAS file system reso
 3.  Ensure that the ECS instance and the NAS file system are created by the same Alibaba Cloud account if they are located in classic networks.
 4.  Ensure that the protocol type of a file system is SMB.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076534041401_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156507781841401_en-US.png)
 
 
 ## System error 67 {#section_2xt_2ks_so0 .section}
@@ -99,7 +100,7 @@ Several important network services are not started.
 
 **Solution**
 
-Start the following services. For more information, see [Mount an SMB file system](../../../../reseller.en-US/Quick Start/Mount a file system/Mount an SMB file system.md#section_zlq_3j1_dfb).
+Start the following services. For more information, see [Mount an SMB file system](../../../../reseller.en-US/Console User Guide/Mount a file system/Mount an SMB file system.md#section_zlq_3j1_dfb).
 
 1.  Workstation
 2.  TCP/IP NetBIOS Helper

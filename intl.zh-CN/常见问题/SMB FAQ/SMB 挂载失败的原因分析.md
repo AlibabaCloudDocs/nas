@@ -10,11 +10,11 @@
 
 **主要原因**
 
-网络未连通。
+网络未连通或TCP/IP NetBIOS Helper服务未启动。
 
 **解决方法**
 
-请根据如下步骤验证网络连通性。
+请根据如下步骤进行排查。
 
 1.  使用ping 命令检查挂载点地址是否可连通，延时是否正常。
 
@@ -38,7 +38,7 @@
 
         -   确认文件系统类型为 SMB。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076533041401_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156507780641401_zh-CN.png)
 
         -   确认挂载点地址填写正确。
         -   确认客户端的 ECS 与挂载点在同一个 VPC 中。
@@ -47,6 +47,7 @@
 
     telnet <挂载点地址\> 445
 
+3.  确认是否已启动 TCP/IP NetBIOS Helper 服务，具体操作请参见[手动挂载SMB文件系统](../../../../intl.zh-CN/控制台用户指南/挂载文件系统/手动挂载SMB文件系统.md#)。
 
 ## 系统错误 58 {#section_hc3_y35_loh .section}
 
@@ -84,7 +85,7 @@
 3.  确认经典网络挂载时， ECS 和 NAS 属于同一个阿里云UID。
 4.  确认文件系统类型为 SMB。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156076533041401_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/149028/156507780641401_zh-CN.png)
 
 
 ## 系统错误 67 {#section_2xt_2ks_so0 .section}
@@ -99,7 +100,7 @@
 
 **解决方法**
 
-启动如下服务，具体操作可参见[挂载SMB文件系统](../../../../intl.zh-CN/快速配置指南/挂载文件系统/挂载 SMB 文件系统.md#section_zlq_3j1_dfb)。
+启动如下服务，具体操作可参见[挂载SMB文件系统](../../../../intl.zh-CN/控制台用户指南/挂载文件系统/手动挂载SMB文件系统.md#section_zlq_3j1_dfb)。
 
 1.  启用 Workstation 服务。
 2.  启用 TCP/IP NetBIOS Helper 服务。
