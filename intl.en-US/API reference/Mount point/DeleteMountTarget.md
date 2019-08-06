@@ -14,7 +14,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 
  |
 |MountTargetDomain|String|Yes|174494b666-xog95.cn-hangzhou.nas.aliyuncs.com|Mount point domain name.|
-|Action|String|No|DeleteMountTarget| Operation interface name and system required parameter. Value: DeleteMountTarget.
+|Action|String|Yes|DeleteMountTarget| Operation interface name and system required parameter. Value: DeleteMountTarget.
 
  |
 
@@ -58,5 +58,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
         ```
 
 
-## Error codes {#section_oxv_anu_tu0 .section}
+## Error codes {#section_k1r_rge_78p .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
