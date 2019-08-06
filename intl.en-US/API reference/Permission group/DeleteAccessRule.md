@@ -12,7 +12,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |--------------|----|--------|-------|-----------|
 |AccessGroupName|String|Yes|classic-test|Permission group name.|
 |AccessRuleId|String|Yes|1|Permission Rule ID.|
-|Action|String|No|DeleteAccessRule| Operation interface name and system required parameter. Value: DeleteAccessRule.
+|Action|String|Yes|DeleteAccessRule| Operation interface name and system required parameter. Value: DeleteAccessRule.
 
  |
 |FileSystemType|String|No|standard| The type of the file system. Valid values: standard and extreme. Default value: standard.
@@ -59,5 +59,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
         ```
 
 
-## Error codes {#section_4v6_2ce_hde .section}
+## Error codes {#section_9a0_2c2_ww8 .section}
+
+For more information, see [Error codes](https://error-center.alibabacloud.com/status/product/NAS).
 
