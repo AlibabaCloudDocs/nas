@@ -16,7 +16,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |StorageType|String|Yes|Performance| The type of the file system. Valid values: Performance and Capacity.
 
  |
-|Action|String|No|CreateFileSystem| The operation that you want to perform. Set the value to CreateFileSystem.
+|Action|String|Yes|CreateFileSystem| The operation that you want to perform. Set the value to CreateFileSystem.
 
  |
 |Description|String|No|balabala| The description of the file system. The description must be 2 to 128 characters in length. The description must start with a letter, but cannot start with http:// or https://. The description can contain letters, numbers, colons \(:\), underscores \(\_\), and hyphens \(-\).
