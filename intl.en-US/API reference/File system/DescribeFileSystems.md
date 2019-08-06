@@ -10,7 +10,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|No|DescribeFileSystems| The operation that you want to perform. Set the value to DescribeFileSystems.
+|Action|String|Yes|DescribeFileSystems| The operation that you want to perform. Set the value to DescribeFileSystems.
 
  |
 |FileSystemId|String|No|109c042666| The ID of the file system.
