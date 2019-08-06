@@ -20,16 +20,16 @@ You can call this operation to create a snapshot.
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|FileSystemId|String|Yes|Extreme-01ddddfc|The ID of the file system.
+|FileSystemId|String|Yes|Extreme-01ddddfc| The ID of the file system.
 
  |
-|Action|String |No|CreateSnapshot|The operation that you want to perform. Set this parameter to CreateSnapshot.
+|Action|String|Yes|CreateSnapshot| The operation that you want to perform. Set this parameter to CreateSnapshot.
 
  |
-|Description|String|No|FinanceDepet|The description of the snapshot. The description must be 2 to 256 characters in length. It cannot start with http:// or https://. Default value: empty string.
+|Description|String|No|FinanceDepet| The description of the snapshot. The description must be 2 to 256 characters in length. It cannot start with http:// or https://. Default value: empty string.
 
  |
-|RetentionDays|Integer|No|30|The retention period of the snapshot. Unit: day. The snapshot is automatically deleted when its retention period ends. Default value: -1.
+|RetentionDays|Integer|No|30| The retention period of the snapshot. Unit: day. The snapshot is automatically deleted when its retention period ends. Default value: -1.
 
  Valid values:
 
@@ -37,18 +37,18 @@ You can call this operation to create a snapshot.
 -   1-65536: The snapshot is retained for the specified number of days.
 
  |
-|SnapshotName|String|No|FinanceJoshua|The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons \(:\), underscores \(\_\), and hyphens \(-\). It cannot start with auto because a name that starts with auto may conflict with the names of automatic snapshots.
+|SnapshotName|String|No|FinanceJoshua| The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons \(:\), underscores \(\_\), and hyphens \(-\). It cannot start with auto because a name that starts with auto may conflict with the names of automatic snapshots.
 
  |
 
 ## Response parameters {#resultMapping .section}
 
-|Parameter|Type|Example|Description |
-|---------|----|-------|------------|
-|RequestId|String|473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E|The ID of the request.
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E| The ID of the request.
 
  |
-|SnapshotId|String|s-extreme-snapshotid1|The ID of the snapshot.
+|SnapshotId|String|s-extreme-snapshotid1| The ID of the snapshot.
 
  |
 
@@ -76,5 +76,5 @@ Sample success response
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_nu8_cbw_eiy .section}
 
