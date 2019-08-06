@@ -16,7 +16,7 @@
 
     **说明：** 目前只支持主账号使用极速型NAS。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156447240851079_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156506265751079_zh-CN.png)
 
 -   在需要创建文件系统的地域，已有可用的专有网络VPC。
 
@@ -149,8 +149,14 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156447240851085_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156506265851085_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
+
+4.  挂载成功后，您可以在ECS上访问NAS文件系统，执行读取或写入操作。
+
+    您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156506265854347_zh-CN.png)
 
 
