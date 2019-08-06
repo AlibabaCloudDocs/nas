@@ -10,7 +10,7 @@ CancelAutoSnapshotPolicy 用于取消一个或者多个文件系统的自动快�
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|FileSystemIds|String|是|extreme-233e6ylv0,extreme-23vbpbi03,extreme-23vasz3ds|目标文件系统 ID。一次最多指定 100 个文件系统 ID，当您需要取消多个文件系统的自动快照策略时，多个文件系统 ID 用一个格式类似 "d-xxxxxxxxx", "d-yyyyyyyyy", … "d-zzzzzzzzz" 的 JSON 数组表示，文件系统 ID 之间用半角逗号（,）隔开。
+|FileSystemIds|String|是|extreme-233e6ylv0,extreme-23vbpbi03,extreme-23vasz3ds|目标文件系统 ID。一次最多指定 100 个文件系统 ID，当您需要取消多个文件系统的自动快照策略时，多个文件系统 ID 之间用半角逗号（,）隔开。
 
  |
 |Action|String|否|CancelAutoSnapshotPolicy|系统规定参数。取值：CancelAutoSnapshotPolicy。
@@ -50,5 +50,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CancelAutoSnapshotPolicy
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
