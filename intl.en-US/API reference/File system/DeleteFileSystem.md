@@ -11,7 +11,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |Parameter name|Type|Required|Example|Description|
 |--------------|----|--------|-------|-----------|
 |FileSystemId|String|Yes|1ca404a348|The file system ID to be deleted.|
-|Action|String|No|DeleteFileSystem| Operation interface name and system required parameter. Value: DeleteFileSystem.
+|Action|String|Yes|DeleteFileSystem| Operation interface name and system required parameter. Value: DeleteFileSystem.
 
  |
 
