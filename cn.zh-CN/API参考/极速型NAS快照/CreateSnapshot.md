@@ -23,7 +23,7 @@ CreateSnapshot 用于创建快照。
 |FileSystemId|String|是|Extreme-01ddddfc|文件系统 ID。
 
  |
-|Action|String|否|CreateSnapshot|系统规定参数。取值：CreateSnapshot。
+|Action|String|否|CreateSnapshot|系统规定参数。对于您自行拼凑 HTTP/HTTPS URL 发起的 API 请求，Action 为必选参数。取值：CreateSnapshot
 
  |
 |Description|String|否|FinanceDepet|快照的接口说明。长度为 2~256 个英文或中文字符，不能以 http:// 和 https:// 开头。默认值：空。
@@ -78,5 +78,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=CreateSnapshot
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
