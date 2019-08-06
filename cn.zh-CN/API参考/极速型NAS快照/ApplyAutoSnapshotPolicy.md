@@ -15,13 +15,13 @@ ApplyAutoSnapshotPolicy 用于为一个或者多个文件系统应用自动快�
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
+|Action|String|是|ApplyAutoSnapshotPolicy|系统规定参数。取值：ApplyAutoSnapshotPolicy。
+
+ |
 |AutoSnapshotPolicyId|String|是|sp-extreme-233e6ylv0|目标自动快照策略 ID。
 
  |
 |FileSystemIds|String|是|extreme-233e6ylv0,extreme -23vbpbi03,extreme -23vasz3ds|目标文件系统ID。一次最多指定 100 个文件系统 ID，当您需要将自动快照策略应用于多个文件系统时，文件系统 ID 之间用半角逗号（,）隔开。
-
- |
-|Action|String|否|ApplyAutoSnapshotPolicy|系统规定参数。取值：ApplyAutoSnapshotPolicy。
 
  |
 
@@ -59,5 +59,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ApplyAutoSnapshotPolicy
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
