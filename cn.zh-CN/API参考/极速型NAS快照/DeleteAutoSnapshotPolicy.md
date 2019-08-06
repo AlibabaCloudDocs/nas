@@ -50,5 +50,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DeleteAutoSnapshotPolicy
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
