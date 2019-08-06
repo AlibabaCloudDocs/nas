@@ -31,7 +31,7 @@ ModifyAutoSnapshotPolicy 用于修改一条自动快照策略。修改自动快�
 -   1~65536：指定保存天数。
 
  |
-|TimePoints|String|否|0,1|自动快照的创建时间点，单位为小时。取值范围：0~23，代表00:00至23:00共24个时间点，如1表示01:00。当一天内需要创建多次自动快照时，可以传入多个时间点：
+|TimePoints|String|否|0,1|自动快照的创建时间点，单位为小时。取值范围：0~23，代表 00:00 至 23:00 共 24 个时间点，如 1 表示 01:00。当一天内需要创建多次自动快照时，可以传入多个时间点：
 
  -   最多传入 24 个时间点。
 -   多个时间点半角逗号（,）隔开。
@@ -72,5 +72,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=ModifyAutoSnapshotPolicy
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
