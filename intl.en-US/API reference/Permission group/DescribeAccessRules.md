@@ -12,7 +12,7 @@ Alibaba Cloud provides [OpenAPI Explorer](https://api.aliyun.com/#product=NAS&ap
 |--------------|----|--------|-------|-----------|
 |AccessGroupName|String|Yes|classic-test|Permission group name.|
 |AccessRuleId|String|No|1|Permission rule ID.|
-|Action|String|No|DescribeAccessRules|Operation interface name and system required parameter. Value: DescribeAccessRules.|
+|Action|String|Yes|DescribeAccessRules|Operation interface name and system required parameter. Value: DescribeAccessRules.|
 |FileSystemType|String|No|standard| The type of the file system. Valid values: standard and extreme. Default value: standard.
 
  |
