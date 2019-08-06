@@ -24,7 +24,7 @@ DescribeAutoSnapshotPolicies 用于查询您已创建的自动快照策略。
  |
 |PageSize|Integer|否|10| 
 
- 分页展示返回的自动快照策略时的每页行数。 最大值：50，默认值：10。
+ 分页展示返回的自动快照策略时的每页行数。 最大值：100，默认值：10。
 
  |
 
@@ -53,13 +53,16 @@ DescribeAutoSnapshotPolicies 用于查询您已创建的自动快照策略。
 |RepeatWeekdays|String|1,5|指定自动快照的重复日期。选定周一到周日中需要创建快照的日期，参数为 1~7 的数字，如：1 表示周一。允许选择多个日期。
 
  |
-|RetentionDays|Integer|30|指定自动快照的保留时间，单位为天。-1：永久保存，1~65536：指定保存天数。
+|RetentionDays|Integer|30|指定自动快照的保留时间，单位为天。
+
+ -   -1：永久保存
+-   1~65536：指定保存天数
 
  |
 |Status|String|Available|自动快照策略状态，取值：Creating、Available。
 
  |
-|TimePoints|String|4,19|指定自动快照的创建时间点。最小单位为小时，从 00:00~23:00 共 24 个时间点可选，参数为 0~23 的数字，如：1 代表在 01:00 时间点。可以选定多个时间点。 传递参数为一个带有格式的 Json Array："0", "1", ... "23"，最多 24 个时间点，用半角逗号字符隔开。
+|TimePoints|String|4,19|自动快照的创建时间点。最小单位为小时，从00:00~23:00共24个时间点可选，参数为0~23的数字，如：1代表在01:00时间点。最多24个时间点，用半角逗号\(,\)隔开。
 
  |
 |PageNumber|Integer|1|自动快照策略列表的页码。
@@ -115,5 +118,5 @@ GET https://nas.cn-hangzhou.aliyuncs.com/?Action=DescribeAutoSnapshotPolicies
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/NAS)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/NAS)查看更多错误码。
 
