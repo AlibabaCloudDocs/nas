@@ -33,16 +33,18 @@ CPFS 是阿里云新上线的并行文件存储服务，专注于提供高性能
 
     2.  保存后运行`service cpfs-client rebuild`命令，10分钟左右完成客户端的 rebuild。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155748166241321_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/156514398341321_zh-CN.png)
 
 3.  编辑配置文件`/etc/cpfs/cpfs-mounts.conf`，增加文件系统和挂载目录信息。
 
     ``` {#codeblock_po3_pm1_ezp}
-    192.168.5.179@tcp:/hpctest    /mnt/test
+    cpfs-xxx-abc.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:cpfs-yyy-bcd.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:/xxx /mnt/test
     ```
+
+    cpfs-xxx-abc.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:cpfs-yyy-bcd.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:/xxx为文件系统挂载点，请根据实际值替换。
 
 4.  通过service cpfs-client start/stop 来启动或停止挂载服务。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155748166241331_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/156514398341331_zh-CN.png)
 
 

@@ -33,16 +33,18 @@ CPFS is compatible with POSIX-based APIs. You can use one or more of these APIs 
 
     2.  Save the file and run the `service cpfs-client rebuild` command. This process takes about 10 minutes to complete.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155868616241321_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/156514399541321_en-US.png)
 
 3.  Open the `/etc/cpfs/cpfs-mounts.conf` configuration file, and add a file system and mount drive.
 
     ``` {#codeblock_po3_pm1_ezp}
-    192.168.5.179@tcp:/hpctest	/mnt/test
+    cpfs-xxx-abc.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:cpfs-yyy-bcd.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:/xxx /mnt/test
     ```
+
+    cpfs-xxx-abc.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:cpfs-yyy-bcd.cn-shanghai.cpfs.nas.aliyuncs.com@tcp:/xxx
 
 4.  Run the service cpfs-client start command or the service cpfs-client stop command to start or stop the mount service.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/155868616241331_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/147136/156514399541331_en-US.png)
 
 
