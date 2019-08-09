@@ -20,6 +20,9 @@ CreateAutoSnapshotPolicy 用于创建一条自动快照策略。创建的自动�
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
+|Action|String|是|CreateAutoSnapshotPolicy|系统规定参数。取值：CreateAutoSnapshotPolicy。
+
+ |
 |FileSystemType|String|是|extreme|文件系统类型，可选值：extreme。
 
  |
@@ -30,9 +33,6 @@ CreateAutoSnapshotPolicy 用于创建一条自动快照策略。创建的自动�
 
  |
 |TimePoints|String|是|0,1,…23|自动快照的创建时间点，单位为小时。取值范围：0~23，代表 00:00 至 23:00 共 24 个时间点，如 1 表示 01:00。当一天内需要创建多次自动快照时，可以传入多个时间点，多个时间点用半角逗号（,）隔开，最多传入24个时间点。
-
- |
-|Action|String|否|CreateAutoSnapshotPolicy|系统规定参数。取值：CreateAutoSnapshotPolicy。
 
  |
 |AutoSnapshotPolicyName|String|否|FinanceJoshua|自动快照策略的名称。长度为 2~128 个英文或中文字符，必须以大小字母或中文开头，可包含数字、半角冒号（:）、下划线（\_）或连字符（-），不能以 http:// 和 https:// 开头。默认值：空
