@@ -10,10 +10,10 @@ DescribeAccessGroups用于返回权限组描述信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|AccessGroupName|String|否|classic-test|权限组名称
+|Action|String|是|DescribeAccessGroups|操作接口名，系统规定参数，取值：DescribeAccessGroups
 
  |
-|Action|String|否|DescribeAccessGroups|操作接口名，系统规定参数，取值：DescribeAccessGroups
+|AccessGroupName|String|否|classic-test|权限组名称
 
  |
 |FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
