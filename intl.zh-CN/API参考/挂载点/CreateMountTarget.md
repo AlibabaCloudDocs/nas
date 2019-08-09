@@ -13,13 +13,13 @@ CreateMountTarget用于创建挂载点。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
+|Action|String|是|CreateMountTarget|操作接口名，系统规定参数，取值：CreateMountTarget
+
+ |
 |FileSystemId|String|是|174494b666|文件系统 ID
 
  |
 |NetworkType|String|是|vpc|网络类型，包括 VPC 和 Classic
-
- |
-|Action|String|否|CreateMountTarget|操作接口名，系统规定参数，取值：CreateMountTarget
 
  |
 |VSwitchId|String|否|vsw-2zevmwkwyztjuoffgdiwl|交换机 ID
