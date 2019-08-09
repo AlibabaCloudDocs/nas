@@ -18,7 +18,7 @@ CreateAccessGroup用于创建权限组。
 |AccessGroupType|String|是|Classic|权限组类型，包括 Vpc和 Classic
 
  |
-|Action|String|否|CreateAccessGroup|操作接口名，系统规定参数，取值：CreateAccessGroup
+|Action|String|是|CreateAccessGroup|操作接口名，系统规定参数，取值：CreateAccessGroup
 
  |
 |Description|String|否|classictestaccessgroup|权限组描述，默认和名称相同，长度为2~128个英文或中文字符。必须以大小字母或中文开头，不能以 http:// 和 https:// 开头。可以包含数字、半角冒号（:）、下划线（\_）或者连字符（-）
