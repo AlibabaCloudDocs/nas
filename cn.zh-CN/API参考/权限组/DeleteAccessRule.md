@@ -16,7 +16,7 @@ DeleteAccessRule用于删除已有权限规则。
 |AccessRuleId|String|是|1|规则序号
 
  |
-|Action|String|否|DeleteAccessRule|操作接口名，系统规定参数，取值：DeleteAccessRule
+|Action|String|是|DeleteAccessRule|操作接口名，系统规定参数，取值：DeleteAccessRule
 
  |
 |FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
