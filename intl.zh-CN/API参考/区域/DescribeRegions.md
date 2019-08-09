@@ -10,7 +10,7 @@ DescribeRegions用于返回所有 RegionId。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|否|DescribeRegions|操作接口名，系统规定参数，取值：DescribeRegions
+|Action|String|是|DescribeRegions|操作接口名，系统规定参数，取值：DescribeRegions
 
  |
 |FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
