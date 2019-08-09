@@ -10,13 +10,13 @@ DeleteMountTarget 用于删除已有挂载点。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
+|Action|String|是|DeleteMountTarget|操作接口名，系统规定参数，取值：DeleteMountTarget
+
+ |
 |FileSystemId|String|是|174494b666|文件系统 ID
 
  |
 |MountTargetDomain|String|是|174494b666-xog95.cn-hangzhou.nas.aliyuncs.com|挂载点域名
-
- |
-|Action|String|否|DeleteMountTarget|操作接口名，系统规定参数，取值：DeleteMountTarget
 
  |
 
