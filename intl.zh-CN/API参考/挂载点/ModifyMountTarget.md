@@ -10,6 +10,9 @@ ModifyMountTarget用于修改挂载点信息。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
+|Action|String|是|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
+
+ |
 |FileSystemId|String|是|1ca404a666|文件系统 ID
 
  |
@@ -17,9 +20,6 @@ ModifyMountTarget用于修改挂载点信息。
 
  |
 |AccessGroupName|String|否|classic-test|权限组名称
-
- |
-|Action|String|否|ModifyMountTarget|操作接口名，系统规定参数，取值：ModifyMountTarget
 
  |
 |Status|String|否|Inactive|挂载点状态，枚举值包括：Active（表示启用），Inactive（表示禁用）
