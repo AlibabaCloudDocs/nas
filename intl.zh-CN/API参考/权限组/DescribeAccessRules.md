@@ -13,10 +13,10 @@ DescribeAccessRules用于返回权限规则描述。
 |AccessGroupName|String|是|classic-test|权限组名称
 
  |
-|AccessRuleId|String|否|1|规则序号
+|Action|String|是|DescribeAccessRules|操作接口名，系统规定参数，取值：DescribeAccessRules
 
  |
-|Action|String|否|DescribeAccessRules|操作接口名，系统规定参数，取值：DescribeAccessRules
+|AccessRuleId|String|否|1|规则序号
 
  |
 |FileSystemType|String|否|standard|文件系统类型，可选值：standard、extreme，默认值：standard
