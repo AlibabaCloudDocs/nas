@@ -10,10 +10,10 @@ DescribeSnapshots 用于查询一个文件系统所有的快照列表。
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|FileSystemType|String|是|extreme|文件系统类型，可选值：extreme。
+|Action|String|是|DescribeSnapshots|系统规定参数。取值：DescribeSnapshots。
 
  |
-|Action|String|否|DescribeSnapshots|系统规定参数。取值：DescribeSnapshots。
+|FileSystemType|String|是|extreme|文件系统类型，可选值：extreme。
 
  |
 |FileSystemId|String|否|extreme-22fd123|指定的文件系统 ID。
