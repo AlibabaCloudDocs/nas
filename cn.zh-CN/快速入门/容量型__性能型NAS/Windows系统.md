@@ -113,7 +113,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156559363449545_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156559376349545_zh-CN.png)
 
 4.  挂载成功后，您可以在ECS上访问NAS文件系统，执行读取或写入操作。
 
