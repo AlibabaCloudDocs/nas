@@ -16,9 +16,9 @@
 
     **说明：** 
 
-    1.  如果您要使用RAM账户操作NAS，详情请参见[RAM用户访问控制](../../../../cn.zh-CN/控制台用户指南/管理权限/RAM用户访问控制.md#)。
-    2.  开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../cn.zh-CN/产品定价/预付费/购买存储包.md#)。
-    3.  如果要创建专有网络类型的挂载点，还需在创建文件系统的地域上创建专有网络VPC，并将已创建的云服务器ECS归属到此专有网络VPC下，详情请参见[创建专有网络和交换机](创建专有网络和交换机../../SP_22/DNVPC11885991/ZH-CN_TP_2434_V13.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb) 。
+    -   如果您要使用RAM账户操作NAS，详情请参见[RAM用户访问控制](../../../../cn.zh-CN/控制台用户指南/管理权限/RAM用户访问控制.md#)。
+    -   开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../cn.zh-CN/产品定价/预付费/购买存储包.md#)。
+    -   如果要创建专有网络类型的挂载点，还需在创建文件系统的地域上创建专有网络VPC，并将已创建的云服务器ECS归属到此专有网络VPC下，详情请参见[创建专有网络和交换机](创建专有网络和交换机../../SP_22/DNVPC11885991/ZH-CN_TP_2434_V13.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb) 。
 
 ## 步骤一：创建文件系统 {#section_yfn_vyz_24t .section}
 
@@ -177,7 +177,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156559333249539_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156566019849539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
@@ -185,6 +185,6 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156559333254347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156566019854347_zh-CN.png)
 
 
