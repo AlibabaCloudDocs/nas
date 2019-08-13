@@ -4,15 +4,15 @@
 
 ## 第一步，检查是否使用noresvport挂载参数 {#section_gw8_cy2_741 .section}
 
-1.  在ECS上下载check\_noresvport.py检查脚本。
+1.  在ECS上下载check\_noresvport.py检查脚本。 
 
-    ``` {#codeblock_jy8_0ht_zez}
-    wget -N https://raw.githubusercontent.com/alibabacloudnas/nas-client-tools/master/linux_client/check_noresvport.py -P /tmp/
+    ``` {#codeblock_5sa_65h_lgo}
+    wget -N https://code.aliyun.com/nas_team/nas-client-tools/raw/master/linux_client/check_noresvport.py -P /tmp/
     ```
 
-2.  使用python执行检查脚本。
+2.  使用python执行检查脚本。 
 
-    ``` {#codeblock_37o_qt1_8qp}
+    ``` {#codeblock_fuz_mal_p6e}
     python /tmp/check_noresvport.py
     ```
 
