@@ -16,11 +16,11 @@ When NAS is activated, a permission group named VPC default permission group \(a
 ## Create a permission group and add rules {#section_0la_i30_27g .section}
 
 1.  Log on to the [NAS console](partners-intl.console.aliyun.com/#/nas).
-2.  Create a permission group.
-    1.  Choose **NAS** \> **Permission Group** and click **Create Permission Group**.
-    2.  In the Create Permission Group dialog box, configure the required settings.
+2.  Create a permission group. 
+    1.  Choose **NAS** \> **Permission Group** and click **Create Permission Group**. 
+    2.  In the Create Permission Group dialog box, configure the required settings. 
 
-        ![manage permission](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/156410760752619_en-US.png)
+        ![Create Permission Group](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/156576579852619_en-US.png)
 
         |Name|Description|
         |----|-----------|
@@ -28,30 +28,28 @@ When NAS is activated, a permission group named VPC default permission group \(a
         |Name|The name of the permission group.|
         |Network Type|Valid values: VPC and classic network.|
 
-3.  Add a rule
+3.  Add a rule. 
     1.  Locate the target permission group and click **Manage**.
     2.  On the Permission Group Rules page, click **Add Rule**.
-    3.  Configure the required settings.
+    3.  Configure the required settings. 
 
-        ![permission rule](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/156410760752620_en-US.png)
+        ![Permission Group Rules](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18697/156576579952620_en-US.png)
 
         |Name|Description|
         |----|-----------|
-        |**Authorization Address**| The authorized object to which this rule applies.
-
- |
-        |**Read/Write Permissions**|Indicates whether to allow read-only or read/write access to the file system from the authorized object. Valid values: **Read-only** and **Read/Write**.|
-        |**User Permission**|Indicates whether to limit a Linux user's access to a file system. When a Linux user attempts to access the files or directories of a file system, the specified user permission is checked.
+        |Authorization Address|The authorized object to which this rule applies.|
+        |Read/Write Permissions|Indicates whether to allow read-only or read/write access to the file system from the authorized object. Valid values: **Read-only** and **Read/Write**.|
+        |User Permission|Indicates whether to limit a Linux user's access to a file system. When a Linux user attempts to access the files or directories of a file system, the specified user permission is checked.
 
         -   **Do not limit root users \(no\_squash\)**: allows access to a file system from root users.
         -   **Limit root users \(root\_squash\)**: denies access to a file system from root users. All root users are treated as nobody users.
         -   **Limit all users \(all\_squash\)**: denies access to a file system from all users including root users. All users are treated as nobody users.
  |
-        |**Priority**|When an authorized object matches multiple rules, the rule with the highest priority takes effect. 1 to 100, in which 1 is the highest priority.
+        |Priority|When an authorized object matches multiple rules, the rule with the highest priority takes effect. 1 to 100, in which 1 is the highest priority.
 
  |
 
-    4.  Click **OK**.
+    4.  Click **OK**
 
 ## More actions {#section_23a_bcs_9ix .section}
 
