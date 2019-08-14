@@ -4,10 +4,12 @@ This topic describes how to create a custom policy and grant the policy to a RAM
 
 ## Procedure {#section_lif_gr0_yuz .section}
 
-1.  Log on to the [RAM console](https://ram.console.aliyun.com/overview) by using an Alibaba Cloud account.
-2.  In the left-side navigation pane, select **Policies**, click **Create Policy**, and follow the instructions to create a policy. The following takes the NASReadOnlyAccess policy as an example. This policy allows read-only access to all NAS resources. For more information, see [../../SP\_65/DNRAM11885314/EN-US\_TP\_23770.dita\#concept\_srq\_fbk\_xdb](../../SP_65/DNRAM11885314/EN-US_TP_23770.dita#concept_srq_fbk_xdb).
+s
 
-    ``` {#codeblock_axc_8u8_8d3}
+1.  Log on to the [RAM console](https://ram.console.aliyun.com/overview) by using an Alibaba Cloud account.
+2.  In the left-side navigation pane, select **Policies**, click **Create Policy**, and follow the instructions to create a policy. The following takes the NASReadOnlyAccess policy as an example. This policy allows read-only access to all NAS resources. For more information, see [../../SP\_65/DNRAM11885314/EN-US\_TP\_23770.dita\#concept\_srq\_fbk\_xdb](../../SP_65/DNRAM11885314/EN-US_TP_23770.dita#concept_srq_fbk_xdb). 
+
+    ``` {#codeblock_9nr_8ug_i34}
     {
         "Statement": [
             {
@@ -18,7 +20,7 @@ This topic describes how to create a custom policy and grant the policy to a RAM
         ],
         "Version": "1"
     }
-    					
+    						
     ```
 
     API operations that you can call to manage NAS file systems are listed in the following table.
@@ -48,8 +50,8 @@ This topic describes how to create a custom policy and grant the policy to a RAM
     |\*|Indicates all NAS resources.|
 
 3.  After the policy is created, go to the Users page.
-4.  Select a RAM user account to be authorized, click **Add Permissions**, select the required NAS permission, and grant the permission to the RAM user account.
+4.  Select a RAM user account to be authorized, click **Add Permissions**, select the required NAS permission, and grant the permission to the RAM user account. 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18696/156436747252616_en-US.png)
+    ![grant permission](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18696/156576575752616_en-US.png)
 
 
