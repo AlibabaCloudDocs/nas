@@ -39,7 +39,7 @@ You can call this operation to query the automatic snapshot policies you have cr
 |AutoSnapshotPolicyName|String|p-23f2i9s4t| The name of the automatic snapshot policy.
 
  |
-|CreateTime|String|2014-04-21T12:08:52Z| The time when the automatic snapshot policy was created. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the format of yyyy-MM-ddTHH:mm:ssZ. The time is displayed in UTC.
+|CreateTime|String|2014-04-21T12:08:52Z| The time when the automatic snapshot policy was created. The time follows the [ISO8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard in the format of yyyy-MM-ddTHH:mm:ssZ. The time is displayed in UTC.
 
  |
 |FileSystemNums|Integer|2| The number of file systems to which the automatic snapshot policy applies.
