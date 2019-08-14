@@ -63,7 +63,7 @@ You can call this operation to query the list of all snapshots of the file syste
 |Snapshots| | | The details of snapshots.
 
  |
-|CreateTime|String|2014-07-24T13:00:52Z| The time when the snapshot is created. The time is displayed in UTC. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the format of yyyy-MM-ddThh:mmZ.
+|CreateTime|String|2014-07-24T13:00:52Z| The time when the automatic snapshot policy was created. The time follows the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) standard in the format of yyyy-MM-ddTHH:mm:ssZ. The time is displayed in UTC.
 
  |
 |Description|String|FinanceDept| The description of the snapshot.

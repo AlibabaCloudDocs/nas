@@ -63,7 +63,7 @@ DescribeSnapshots 用于查询一个文件系统所有的快照列表。
 |Snapshots| | |快照详情集合。
 
  |
-|CreateTime|String|2014-07-24T13:00:52Z|创建时间。按照 [ISO8601](https://help.aliyun.com/document_detail/25696.html) 标准表示，并需要使用UTC时间。格式为：yyyy-MM-ddThh:mmZ。
+|CreateTime|String|2014-07-24T13:00:52Z|创建时间。按照 [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) 标准表示，并需要使用UTC时间。格式为：yyyy-MM-ddThh:mmZ。
 
  |
 |Description|String|FinanceDept|接口说明信息。
