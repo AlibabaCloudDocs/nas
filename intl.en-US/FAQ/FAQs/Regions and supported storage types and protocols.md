@@ -84,7 +84,7 @@ Zones: A, B, C, D, E
 
     |Region|City|Supported storage types, protocols, and zones|
     |------|----|---------------------------------------------|
-    |Hong Kong|Hong Kong|     -   Capacity: NFS, SMB
+    |China \(Hong Kong\)|Hong Kong|     -   Capacity: NFS, SMB
 
 Zones: B
 
@@ -120,7 +120,7 @@ Zones: A
     |Asia Pacific NE 1|Tokyo|Capacity: NFS, SMB Zones: A, B
 
  |
-    |Asia Pacific SOU 1|Mumbai |     -   Capacity: NFS, SMB
+    |Asia Pacific SOU 1|Mumbai|     -   Capacity: NFS, SMB
 
 Zones: A
 
