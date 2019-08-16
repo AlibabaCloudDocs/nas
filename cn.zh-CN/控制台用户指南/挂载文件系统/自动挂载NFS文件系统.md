@@ -81,7 +81,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156568934351407_zh-CN.png)
+    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156594970851407_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。如果挂载失败，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
 
@@ -89,7 +89,7 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156568934354347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156594970854347_zh-CN.png)
 
 
 ## 极速型 NAS {#section_gsl_kkp_hhb .section}
@@ -103,26 +103,30 @@
     vi /etc/systemd/system/sockets.target.wants/rpcbind.socket
     ```
 
-    ![注释rpcbind参数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156568934351186_zh-CN.png)
+    ![注释rpcbind参数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156594970851186_zh-CN.png)
 
     **说明：** 如果您是在CentOS6.x系统中配置自动重启，您还需执行以下两个操作。
 
     1.  执行`chkconfig netfs on`命令，保证netfs开机自启动。
     2.  打开/etc/netconfig配置文件，注释掉inet6相关的内容。
 
-        ![注释inet6相关内容](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156568934351194_zh-CN.png)
+        ![注释inet6相关内容](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156594970951194_zh-CN.png)
 
 3.  打开/etc/fstab配置文件，添加以下命令。 
 
     ``` {#codeblock_tj5_65v_w2c}
-    file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt nfs vers=3,proto=tcp,noresvport,_netdev 0 0
+    file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt nfs vers=3,nolock,proto=tcp,noresvport,_netdev 0 0
     ```
 
     命令中各参数说明如下表所示。
 
     |参数|说明|
     |--|--|
-    |挂载点| |
+    |挂载点| 挂载点包括挂载点域名和挂载点路径，请根据实际值替换。
+
+    -   挂载点域名：添加挂载点时自动生成，无需手工配置。
+    -   挂载点路径：挂载的目标地址，Linux 系统中的根目录（/）或任意子目录（如/mnt）。
+ |
     |vers|文件系统版本，目前只支持nfsv3。|
     |\_netdev|防止客户端在网络就绪之前开始挂载文件系统。|
     |0（noresvport 后第一项）|非零值表示文件系统应由 dump 备份。对于 NAS，此值为 0。|
@@ -134,7 +138,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156568934351183_zh-CN.png)
+    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156594970951183_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。如果挂载失败，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
 
@@ -142,6 +146,6 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156568934354347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156594970854347_zh-CN.png)
 
 
