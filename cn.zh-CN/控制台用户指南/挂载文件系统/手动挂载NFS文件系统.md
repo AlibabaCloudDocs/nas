@@ -21,7 +21,7 @@
     -   如果您使用的是极速型NAS，请参见以下命令进行挂载。
 
         ``` {#codeblock_esw_fnh_wih}
-        sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt
+        sudo mount -t nfs -o vers=3,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt
         ```
 
     如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
