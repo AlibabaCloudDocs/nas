@@ -16,13 +16,11 @@ NAS supports the subscription and pay-as-you-go billing methods. The two billing
 
 NAS supports the subscription and pay-as-you-go billing methods.
 
--   [Pay-as-you-go](intl.en-US/Pricing/Pay-as-you-go.md#)Pay-as-you-go is a billing method that you can use to pay for a service after you use the service. Expenses incurred within an hour are deducted from the balance at the next hourly interval. For example, if you receive a bill at 9:30, the bill includes the expenses from 8:00 to 9:00. The basic billing unit is one hour. Each expense is paid by the hour even if the usage time of a file system is less than one hour.
+-   [Pay-as-you-go](reseller.en-US/Pricing/Pay-as-you-go.md#)Pay-as-you-go is a billing method that you can use to pay for a service after you use the service. Expenses incurred within an hour are deducted from the balance at the next hourly interval. For example, if you receive a bill at 9:30, the bill includes the expenses from 8:00 to 9:00. The basic billing unit is one hour. Each expense is paid by the hour even if the usage time of a file system is less than one hour.
 
     **Note:** Assume that you receive a bill at 9:30. However, the bill may only include the expenses from 7:00 to 8:00 due to a system delay.
 
--   [Subscription \(Storage Package\)](intl.en-US/Pricing/Subscription/Purchase a storage package.md#): After you purchase a storage package, it covers a specified amount of consumed resources that you use. A storage package is more cost-effective.
-
-    You can renew a storage package during the validity period of the storage package. You can also enable the Auto Renew feature in the [Expense Center console](https://renew.console.aliyun.com/center#/renew/naspackage?_k=2qmc0g). For more information, see [\[DO NOT TRANSLATE\]](EN-US_TP_18687.md#). If you fail to renew a storage package after the storage package expires, you are charged by using the pay-as-you-go billing method. This does not affect data storage and file systems.
+-   [Subscription \(Storage Package\)](reseller.en-US/Pricing/Subscription/Purchase a storage package.md#): After you purchase a storage package, it covers a specified amount of consumed resources that you use. A storage package is more cost-effective.
 
     **Note:** 
 
@@ -32,7 +30,7 @@ NAS supports the subscription and pay-as-you-go billing methods.
     For example, you purchase a storage package of 500 GB for File System A. During a period from 7:00 to 8:00, the maximum used space of File System A is 800 GB. Therefore, 500 GB of the total 800 GB is covered by the storage package. Charges incurred for the remaining 300 GB are paid by using the pay-as-you-go billing method.
 
 
-For more information about the pricing structure of NAS, see [Pricing](https://www.alibabacloud.com/zh/product/nas/pricing).
+For more information about the pricing structure of NAS, see Pricing.
 
 ## FAQ {#section_9wy_f82_17v .section}
 
