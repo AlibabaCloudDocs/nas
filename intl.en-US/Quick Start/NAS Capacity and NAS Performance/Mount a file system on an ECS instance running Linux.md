@@ -8,21 +8,21 @@ This topic describes how to create a file system and mount the file system on an
 
 2.  You have activated the Network Attached Storage \(NAS\) service.
 
-    When you log on to the [NAS console](partners-intl.console.aliyun.com/#/nas) for the first time, follow the instructions to activate the NAS service.
+    When you log on to the [NAS console](https://nas.console.aliyun.com/) for the first time, follow the instructions to activate the NAS service.
 
 3.  At least one ECS instance is available in the region where you need to create a file system.
 
-    If no ECS instance is available, you need to purchase an ECS instance. For more information, see [Step 2. Create an instance](../../../../reseller.en-US/Quick Start for Entry-Level Users/Step 2. Create an instance.md#).
+    If no ECS instance is available, you need to purchase an ECS instance. For more information, see [Step 2. Create an instance](../../../../intl.en-US/Quick Start for Entry-Level Users/Step 2. Create an instance.md#).
 
     **Note:** 
 
-    1.  For more information about how to manage NAS by using a RAM user account, see [Access control for RAM users](../../../../reseller.en-US/Console User Guide/Manage permissions/Access control for RAM users.md#).
-    2.  After you activate the NAS service, the default billing method is pay-as-you-go. If you want to use NAS with an extra discount, you can purchase a storage package. For more information, see [Purchase a storage package](../../../../reseller.en-US/Pricing/Subscription/Purchase a storage package.md#).
+    1.  For more information about how to manage NAS by using a RAM user account, see [Access control for RAM users](../../../../intl.en-US/Console User Guide/Manage permissions/Access control for RAM users.md#).
+    2.  After you activate the NAS service, the default billing method is pay-as-you-go. If you want to use NAS with an extra discount, you can purchase a storage package. For more information, see [Purchase a storage package](../../../../intl.en-US/Pricing/Subscription/Purchase a storage package.md#).
     3.  If you need to create a mount point in a VPC, you need to create a VPC in the same region where the new file system resides. Then, you need to attach the ECS instance that hosts the file system to the VPC. For more information, see [Create a VPC and VSwitch](Create a VPC and VSwitch../../SP_22/DNVPC11885991/EN-US_TP_2434.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb).
 
 ## Step 1: Create a file system {#section_3x4_3v9_srh .section}
 
-1.  Log on to the [NAS console](partners-intl.console.aliyun.com/#/nas).
+1.  Log on to the [NAS console](https://nas.console.aliyun.com/).
 2.  Choose **NAS** \> **File System List**, and click **Create File System**.
 3.  In the Create File System dialog box, configure the required settings. 
 
@@ -33,7 +33,7 @@ This topic describes how to create a file system and mount the file system on an
 **Note:** 
 
     -   When a file system and an ECS instance are located in different regions, you cannot mount the file system on the ECS instance.
-    -   The supported storage types and protocol types of a file system change based on the region. For more information, see [Storage types and protocol types supported by NAS in different regions](../../../../reseller.en-US/FAQ/FAQs/Regions and supported storage types and protocols.md#).
+    -   The supported storage types and protocol types of a file system change based on the region. For more information, see [Storage types and protocol types supported by NAS in different regions](../../../../intl.en-US/FAQ/FAQs/Regions and supported storage types and protocols.md#).
     -   You can create a maximum of 20 file systems in a region by using an Alibaba Cloud account.
  |
     |Storage Type| Valid values: **SSD performance-type** and **Capacity-type**.
@@ -53,7 +53,7 @@ This topic describes how to create a file system and mount the file system on an
 **Note:** When a file system and an ECS instance are located in different zones in the same region, you can mount the file system on the ECS instance.
 
  |
-    |Storage Package| Storage packages are an alternative billing method. It provides an extra discount over the pay-as-you-go billing method. If you do not purchase a storage package, the default billing method is pay-as-you-go. For more information, see [Pricing](../../../../reseller.en-US/Pricing/Pricing.md#).
+    |Storage Package| Storage packages are an alternative billing method. It provides an extra discount over the pay-as-you-go billing method. If you do not purchase a storage package, the default billing method is pay-as-you-go. For more information, see [Pricing](../../../../intl.en-US/Pricing/Pricing.md#).
 
  |
 
@@ -65,7 +65,7 @@ In NAS, you need to use a mount point to mount a file system on an ECS instance.
 
 **Note:** You can create a maximum of two mount points for each file system.
 
-1.  Log on to the [NAS console](partners-intl.console.aliyun.com/#/nas).
+1.  Log on to the [NAS console](https://nas.console.aliyun.com/).
 2.  Choose **NAS** \> **File System List**.
 3.  Find the target file system, and click **Add Mount Point**.
 4.  In the **Add Mount Point** dialog box, configure the required settings. 
@@ -86,7 +86,7 @@ In NAS, you need to use a mount point to mount a file system on an ECS instance.
  |
         |Permission Group| Select **VPC default permission group \(allow all\)** or an existing permission group.
 
-**Note:** This VPC default permission group is generated for each Alibaba Cloud account, which allows access to the file system through the mount point from all IP addresses of the VPC. For more information about how to create a permission group, see [Manage permission groups](../../../../reseller.en-US/Console User Guide/Manage permissions/Manage permission groups.md#).
+**Note:** This VPC default permission group is generated for each Alibaba Cloud account, which allows access to the file system through the mount point from all IP addresses of the VPC. For more information about how to create a permission group, see [Manage permission groups](../../../../intl.en-US/Console User Guide/Manage permissions/Manage permission groups.md#).
 
  |
 
@@ -100,8 +100,8 @@ In NAS, you need to use a mount point to mount a file system on an ECS instance.
 
         -   You can only create a mount point with the classic network type in a region that is located in Mainland China.
         -   You can only attach a mount point with the classic network type to an ECS instance.
-        -   For data security, NAS dos not provide a permission group for a mount point with the classic network type. Therefore, you need to create a permission group of the classic network type before specifying the permission group for a mount point of the classic network type. Then, you need to add the required rules to the permission group. For more information about how to manage permission groups, see [Manage permission groups](../../../../reseller.en-US/Console User Guide/Manage permissions/Manage permission groups.md#).
-        -   When creating a mount point in a classic network for the first time, you are required to use RAM to authorize NAS to access ECS instances hosted by the logon Alibaba Cloud account. We recommend that you follow the instructions to complete the authorization and create a mount point in a classic network. For more information, see [Why do I need RAM permissions to create a mount point in a classic network](../../../../reseller.en-US/FAQ/FAQs/Why do I need RAM permissions to create a mount point in a classic network.md#).
+        -   For data security, NAS dos not provide a permission group for a mount point with the classic network type. Therefore, you need to create a permission group of the classic network type before specifying the permission group for a mount point of the classic network type. Then, you need to add the required rules to the permission group. For more information about how to manage permission groups, see [Manage permission groups](../../../../intl.en-US/Console User Guide/Manage permissions/Manage permission groups.md#).
+        -   When creating a mount point in a classic network for the first time, you are required to use RAM to authorize NAS to access ECS instances hosted by the logon Alibaba Cloud account. We recommend that you follow the instructions to complete the authorization and create a mount point in a classic network. For more information, see [Why do I need RAM permissions to create a mount point in a classic network](../../../../intl.en-US/FAQ/FAQs/Why do I need RAM permissions to create a mount point in a classic network.md#).
  |
 
 5.  Click **OK** create a mount point.
@@ -110,7 +110,7 @@ In NAS, you need to use a mount point to mount a file system on an ECS instance.
 
 Before mounting an NFS file system on an ECS instance running Linux, you must install an NFS client.
 
-1.  Log on to the [ECS console](partners-intl.console.aliyun.com/#/ecs).
+1.  Log on to the [ECS console](https://ecs.console.aliyun.com/).
 2.  Use the following command to install the NFS client. 
     -   If CentOS, RHEL, or Aliyun Linux is running on the ECS instance, run the following command.
 
@@ -128,7 +128,7 @@ Before mounting an NFS file system on an ECS instance running Linux, you must in
         sudo apt-get install nfs-common
         ```
 
-3.  Change the maximum number of concurrent NFS requests. For more information, see [How can I modify the maximum number of concurrent NFS requests?](../../../../reseller.en-US/FAQ/FAQs/How can I modify the maximum number of concurrent NFS requests?.md#). 
+3.  Change the maximum number of concurrent NFS requests. For more information, see [How can I modify the maximum number of concurrent NFS requests?](../../../../intl.en-US/FAQ/FAQs/How can I modify the maximum number of concurrent NFS requests?.md#). 
 
     The maximum number of concurrent requests from an NFS client is limited to 2 by default, which reduces NFS performance.
 
@@ -137,7 +137,7 @@ Before mounting an NFS file system on an ECS instance running Linux, you must in
 
 You can use the domain name of a file system or the domain name of the mount target to mount the NFS file system on an ECS instance. The domain name of the file system is resolved to the IP address of the mount target in a zone where the ECS instance resides.
 
-1.  Log on to the [ECS console](partners-intl.console.aliyun.com/#/ecs).
+1.  Log on to the [ECS console](https://ecs.console.aliyun.com/).
 2.  Mount the NFS file system. 
 
     -   Use the following command to mount an NFSv4 file system.
@@ -170,7 +170,7 @@ You can use the domain name of a file system or the domain name of the mount tar
     -   The path of a mount point indicates the target mount address. The path can be the root directory \(/\) or a subfolder such as /mnt in Linux.
  |
     |vers|The version of the file system. Only NFSv3 and NFSv4 are applicable.|
-    |Mount options| When you mount a file system, multiple mount options are available. For more information, see the [Mount options](reseller.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#table_2uc_odz_vk9) topic in [Mount an NFS file system](../../../../dita-oss-bucket/SP_111/DNnas1882233/reseller.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#).
+    |Mount options| When you mount a file system, multiple mount options are available. For more information, see the [Mount options](intl.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#table_2uc_odz_vk9) topic in [Mount an NFS file system](../../../../dita-oss-bucket/SP_111/DNnas1882233/intl.en-US/Console User Guide/Mount a file system/Mount an NFS file system.md#).
 
  |
 
@@ -178,7 +178,7 @@ You can use the domain name of a file system or the domain name of the mount tar
 
     The following figure shows an example of a successful mount.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156618367051149_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156618374551149_en-US.png)
 
     After a file system is mounted, you can use the `df -h` command to view the capacity of the file system.
 
@@ -186,6 +186,6 @@ You can use the domain name of a file system or the domain name of the mount tar
 
     You can access the file system by using the same method for a common directory. An example is shown as follows.
 
-    ![read and write data to the file system](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156618367154347_en-US.png)
+    ![read and write data to the file system](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156618374554347_en-US.png)
 
 
