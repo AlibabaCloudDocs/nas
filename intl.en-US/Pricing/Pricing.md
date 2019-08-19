@@ -16,7 +16,7 @@ NAS supports the subscription and pay-as-you-go billing methods. The two billing
 
 NAS supports the subscription and pay-as-you-go billing methods.
 
--   [Pay-as-you-go](reseller.en-US/Pricing/Pay-as-you-go.md#)Pay-as-you-go is a billing method that you can use to pay for a service after you use the service. Expenses incurred within an hour are deducted from the balance at the next hourly interval. For example, if you receive a bill at 9:30, the bill includes the expenses from 8:00 to 9:00. The basic billing unit is one hour. Each expense is paid by the hour even if the usage time of a file system is less than one hour.
+-   [Pay-as-you-go](reseller.en-US/Pricing/Pay-as-you-go.md#): Pay-as-you-go is a billing method that you can use to pay for a service after you use the service. Expenses incurred within an hour are deducted from the balance at the next hourly interval. For example, if you receive a bill at 9:30, the bill includes the expenses from 8:00 to 9:00. The basic billing unit is one hour. Each expense is paid by the hour even if the usage time of a file system is less than one hour.
 
     **Note:** Assume that you receive a bill at 9:30. However, the bill may only include the expenses from 7:00 to 8:00 due to a system delay.
 
