@@ -34,7 +34,7 @@ Network Attached Storage \(NAS\) supports the subscription billing method. You c
 
 -   Can I purchase multiple storage packages for a file system?
 
-    No, you can only attach a maximum of one storage package to a file system. If you require a storage package with a higher specification or longer duration, you can perform the [EN-US\_TP\_18688.dita\#concept\_53974\_zh](EN-US_TP_18688.dita#concept_53974_zh) action on the existing storage package.
+    No, you can only attach a maximum of one storage package to a file system. If you require a storage package with a higher specification or longer duration, you can perform the [Upgrade a storage package](Upgrade a storage packageEN-US_TP_18688.dita#concept_53974_zh) action on the existing storage package.
 
 -   Is the storage capacity of a file system limited by the capacity of a storage package?
 
