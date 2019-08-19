@@ -177,7 +177,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156566019849539_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156618368449539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
@@ -185,6 +185,6 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156566019854347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156618368554347_zh-CN.png)
 
 
