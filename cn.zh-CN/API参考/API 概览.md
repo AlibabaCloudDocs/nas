@@ -32,6 +32,9 @@ NAS 提供以下 API 接口。
 |26|极速型NAS快照|[DescribeAutoSnapshotPolicies](cn.zh-CN/API参考/极速型NAS快照/DescribeAutoSnapshotPolicies.md#)|查询已创建的自动快照策略|
 |27|极速型NAS快照|[ModifyAutoSnapshotPolicy](cn.zh-CN/API参考/极速型NAS快照/ModifyAutoSnapshotPolicy.md#)|修改自动快照策略|
 |28|极速型NAS快照|[ResetFileSystem](cn.zh-CN/API参考/极速型NAS快照/ResetFileSystem.md#)|使用文件系统的历史快照回滚至某一阶段的文件系统状态|
+|29|标签|[AddTags](cn.zh-CN/API参考/标签/AddTags.md#)|添加或者覆盖一个或者多个标签到一个文件系统实例。|
+|30|标签|[RemoveTags](cn.zh-CN/API参考/标签/RemoveTags.md#)|从一个文件系统实例上解绑一个或多个标签。|
+|31|标签|[DescribeTags](cn.zh-CN/API参考/标签/DescribeTags.md#)|查询已有标签。|
 
 
 有关API更多信息，请参阅[API资源导航](https://developer.aliyun.com)、 [API Explorer](https://api.aliyun.com)和 [API错误中心](https://error-center.aliyun.com) 。
