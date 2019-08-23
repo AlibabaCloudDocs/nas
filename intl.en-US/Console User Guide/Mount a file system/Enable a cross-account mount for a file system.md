@@ -6,14 +6,14 @@ By default, you can only mount a file system on an ECS instance that is owned by
 
 You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned by different accounts.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156654837539653_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156654864839653_en-US.png)
 
 1.  Create a CEN instance by using Account A. 
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/).
     2.  On the Instances page, click **Create CEN Instance**.
     3.  Configure the CEN instance. 
 
-        ![Configure the CEN instance](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156654837639616_en-US.png)
+        ![Configure the CEN instance](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156654864939616_en-US.png)
 
         |Name|Description|
         |----|-----------|
@@ -27,7 +27,7 @@ You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned
  The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
 
  |
-        |Attach Network| You can attach networks owned by this account or a different account to a CEN instance. For more information, see [../../SP\_17/DNBACK1834571/EN-US\_TP\_3049.dita\#task\_1563531](../../SP_17/DNBACK1834571/EN-US_TP_3049.dita#task_1563531).
+        |Attach Network| You can attach networks owned by this account or a different account to a CEN instance. For more information, see [Networks](Networks../../SP_17/DNBACK1834571/EN-US_TP_3049.dita#task_1563531).
 
  |
 
@@ -39,14 +39,14 @@ You can use Alibaba Cloud Cloud Enterprise Network \(CEN\) to connect VPCs owned
     4.  On the VPC Details page, locate the CEN cross-account authorization information section, and click **CEN Cross-Account Authorization**.
     5.  In the Attach to CEN dialog box, enter the Peer Account UID and Peer Account CEN ID, and click **OK**. 
 
-        ![attach to CEN](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156654837639688_en-US.png)
+        ![attach to CEN](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156654864939688_en-US.png)
 
 3.  Attach a network by using Account A. 
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/) by using Account A.
     2.  On the Instances page, locate the target instance, and click **Manage**.
     3.  On the Networks tab, click **Attach Network** to configure the network. 
 
-        ![configure the network](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156654837639689_en-US.png)
+        ![configure the network](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132369/156654864939689_en-US.png)
 
         |Name|Description|
         |----|-----------|
