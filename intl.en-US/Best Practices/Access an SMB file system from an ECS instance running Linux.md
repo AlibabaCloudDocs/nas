@@ -100,7 +100,7 @@ This topic describes how to mount an SMB file system on an ECS instance running 
     |Parameter|Description|
     |---------|-----------|
     |File system type|For an SMB file system, you must specify -t cifs.|
-    |Domain name of a mount point|When you create a mount point for a file system, the domain name of the mount point is generated. You must replace the domain name based on your requirements. For more information about mount points, see [../DNnas1882233/EN-US\_TP\_18694.dita\#task\_27531\_zh](../DNnas1882233/EN-US_TP_18694.dita#task_27531_zh).|
+    |Domain name of a mount point|When you create a mount point for a file system, the domain name of the mount point is generated. You must replace the domain name based on your requirements. For more information about mount points, see [Manage mount points](Manage mount points../DNnas1882233/EN-US_TP_18694.dita#task_27531_zh).|
     |myshare|The name of an SMB share. You cannot change the name.|
     |Mount directory|The target mount directory, such as /mnt/sharepath.|
     |Mount option|You can use the -o switch to specify mount options.     -   \(Required\) vers: specifies the version of the SMB protocol. You can specify 2.1 or 3.0 for the parameter.
@@ -130,13 +130,13 @@ This topic describes how to mount an SMB file system on an ECS instance running 
 
     The following figure shows an example of a successful mount.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253385/156654531454720_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253385/156654604154720_en-US.png)
 
 4.  After you mount a file system, you can perform read/write operations on the NAS file system from the Linux ECS instance. 
 
     You can access the NAS file system in the same way you access a normal directory. The following figure shows a code example.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156654531454347_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156654604154347_en-US.png)
 
 
 ## Scenarios {#section_6xk_1hd_bzj .section}
