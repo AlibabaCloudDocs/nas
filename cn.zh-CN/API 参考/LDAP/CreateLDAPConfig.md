@@ -1,6 +1,6 @@
 # CreateLDAPConfig {#doc_api_NAS_CreateLDAPConfig .reference}
 
-用于添加LADP。
+用于添加LDAP。
 
 ## 调试 {#api_explorer .section}
 
