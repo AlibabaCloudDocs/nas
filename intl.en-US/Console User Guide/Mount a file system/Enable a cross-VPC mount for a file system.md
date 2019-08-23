@@ -6,14 +6,14 @@ Typically, you can only mount a file system on an ECS instance that is hosted by
 
 You can use CEN to establish a connection between different VPCs that are located in the same region. You can enable a cross-VPC mount for the file system after the connection is established.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156438599339613_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156654829339613_en-US.png)
 
 1.  Create a CEN instance. 
     1.  Log on to the [CEN console](https://cen.console.aliyun.com/).
     2.  On the Instances page, click **Create CEN Instance**.
     3.  Configure the CEN instance. 
 
-        ![Configure the CEN instance](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156438599439616_en-US.png)
+        ![Configure the CEN instance](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156654829339616_en-US.png)
 
         |Name|Description|
         |----|-----------|
@@ -27,7 +27,7 @@ You can use CEN to establish a connection between different VPCs that are locate
  The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
 
  |
-        |Attach Network| You can attach networks owned by this account or a different account to a CEN instance. For more information, see [CEN instances](https://partners-intl.aliyun.com/help/doc-detail/66001.htm).
+        |Attach Network| You can attach networks owned by this account or a different account to a CEN instance. For more information, see [../../SP\_17/DNBACK1834571/EN-US\_TP\_3049.dita\#task\_1563531](../../SP_17/DNBACK1834571/EN-US_TP_3049.dita#task_1563531).
 
  |
 
@@ -35,7 +35,7 @@ You can use CEN to establish a connection between different VPCs that are locate
     1.  On the Instances page, locate the target instance, and click **Manage**.
     2.  On the Networks tab, click **Attach Network** to configure the network. 
 
-        ![configure the network](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156438599439622_en-US.png)
+        ![configure the network](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/132139/156654829339622_en-US.png)
 
         |Name|Description|
         |----|-----------|
