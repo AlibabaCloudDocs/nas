@@ -29,7 +29,7 @@
 |Tag.N.Key|String|否|keyN|当前第N组标签键（TagKey）。需要绑定的标签，包括标签键（TagKey）和标签值（TagValue），单次最多支持传入10组值。标签键（TagKey）不能为空，标签值（TagValue）可以为空。
 
  |
-|Tag.N.Value|String|否|valueN|当前第N组标签值（TagValue）。需要绑定的标签，包括标签值（TagKey）和标签值（TagValue），单次最多支持传入10组值。标签值（TagKey）不能为空，标签值（TagValue）可以为空。
+|Tag.N.Value|String|否|valueN|当前第N组标签值（TagValue）。需要绑定的标签，包括标签键（TagKey）和标签值（TagValue），单次最多支持传入10组值。标签键（TagKey）不能为空，标签值（TagValue）可以为空。
 
  |
 
