@@ -16,7 +16,7 @@
 
     **说明：** 目前只支持主账号使用极速型NAS。
 
-    ![云资源访问授权](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156576854051079_zh-CN.png)
+    ![云资源访问授权](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156714749751079_zh-CN.png)
 
 4.  在需要创建文件系统的地域，已有可用的专有网络VPC。
 
@@ -115,7 +115,7 @@
         sudo apt-get install nfs-common
         ```
 
-3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../../../../cn.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。 NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../../../../cn.zh-CN/常见问题/规模与性能/如何修改同时发起的NFS请求数量.md#)。 NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
 ## 步骤四：挂载文件系统 {#section_6ig_f8k_s6o .section}
 
@@ -128,7 +128,7 @@
     sudo mount -t nfs -o vers=3,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt
     ```
 
-    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../../../../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
+    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../../../../cn.zh-CN/常见错误排查/挂载失败的排查与处理方法.md#)进行排查。
 
     挂载命令中的参数说明如下表所示：
 
@@ -139,7 +139,7 @@
     -   挂载点域名：添加挂载点时自动生成，无需手工配置。
     -   挂载点路径：挂载的目标地址，Linux 系统中的根目录（/）或任意子目录（如/mnt）。
  |
-    |ver|文件系统版本，目前只支持nfsv3。|
+    |vers|文件系统版本，目前只支持nfs v3。|
     |挂载选项| 挂载文件系统时，可选择多种挂载选项，详情请参见[手动挂载NFS文件系统](../../../../cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#)中的[挂载选项说明表](cn.zh-CN/控制台用户指南/挂载文件系统/手动挂载NFS文件系统.md#table_2uc_odz_vk9)。
 
  |
@@ -148,12 +148,12 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156576854051085_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/868664/156714749751085_zh-CN.png)
 
 4.  挂载成功后，您可以在ECS上访问NAS文件系统，执行读取或写入操作。 
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156576854054347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156714749854347_zh-CN.png)
 
 
