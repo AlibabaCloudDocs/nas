@@ -12,17 +12,3 @@ Charges are incurred for the maximum used space of a file system within an hour 
 
 Maximum used space of a file system within an hour × unit price by the hour
 
-## Order of payment methods {#section_yab_383_tfx .section}
-
-Expenses in an account are paid by using the following order of payment methods:
-
-1.  Credits for an enterprise
-2.  Available coupons in an Alibaba Cloud account
-3.  Available balance in the Alibaba Cloud account
-4.  Available balance of an authorized PayPal account
-5.  Available bank accounts of an authorized PayPal account
-6.  Other bank accounts with express pay activated under an authorized PayPal account
-7.  Available Yuebao balance of an authorized PayPal account. To use this payment method, you must enable the payment of Yuebao in an authorized PayPal account.
-
-You cannot pay charges by using more than one of the following payment methods at the same time: credits, available coupons, and available balance of an authorized PayPal account.
-
