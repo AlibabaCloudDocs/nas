@@ -4,7 +4,7 @@ Alibaba Cloud Network Attached Storage \(NAS\) provides file storage services fo
 
 ## Overview {#section_alc_yth_1hb .section}
 
-NAS is a distributed file system that provides shared access, scalability, high availability, and high performance. Dependent on POXIS-based file APIs, NAS provides several benefits, such as compatibility with operating systems, shared access, data consistency, and exclusive locks.
+NAS is a distributed file system that provides shared access, scalability, high availability, and high performance. Dependent on POSIX-based file APIs, NAS provides several benefits, such as compatibility with operating systems, shared access, data consistency, and exclusive locks.
 
 NAS provides easy-to-use and scalable file storage that can work with ECS. A NAS file system can provide simultaneous access to multiple ECS instances. The storage capacity of a file system scales up or down with the number of files. NAS provides a common data source for multiple instances or running applications.
 
