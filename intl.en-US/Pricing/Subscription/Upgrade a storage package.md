@@ -6,7 +6,7 @@ You can upgrade your existing storage package if you require a storage package w
 
 1.  Log on to the [NAS console](https://partners-intl.console.aliyun.com/#/nas).
 2.  Choose **NAS** \> **File System List**, find the target file system, and click **Manage**.
-3.  In the Storage Package section, click **Upgrade**.![upgrade](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18688/156738977712703_en-US.png) 
+3.  In the Storage Package section, click **Upgrade**.![upgrade](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18688/156739122812703_en-US.png) 
 
     **Note:** 
 
