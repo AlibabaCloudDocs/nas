@@ -46,21 +46,27 @@
     4.  重启实例。
     5.  启动**命令提示符**，运行命令 `mount`。 如果返回以下信息，说明NFS客户端安装成功。 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156712865213175_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156775566213175_zh-CN.png)
 
 3.  运行以下命令挂载 NAS 文件系统。 
 
     ``` {#codeblock_5l4_qjb_m6i}
-    mount -o nolock \\035XXXXXXX3.cn-hangzhou.nas.aliyuncs.com\! h:                    
+    mount -o nolock -o mtype=hard -o timeout=60 \\035XXXXXXX3.cn-hangzhou.nas.aliyuncs.com\! h:                   
     ```
 
     `035XXXXXXX3.cn-hangzhou.nas.aliyuncs.com\` 是新挂载点的挂载地址。
 
-4.  在**这台电脑**界面查看新的共享文件系统。 
+4.  执行`mount`检查挂载结果。 
+
+    挂载完成后，回显信息必须包括mount=hard、locking=no以及timeout参数\>=10，否则说明挂载有问题。
+
+    ![检查UID和GID](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156775566213180_zh-CN.png)
+
+5.  在**这台电脑**界面查看新的共享文件系统。 
 
     在共享文件系统里新建文件夹和文件，检查是否能正常操作该文件系统。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156712865213177_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156775566213177_zh-CN.png)
 
 
 ## 常见问题 {#section_2u4_3qx_r09 .section}
@@ -71,7 +77,7 @@
 
 **HKEY\_LOCAL\_MACHINE** \> **SOFTWARE** \> **Microsoft** \> **ClientForNFS** \> **CurrentVersion** \> **User** \> **Default** \> **Mount**，其中 Locking 值必须为 1。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156712865213178_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156775566313178_zh-CN.png)
 
 创建以下注册表项设置 GID 和 UID：
 
@@ -80,10 +86,21 @@
     -   AnonymousGID，值为0。
     -   AnonymousUID，值为0。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156712865213179_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156775566313179_zh-CN.png)
 
-3.  运行 `mount` 检查新的 UID 和 GID。 
+3.  重启实例。
+4.  运行以下命令挂载 NAS 文件系统。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156712865213180_zh-CN.png)
+    ``` {#codeblock_bcu_68e_don}
+    mount -o nolock -o mtype=hard -o timeout=60 \\035XXXXXXX3.cn-hangzhou.nas.aliyuncs.com\! h:                   
+    ```
+
+    `035XXXXXXX3.cn-hangzhou.nas.aliyuncs.com\` 是新挂载点的挂载地址。
+
+5.  运行 `mount` 检查新的 UID 和 GID。 
+
+    挂载完成后，回显信息必须包括mount=hard、locking=no以及timeout参数\>=10，否则说明挂载有问题。
+
+    ![检查UID和GID](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18709/156775566213180_zh-CN.png)
 
 
