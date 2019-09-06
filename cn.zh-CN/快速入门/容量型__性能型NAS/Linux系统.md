@@ -16,9 +16,15 @@
 
     **说明：** 
 
-    -   如果您要使用RAM账户操作NAS，详情请参见[RAM用户访问控制](../../../../cn.zh-CN/控制台用户指南/管理权限/RAM用户访问控制.md#)。
-    -   开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../cn.zh-CN/产品定价/预付费/购买存储包.md#)。
+    -   如果您要使用RAM账户操作NAS，详情请参见[RAM用户访问控制](../../../../cn.zh-CN/控制台用户指南/管理权限/使用RAM实现用户访问控制.md#)。
+    -   开通NAS服务后，默认的计费方式是按量付费。如果您想使用更优惠的套餐，可购买存储包，详情请参见[购买存储包](../../../../cn.zh-CN/产品定价/包年包月/购买存储包.md#)。
     -   如果要创建专有网络类型的挂载点，还需在创建文件系统的地域上创建专有网络VPC，并将已创建的云服务器ECS归属到此专有网络VPC下，详情请参见[创建专有网络和交换机](创建专有网络和交换机../../SP_22/DNVPC11885991/ZH-CN_TP_2434_V13.dita#concept_isl_ghv_rdb/section_ufw_rhv_rdb) 。
+
+## 操作视频 {#section_4v4_6wr_ikd .section}
+
+观看以下视频可快速了解如何创建文件系统，并将其挂载至云服务器ECS（Linux系统）上。
+
+  
 
 ## 步骤一：创建文件系统 {#section_yfn_vyz_24t .section}
 
@@ -128,7 +134,7 @@
         sudo apt-get install nfs-common
         ```
 
-3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../../../../cn.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。 NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../../../../cn.zh-CN/常见问题/规模与性能/如何修改同时发起的NFS请求数量.md#)。 NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
 ## 步骤四：挂载文件系统 {#section_789_6w7_3jg .section}
 
@@ -157,7 +163,7 @@
         sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
         ```
 
-    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../../../../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
+    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../../../../cn.zh-CN/常见错误排查/挂载失败的排查与处理方法.md#)进行排查。
 
     挂载命令中的参数说明如下表所示：
 
@@ -177,7 +183,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156618368449539_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156776252949539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
@@ -185,6 +191,6 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156618368554347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156776253054347_zh-CN.png)
 
 
