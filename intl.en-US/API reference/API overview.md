@@ -21,4 +21,17 @@ NAS provides the following APIs.
 |15|Permission group|[DeleteAccessRule](reseller.en-US/API reference/Permission group/DeleteAccessRule.md#)|Delete existing permission rules.|
 |16|Permission group|[DescribeAccessRules](reseller.en-US/API reference/Permission group/DescribeAccessRules.md#)|Return permission rule description.|
 |17|Permission group|[ModifyAccessRule](reseller.en-US/API reference/Permission group/ModifyAccessRule.md#)|Modify permission rules.|
+|19|Snapshots for NAS Extreme|[CreateSnapshot](reseller.en-US/API reference/Snapshots for NAS Extreme/CreateSnapshot.md#)|Create a snapshot.|
+|20|Snapshots for NAS Extreme|[CreateAutoSnapshotPolicy](reseller.en-US/API reference/Snapshots for NAS Extreme/CreateAutoSnapshotPolicy.md#)|Create an automatic snapshot policy.|
+|21|Snapshots for NAS Extreme|[ApplyAutoSnapshotPolicy](reseller.en-US/API reference/Snapshots for NAS Extreme/ApplyAutoSnapshotPolicy.md#)|Apply an automatic snapshot policy to one or more file systems.|
+|22|Snapshots for NAS Extreme|[DeleteSnapshot](reseller.en-US/API reference/Snapshots for NAS Extreme/DeleteSnapshot.md#)|Delete a snapshot.|
+|23|Snapshots for NAS Extreme|[CancelAutoSnapshotPolicy](reseller.en-US/API reference/Snapshots for NAS Extreme/CancelAutoSnapshotPolicy.md#)|Disable automatic snapshot policies for one or more file systems.|
+|24|Snapshots for NAS Extreme|[DeleteAutoSnapshotPolicy](reseller.en-US/API reference/Snapshots for NAS Extreme/DeleteAutoSnapshotPolicy.md#)|Delete an automatic snapshot policy.|
+|25|Snapshots for NAS Extreme|[DescribeSnapshots](reseller.en-US/API reference/Snapshots for NAS Extreme/DescribeSnapshots.md#)|Query the list of all snapshots of the file system.|
+|26|Snapshots for NAS Extreme|[DescribeAutoSnapshotPolicies](reseller.en-US/API reference/Snapshots for NAS Extreme/DescribeAutoSnapshotPolicies.md#)|Query the automatic snapshot policies you have created.|
+|27|Snapshots for NAS Extreme|[ModifyAutoSnapshotPolicy](reseller.en-US/API reference/Snapshots for NAS Extreme/ModifyAutoSnapshotPolicy.md#)|Modify an automatic snapshot policy.|
+|28|Snapshots for NAS Extreme|[ResetFileSystem](reseller.en-US/API reference/Snapshots for NAS Extreme/ResetFileSystem.md#)|Restore a file system to the status when a snapshot was created.|
+|29|Tags|[AddTags](reseller.en-US/API reference/Tags/AddTags.md#)|Add one or multiple tags to a file system.|
+|30|Tags|[RemoveTags](reseller.en-US/API reference/Tags/RemoveTags.md#)|Remove one or multiple tags from a file system.|
+|31|Tags|[DescribeTags](reseller.en-US/API reference/Tags/DescribeTags.md#)|Search by tags added to a specific file system.|
 
