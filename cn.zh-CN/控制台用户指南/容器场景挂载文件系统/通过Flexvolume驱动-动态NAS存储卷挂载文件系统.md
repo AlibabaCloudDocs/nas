@@ -6,11 +6,15 @@
 
     如果是自建Kubernets集群，请先下载并安装[阿里云Flexolume驱动](https://github.com/AliyunContainerService/flexvolume)。
 
-2.  已创建文件系统，详情请参见[创建文件系统](cn.zh-CN/控制台用户指南/管理文件系统.md#section_5jo_0kj_jn5)。
+2.  确认Flexvolume驱动版本为v1.12.6.52-f6604e5-aliyun及以上版本。
+
+    如果低于该版本，请升级Flexvolume驱动，详情请参见 [升级Flexvolume驱动](升级Flexvolume驱动../../SP_235/DNCSK19102190/ZH-CN_TP_80841_V2.dita#task_z3j_tvk_2gb)。
+
+3.  已创建文件系统，详情请参见[创建文件系统](cn.zh-CN/控制台用户指南/管理文件系统.md#section_5jo_0kj_jn5)。
 
     创建的文件系统需要与您的Kubernetes集群在同一可用区。
 
-3.  已添加挂载点，详情请参见[添加挂载点](cn.zh-CN/控制台用户指南/管理挂载点.md#section_6xi_a3u_zkq)。
+4.  已添加挂载点，详情请参见[添加挂载点](cn.zh-CN/控制台用户指南/管理挂载点.md#section_6xi_a3u_zkq)。
 
     添加挂载点时所选的VPC网络要与您Kubernetes集群所在的VPC网络保持一致。
 
