@@ -15,7 +15,7 @@ Apsara File Storage NAS Capacity is backed by SATA hard disk drives \(SATA HDDs\
 -   Capacity: 10 PB
 -   Latency: 10 ms
 -   IOPS: up to 15,000 \(4,000 random read/write\)
--   Throughput: linear scaling along with capacity, applicable to computing businesses that require large capacity and high throughput but moderate latency requirements
+-   Throughput: linear scaling along with capacity, applicable to computing businesses that require large capacity and high throughput but moderate latency
 
 ## Scenarios {#section_kyg_ar8_qh3 .section}
 
