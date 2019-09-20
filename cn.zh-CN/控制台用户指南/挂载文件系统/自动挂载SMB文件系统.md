@@ -13,7 +13,7 @@
 
             正常情况下，Workstation 服务默认为启动状态。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156576991942055_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896733042055_zh-CN.png)
 
     -   TCP/IP NetBIOS Helper
 
@@ -23,14 +23,14 @@
         2.  单击**属性**，双击 **Internet 协议版本 4** 进入属性框，单击**高级**。
         3.  在高级TCP IP设置对话框中，选择 **WINS** \> **启用 TCP/IP 上的 NetBIOS**。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156576992042056_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896733042056_zh-CN.png)
 
         4.  选择**所有程序** \> **附件** \> **运行**或使用快捷键`Win+R`，输入`services.msc`进入本地服务。
         5.  在服务中找到 TCP/IP NetBIOS Helper，确认运行状态为**已启动**，启动类型为**自动**。
 
             正常情况下，TCP/IP NetBIOS Helper 服务默认为启动状态。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156576992054417_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896733054417_zh-CN.png)
 
 
 ## 操作步骤 {#section_asn_ci4_x0r .section}
@@ -47,52 +47,46 @@
     -   挂载目标盘符：指当前Windows系统上要挂载的目标盘符，请根据实际值替换。
     -   挂载点域名：指创建文件系统挂载点时，自动生成的挂载点域名，请根据实际值替换。挂载点详情请参见[管理挂载点](../cn.zh-CN/控制台用户指南/管理挂载点.md#)。
     -   myshare： SMB的share名称，不允许变更。
-    **说明：** 
-
-    目标盘符不能和本地盘符重名。
-
-    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
-
 3.  创建计划任务。 
     1.  打开控制面板，选择**管理工具** \> **任务话程序**。
     2.  在任务计划程序页面，选择**操作** \> **创建任务**。 
 
-        ![创建任务](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992012128_zh-CN.png)
+        ![创建任务](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733012128_zh-CN.png)
 
     3.  选择**常规**页签，输入计划任务的**名称**，勾选**不管用户是否登录都要运行**和**使用最高权限运行**。 
 
-        ![常规设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992012129_zh-CN.png)
+        ![常规设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733112129_zh-CN.png)
 
     4.  选择**触发器**页签，单击**新建**，在**开始任务**中选择**登录时**，在**高级设置**中选择**已启用**，单击**确定**。 
 
-        ![触发器设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992112130_zh-CN.png)
+        ![触发器设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733112130_zh-CN.png)
 
     5.  选择**操作**页签，单击**新建**，在**操作**中选择**启动程序**，在**程序或脚本**中选择创建好的nas\_auto.bat文件，单击**确定**。 
 
-        ![启动程序](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992112131_zh-CN.png)
+        ![启动程序](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733112131_zh-CN.png)
 
     6.  选择**条件**页签，选择**只有在以下网络连接可用时才启动**。在**只有在以下网络连接可用时才启动**中选择**任何连接**。 
 
-        ![条件设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992112132_zh-CN.png)
+        ![条件设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733112132_zh-CN.png)
 
     7.  选择**设置**页签，选择**如果请求后任务还在运行，强行将其停止**，在**如果此任务已经运行，以下规则适用**中选择**请勿启动新实例**。 
 
-        ![设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992112133_zh-CN.png)
+        ![设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733112133_zh-CN.png)
 
     8.  单击**确定**。
     9.  重启服务器，验证创建结果。 
 
         如果系统显示如下信息，表示计划任务正常执行。
 
-        ![创建结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156576992212134_zh-CN.png)
+        ![创建结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21507/156896733112134_zh-CN.png)
 
 4.  打开命令行窗口，执行`net use`命令，检查挂载结果。 
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156576992249545_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896733149545_zh-CN.png)
 
-    如果未挂载成功，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
+    如果未挂载成功，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
 5.  挂载成功后，您可以在ECS上访问NAS文件系统，执行读取或写入操作
 
