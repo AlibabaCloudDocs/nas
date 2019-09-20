@@ -15,21 +15,21 @@
 2.  运行以下命令，安装NFS客户端。 
     -   如果您使用CentOS、Redhat、Aliyun Linux操作系统，运行以下命令：
 
-        ``` {#d7e480}
+        ``` {#d7e491}
         sudo yum install nfs-utils
         ```
 
     -   如果您使用Ubuntu或Debian操作系统，运行以下命令：
 
-        ``` {#d7e486}
+        ``` {#d7e497}
         sudo apt-get update
         ```
 
-        ``` {#d7e489}
+        ``` {#d7e500}
         sudo apt-get install nfs-common
         ```
 
-3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../cn.zh-CN/常见问题/一般性问题/如何修改同时发起的NFS请求数量.md#)。 NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
+3.  修改同时发起的NFS请求数量， 详情请参见[如何修改同时发起的NFS请求数量](../cn.zh-CN/常见问题/规模与性能/如何修改同时发起的NFS请求数量.md#)。 NFS客户端对于同时发起的NFS请求数量进行了控制，默认编译的内核中此参数值为2，严重影响性能。
 
 ## 步骤二：挂载NFS文件系统 {#section_spc_nlh_cfb .section}
 
@@ -41,21 +41,21 @@
     -   如果您使用的是容量型/性能型NAS，请参见以下命令进行挂载。
         -   如果您要挂载NFSv4文件系统，运行以下命令：
 
-            ``` {#d7e531}
+            ``` {#d7e543}
             sudo mount -t nfs -o vers=4,minorversion=0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
             								
             ```
 
             如果挂载失败，请尝试以下命令：
 
-            ``` {#d7e537}
+            ``` {#d7e549}
             sudo mount -t nfs4 -o rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
             								
             ```
 
         -   如果您要挂载NFSv3文件系统，运行以下命令：
 
-            ``` {#d7e543}
+            ``` {#d7e555}
             sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.nas.aliyuncs.com:/ /mnt
             ```
 
@@ -65,7 +65,7 @@
         sudo mount -t nfs -o vers=3,nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport file-system-id.region.extreme.nas.aliyuncs.com:/share /mnt
         ```
 
-    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
+    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
     挂载命令中的参数说明如下表所示：
 
@@ -101,7 +101,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156620792149539_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156896727749539_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。
 
@@ -109,6 +109,10 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156620792154347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156896727754347_zh-CN.png)
 
+
+## 常见错误排查 {#section_tyq_hym_9v6 .section}
+
+如果挂载失败，请参见[挂载失败的排查与处理方法](../DNnas1858274/../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
