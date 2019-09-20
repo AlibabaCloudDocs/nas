@@ -13,7 +13,7 @@
 
             正常情况下，Workstation 服务默认为启动状态。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156568688542055_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896729342055_zh-CN.png)
 
     -   TCP/IP NetBIOS Helper
 
@@ -23,14 +23,14 @@
         2.  单击**属性**，双击 **Internet 协议版本 4** 进入属性框，单击**高级**。
         3.  在高级TCP IP设置对话框中，选择 **WINS** \> **启用 TCP/IP 上的 NetBIOS**。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156568688542056_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896729342056_zh-CN.png)
 
         4.  选择**所有程序** \> **附件** \> **运行**或使用快捷键`Win+R`，输入`services.msc`进入本地服务。
         5.  在服务中找到 TCP/IP NetBIOS Helper，确认运行状态为**已启动**，启动类型为**自动**。
 
             正常情况下，TCP/IP NetBIOS Helper 服务默认为启动状态。
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156568688654417_zh-CN.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896729354417_zh-CN.png)
 
 
 ## 操作步骤 {#section_pgk_srh_cfb .section}
@@ -38,7 +38,7 @@
 1.  登录[云服务器ECS](https://ecs.console.aliyun.com/)。
 2.  打开命令行窗口，执行以下命令挂载文件系统。 
 
-    ``` {#d7e188}
+    ``` {#d8e188}
     net use D: \\file-system-id.region.nas.aliyuncs.com\myshare
     ```
 
@@ -51,13 +51,17 @@
 
     目标盘符不能和本地盘符重名。
 
-    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../cn.zh-CN/常见问题/挂载失败的排查与处理方法.md#)进行排查。
+    如果执行挂载命令报错，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
 3.  执行`net use`命令，检查挂载结果。 
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156568688649545_zh-CN.png)
+    ![查看挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21209/156896729349545_zh-CN.png)
 
 4.  挂载成功后，您可以在ECS上访问NAS文件系统，执行读取或写入操作。
+
+## 常见错误排查 {#section_zlj_dcc_ojm .section}
+
+如果挂载失败，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
