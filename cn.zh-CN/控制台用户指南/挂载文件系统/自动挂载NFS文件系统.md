@@ -81,7 +81,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156896731051407_zh-CN.png)
+    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21207/156896786051407_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。如果挂载失败，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
@@ -89,7 +89,7 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156896731054347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156896786054347_zh-CN.png)
 
 
 ## 极速型 NAS {#section_gsl_kkp_hhb .section}
@@ -103,14 +103,14 @@
     vi /etc/systemd/system/sockets.target.wants/rpcbind.socket
     ```
 
-    ![注释rpcbind参数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156896731051186_zh-CN.png)
+    ![注释rpcbind参数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156896786051186_zh-CN.png)
 
     **说明：** 如果您是在CentOS6.x系统中配置自动重启，您还需执行以下两个操作。
 
     1.  执行`chkconfig netfs on`命令，保证netfs开机自启动。
     2.  打开/etc/netconfig配置文件，注释掉inet6相关的内容。
 
-        ![注释inet6相关内容](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156896731151194_zh-CN.png)
+        ![注释inet6相关内容](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156896786051194_zh-CN.png)
 
 3.  打开/etc/fstab配置文件，添加以下命令。 
 
@@ -138,7 +138,7 @@
 
     如果回显包含如下类似信息，说明挂载成功。
 
-    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156896731151183_zh-CN.png)
+    ![挂载结果](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/21506/156896786051183_zh-CN.png)
 
     挂载成功后，您还可以通过`df -h`命令，可以查看文件系统的当前容量信息。如果挂载失败，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
@@ -146,6 +146,10 @@
 
     您可以把NAS文件系统当作一个普通的目录来访问和使用，例子如下：
 
-    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156896731054347_zh-CN.png)
+    ![读写操作](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/18690/156896786054347_zh-CN.png)
 
+
+## 常见错误排查 {#section_am0_b7e_vns .section}
+
+如果挂载失败，请参见[挂载失败的排查与处理方法](../cn.zh-CN/控制台用户指南/挂载文件系统/挂载失败的排查与处理方法.md#)进行排查。
 
