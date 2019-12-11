@@ -2,7 +2,7 @@
 
 This topic describes the features, specifications, and scenarios of Apsara File Storage NAS Performance. You can select the storage type based on your business requirements.
 
-Apsara File Storage NAS Performance is backed by solid-state drives \(SSDs\), providing high throughput, high IPOS, and low latency performances for workloads. It is a shared file storage service that is applicable to scenarios that require high throughput, elasticity, and low latency of read operations. You can use this solution if you have frequent read/write operations and high requirements over system response performance.
+Apsara File Storage NAS Performance is backed by solid-state drives \(SSDs\), providing high throughput, high IOPS, and low latency performances for workloads. It is a shared file storage service that is applicable to scenarios that require high throughput, elasticity, and low latency of read operations. You can use this solution if you have frequent read/write operations and high requirements over system response performance.
 
 ## Features {#section_qaj_omr_lnj .section}
 
